@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fef3793-5322-4a1b-91a4-22b3353b493b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/images/logo/spree_50.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -136,6 +135,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -374,7 +374,11 @@
       <created>1397241293592</created>
       <updated>1397241293592</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cambio Logo">
+      <created>1397243025055</created>
+      <updated>1397243025055</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -415,7 +419,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Arreglo Scope" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglo Scope" />
+    <MESSAGE value="Cambio Logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio Logo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
