@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails TallerIntegracion3: development" uuid="529d93fb-973d-42e9-8407-06c0503f4b5e">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails TallerIntegracion3: production" uuid="b7c49a4b-8cd7-4084-b766-51cea8b491a2">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
