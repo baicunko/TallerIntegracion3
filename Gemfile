@@ -5,7 +5,7 @@ gem 'rails', '4.0.4'
 
 
 gem 'money', '6.0.1'
-
+gem 'whenever'
 
 #Extra agregado por mi
 gem 'execjs'
