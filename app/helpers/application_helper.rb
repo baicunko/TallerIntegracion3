@@ -10,12 +10,11 @@ module ApplicationHelper
     contents, metadata = client.get_file_and_metadata('/Grupo3/DBPrecios.accdb')
 
     destination_file_full_path = Rails.root.to_s + "/" + "DBPrecios.accdb"
-
-
       open(destination_file_full_path, 'wb') do |file|
-        file << open(contents).read
+        file << contents
       end
-    puts destination_file_full_path
-    open('DBPrecios.accdb', 'w') {|f| f.puts contents }
+
+
   end
+
 end
