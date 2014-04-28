@@ -98,6 +98,8 @@ GEM
       warden (~> 1.2.3)
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
+    dropbox-sdk (1.6.4)
+      json
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
@@ -284,6 +286,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dropbox-sdk
   execjs
   jbuilder (~> 1.2)
   jquery-rails
