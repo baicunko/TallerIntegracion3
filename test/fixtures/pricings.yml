@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  SKU: MyString
+  Precio: MyString
+  FechaActualizacion: MyString
+  FechaVigencia: MyString
+  CostoProducto: MyString
+  CostoTraspaso: MyString
+  CostoAlmacenaje: MyString
+
+two:
+  id: 
+  SKU: MyString
+  Precio: MyString
+  FechaActualizacion: MyString
+  FechaVigencia: MyString
+  CostoProducto: MyString
+  CostoTraspaso: MyString
+  CostoAlmacenaje: MyString
