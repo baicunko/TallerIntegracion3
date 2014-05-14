@@ -1,0 +1,37 @@
+<h1>Listing stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Used space</th>
+      <th>Total space</th>
+      <th>Reception</th>
+      <th>Dispatch</th>
+      <th>Lung</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.id %></td>
+        <td><%= store.used_space %></td>
+        <td><%= store.total_space %></td>
+        <td><%= store.reception %></td>
+        <td><%= store.dispatch %></td>
+        <td><%= store.lung %></td>
+        <td><%= link_to 'Show', store %></td>
+        <td><%= link_to 'Edit', edit_store_path(store) %></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store', new_store_path %>
