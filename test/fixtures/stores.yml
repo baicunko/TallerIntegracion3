@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  used_space: 1
+  total_space: 1
+  reception: false
+  dispatch: false
+  lung: false
+
+two:
+  id: 1
+  used_space: 1
+  total_space: 1
+  reception: false
+  dispatch: false
+  lung: false

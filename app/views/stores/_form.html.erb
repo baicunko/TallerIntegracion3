@@ -1,0 +1,41 @@
+<%= form_for(@store) do |f| %>
+  <% if @store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@store.errors.count, "error") %> prohibited this store from being saved:</h2>
+
+      <ul>
+      <% @store.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :used_space %><br>
+    <%= f.number_field :used_space %>
+  </div>
+  <div class="field">
+    <%= f.label :total_space %><br>
+    <%= f.number_field :total_space %>
+  </div>
+  <div class="field">
+    <%= f.label :reception %><br>
+    <%= f.check_box :reception %>
+  </div>
+  <div class="field">
+    <%= f.label :dispatch %><br>
+    <%= f.check_box :dispatch %>
+  </div>
+  <div class="field">
+    <%= f.label :lung %><br>
+    <%= f.check_box :lung %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
