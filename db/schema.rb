@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403172352) do
+ActiveRecord::Schema.define(version: 20140514162542) do
+
+  create_table "products", force: true do |t|
+    t.string   "sku"
+    t.integer  "precio"
+    t.datetime "fecha_actualizacion"
+    t.datetime "fecha_vigencia"
+    t.integer  "costo_producto"
+    t.integer  "costo_traspaso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"

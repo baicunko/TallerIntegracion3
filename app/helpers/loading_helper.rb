@@ -1,8 +1,12 @@
-class Product < ActiveRecord::Base
+module LoadingHelper
   require 'CSV'
 
-  def self.import(file)
-    CSV.foreach(file.path, headers: true) do |row|
+  def self.import()
+    #Open file
+    file = File.join(Rails.root, 'app', 'products.csv')
+	  File.read(file)
+
+    CSV.foreach("#{Rails.root}/app/products.csv", headers: true) do |row|
 
       product_hash = row.to_hash # exclude the price field
       product = Product.where(id: product_hash["id"])
@@ -14,4 +18,4 @@ class Product < ActiveRecord::Base
       end # end if !product.nil?
     end # end CSV.foreach
   end # end self.import(file)
-end # end class
+end
