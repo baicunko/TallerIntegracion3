@@ -42,8 +42,6 @@ class StockManagementController < ApplicationController
 		
 	end
 
-
-
 	def generate_hash(pedido)
 		require 'openssl'
 		require "base64"

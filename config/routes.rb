@@ -5,7 +5,7 @@ RailsApp::Application.routes.draw do
   resources :stores
 
   get 'stock_management' => 'stock_management#index'
-
+  
   get 'stock_management/get_store' => 'stock_management#get_store'
 
   # This line mounts Spree's routes at the root of your application.
