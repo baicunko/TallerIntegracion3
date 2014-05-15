@@ -1,0 +1,15 @@
+one:
+  sku: MyString
+  precio: 1
+  fecha_actualizacion: 
+  fecha_vigencia: 
+  costo_producto: 
+  costo_traspaso: 1
+
+two:
+  sku: MyString
+  precio: 1
+  fecha_actualizacion: 
+  fecha_vigencia: 
+  costo_producto: 
+  costo_traspaso: 1
