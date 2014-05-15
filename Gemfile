@@ -12,6 +12,8 @@ gem 'execjs'
 #gem 'therubyracer'
 gem 'thin'
 
+#gema para conectar postgres con archivos cvs
+gem 'postgres-copy'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
