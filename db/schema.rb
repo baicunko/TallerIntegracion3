@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140514220047) do
+=======
+
+ActiveRecord::Schema.define(version: 20140514162542) do
+
+  create_table "products_access", force: true do |t|
+    t.string   "sku"
+    t.integer  "precio"
+    t.datetime "fecha_actualizacion"
+    t.datetime "fecha_vigencia"
+    t.integer  "costo_producto"
+    t.integer  "costo_traspaso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> b60a8bacbe4920e21043a9ee398b86a0dd56ce73
 
   create_table "products", force: true do |t|
     t.integer  "sku"

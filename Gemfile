@@ -9,7 +9,7 @@ gem 'money', '6.0.1'
 
 #Extra agregado por mi
 gem 'execjs'
-gem 'therubyracer'
+#gem 'therubyracer'
 gem 'thin'
 
 
@@ -29,7 +29,7 @@ gem "twitter-bootstrap-rails"
 gem "rest_client"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -60,3 +60,10 @@ end
 gem 'spree', '2.2.1'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-2-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-2-stable'
+
+#Natalia
+gem 'httparty', '0.13.1'
+gem 'rest-client', '~> 1.6.7'
+gem 'multi_xml', '~> 0.5.5'
+gem 'json', '~> 1.8.1'
+gem 'google_drive', '~> 0.3.9'
