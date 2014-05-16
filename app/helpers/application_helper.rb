@@ -17,7 +17,8 @@ module ApplicationHelper
     #ya tenemos cargado entonces el Access, ahora pasemoslo a csv
     access2csv=Rails.root.to_s + "/app/"
     comando="/usr/bin/java -jar "+access2csv+"access2csv.jar "+access2csv+"products.accdb";
-    exec(comando);
+    system(comando);
+    LoadingHelper.import;
 
 
 

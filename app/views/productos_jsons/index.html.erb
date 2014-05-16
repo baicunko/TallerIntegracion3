@@ -1,0 +1,55 @@
+<h1>Listing productos_jsons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sku</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Precionormal</th>
+      <th>Preciointernet</th>
+      <th>Descripcion</th>
+      <th>Imagen</th>
+      <th>Categoria1</th>
+      <th>Categoria2</th>
+      <th>Categoria3</th>
+      <th>Categoria4</th>
+      <th>Categoria5</th>
+      <th>Categoria6</th>
+      <th>Categoria7</th>
+      <th>Categoria8</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos_jsons.each do |productos_json| %>
+      <tr>
+        <td><%= productos_json.SKU %></td>
+        <td><%= productos_json.Marca %></td>
+        <td><%= productos_json.Modelo %></td>
+        <td><%= productos_json.PrecioNormal %></td>
+        <td><%= productos_json.PrecioInternet %></td>
+        <td><%= productos_json.Descripcion %></td>
+        <td><%= productos_json.Imagen %></td>
+        <td><%= productos_json.Categoria1 %></td>
+        <td><%= productos_json.Categoria2 %></td>
+        <td><%= productos_json.Categoria3 %></td>
+        <td><%= productos_json.Categoria4 %></td>
+        <td><%= productos_json.Categoria5 %></td>
+        <td><%= productos_json.Categoria6 %></td>
+        <td><%= productos_json.Categoria7 %></td>
+        <td><%= productos_json.Categoria8 %></td>
+        <td><%= link_to 'Show', productos_json %></td>
+        <td><%= link_to 'Edit', edit_productos_json_path(productos_json) %></td>
+        <td><%= link_to 'Destroy', productos_json, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Productos json', new_productos_json_path %>
