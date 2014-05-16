@@ -1,5 +1,7 @@
 RailsApp::Application.routes.draw do
 
+  resources :precios_temporals
+
   resources :reservas
 
   resources :productos_jsons

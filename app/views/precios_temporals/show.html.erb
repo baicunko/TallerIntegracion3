@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @precios_temporal.SKU %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @precios_temporal.precio %>
+</p>
+
+<%= link_to 'Edit', edit_precios_temporal_path(@precios_temporal) %> |
+<%= link_to 'Back', precios_temporals_path %>
