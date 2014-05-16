@@ -11,12 +11,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140514220047) do
+ActiveRecord::Schema.define(version: 20140516191745) do
+
+  create_table "clients", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "number"
+    t.string   "phone"
+    t.string   "rut"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "shipto"
+    t.string   "phone"
+    t.string   "contactid"
+    t.string   "organization"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "productos_jsons", force: true do |t|
+    t.string   "SKU"
+    t.string   "Marca"
+    t.string   "Modelo"
+    t.integer  "PrecioNormal"
+    t.integer  "PrecioInternet"
+    t.string   "Descripcion"
+    t.string   "Imagen"
+    t.string   "Categoria1"
+    t.string   "Categoria2"
+    t.string   "Categoria3"
+    t.string   "Categoria4"
+    t.string   "Categoria5"
+    t.string   "Categoria6"
+    t.string   "Categoria7"
+    t.string   "Categoria8"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", force: true do |t|
-    t.integer  "sku"
-    t.integer  "store_id"
-    t.float    "costs"
+    t.string   "sku"
+    t.integer  "precio"
+    t.datetime "fecha_actualizacion"
+    t.datetime "fecha_vigencia"
+    t.integer  "costo_producto"
+    t.integer  "costo_traspaso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "costo_almacenamiento"
+  end
+
+  create_table "reservas", force: true do |t|
+    t.datetime "fecha"
+    t.string   "cliente"
+    t.string   "sku"
+    t.integer  "cantidad"
+    t.string   "responsable"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
