@@ -3,10 +3,10 @@ module LoadingHelper
 
   def self.import()
     #Open file
-    file = File.join(Rails.root, 'app', 'products.csv')
+    file = File.join(Rails.root, 'products.csv')
 	  File.read(file)
 
-    CSV.foreach("#{Rails.root}/app/products.csv", headers: true) do |row|
+    CSV.foreach("#{Rails.root}/products.csv", headers: true) do |row|
 
       product_hash = row.to_hash # exclude the price field
       product = Product.where(id: product_hash["id"])
