@@ -1,6 +1,7 @@
 module LoadingHelper
   require 'CSV'
   require 'date'
+  require 'net/sftp'
   def self.import
     file = File.open(File.join(Rails.root, 'Pricing.csv'), "r+")
     buffer = file.read
@@ -47,6 +48,11 @@ module LoadingHelper
     end # end CSV.foreach
   end # end self.import(file)
 
+
+
+  def self.Kappes
+
+  end
 
 
 

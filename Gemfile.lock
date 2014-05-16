@@ -144,6 +144,11 @@ GEM
     multi_json (1.10.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
     netrc (0.7.7)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
@@ -315,6 +320,8 @@ DEPENDENCIES
   json (~> 1.8.1)
   money (= 6.0.1)
   multi_xml (~> 0.5.5)
+  net-scp
+  net-sftp
   rails (= 4.0.4)
   rest-client (~> 1.6.7)
   rest_client

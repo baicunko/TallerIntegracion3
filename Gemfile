@@ -6,12 +6,12 @@ gem 'rails', '4.0.4'
 
 gem 'money', '6.0.1'
 
-
+gem 'net-sftp'
 #Extra agregado por mi
 gem 'execjs'
 #gem 'therubyracer'
 gem 'thin'
-
+gem 'net-scp'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
