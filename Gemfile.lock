@@ -84,7 +84,6 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     colorize (0.7.2)
-    commonjs (0.2.7)
     daemons (1.1.9)
     deface (1.0.0)
       colorize (>= 0.5.8)
@@ -192,7 +191,6 @@ GEM
       polyamorous (~> 0.6.0)
     rdoc (4.1.1)
       json (~> 1.4)
-    ref (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rest_client (1.7.3)
