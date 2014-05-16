@@ -1,6 +1,8 @@
 RailsApp::Application.routes.draw do
 
 
+  resources :reservas
+
   resources :products
 
   resources :stores
