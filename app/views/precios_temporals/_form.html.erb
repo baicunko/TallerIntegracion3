@@ -1,0 +1,25 @@
+<%= form_for(@precios_temporal) do |f| %>
+  <% if @precios_temporal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@precios_temporal.errors.count, "error") %> prohibited this precios_temporal from being saved:</h2>
+
+      <ul>
+      <% @precios_temporal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SKU %><br>
+    <%= f.number_field :SKU %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.number_field :precio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
