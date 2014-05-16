@@ -33,7 +33,6 @@ gem "rest_client"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'httparty'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'ruby-hmac'
