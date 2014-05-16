@@ -1,5 +1,6 @@
 RailsApp::Application.routes.draw do
 
+
   resources :products
 
   resources :stores
@@ -7,6 +8,8 @@ RailsApp::Application.routes.draw do
   get 'stock_management' => 'stock_management#index'
   
   get 'stock_management/get_store' => 'stock_management#get_store'
+
+  resources :clients
 
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
