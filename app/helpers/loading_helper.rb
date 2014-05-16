@@ -4,18 +4,20 @@ module LoadingHelper
   def self.import
 
 
-    #file = File.open(File.join(Rails.root, 'Pricing.csv'), "r+")
-    #buffer = file.read
-    #file.rewind
-    #file.puts "id,sku,precio,fecha_actualizacion,fecha_vigencia,costo_producto,costo_traspaso,costo_almacenamiento"
-    #file.print buffer
-    #file.close
+    file = File.open(File.join(Rails.root, 'Pricing.csv'), "r+")
+    buffer = file.read
+    file.rewind
+    file.puts "id,sku,precio,fecha_actualizacion,fecha_vigencia,costo_producto,costo_traspaso,costo_almacenamiento"
+    file.print buffer
+    file.close
 
     #Open file
+
     file = File.join(Rails.root, 'Pricing.csv')
 	  File.read(file)
 
     CSV.foreach("#{Rails.root}/Pricing.csv", headers: true) do |row|
+
 
       product_hash = row.to_hash # exclude the price field
 
