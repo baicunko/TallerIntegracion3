@@ -11,24 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20140514220047) do
 
-ActiveRecord::Schema.define(version: 20140514162542) do
-
-  create_table "products_access", force: true do |t|
+  create_table "products", force: true do |t|
     t.string   "sku"
     t.integer  "precio"
     t.datetime "fecha_actualizacion"
     t.datetime "fecha_vigencia"
     t.integer  "costo_producto"
     t.integer  "costo_traspaso"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "products", force: true do |t|
-    t.integer  "sku"
-    t.integer  "store_id"
-    t.float    "costs"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -771,6 +762,11 @@ ActiveRecord::Schema.define(version: 20140514162542) do
     t.string   "description"
     t.boolean  "default_tax",        default: false
     t.integer  "zone_members_count", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stock_managements", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

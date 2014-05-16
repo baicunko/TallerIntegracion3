@@ -9,7 +9,7 @@ gem 'money', '6.0.1'
 
 #Extra agregado por mi
 gem 'execjs'
-#gem 'therubyracer'
+gem 'therubyracer'
 gem 'thin'
 
 
