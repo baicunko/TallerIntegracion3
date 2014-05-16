@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  SKU: MyString
+  Marca: MyString
+  Modelo: MyString
+  PrecioNormal: 1
+  PrecioInternet: 1
+  Descripcion: MyString
+  Imagen: MyString
+  Categoria1: MyString
+  Categoria2: MyString
+  Categoria3: MyString
+  Categoria4: MyString
+  Categoria5: MyString
+  Categoria6: MyString
+  Categoria7: MyString
+  Categoria8: MyString
+
+two:
+  SKU: MyString
+  Marca: MyString
+  Modelo: MyString
+  PrecioNormal: 1
+  PrecioInternet: 1
+  Descripcion: MyString
+  Imagen: MyString
+  Categoria1: MyString
+  Categoria2: MyString
+  Categoria3: MyString
+  Categoria4: MyString
+  Categoria5: MyString
+  Categoria6: MyString
+  Categoria7: MyString
+  Categoria8: MyString

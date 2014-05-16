@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516154440) do
+ActiveRecord::Schema.define(version: 20140516175251) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -31,6 +31,26 @@ ActiveRecord::Schema.define(version: 20140516154440) do
     t.string   "contactid"
     t.string   "organization"
     t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "productos_jsons", force: true do |t|
+    t.string   "SKU"
+    t.string   "Marca"
+    t.string   "Modelo"
+    t.integer  "PrecioNormal"
+    t.integer  "PrecioInternet"
+    t.string   "Descripcion"
+    t.string   "Imagen"
+    t.string   "Categoria1"
+    t.string   "Categoria2"
+    t.string   "Categoria3"
+    t.string   "Categoria4"
+    t.string   "Categoria5"
+    t.string   "Categoria6"
+    t.string   "Categoria7"
+    t.string   "Categoria8"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

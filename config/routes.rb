@@ -1,6 +1,8 @@
 RailsApp::Application.routes.draw do
 
 
+  resources :productos_jsons
+
   resources :products
 
   resources :stores
