@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fef3793-5322-4a1b-91a4-22b3353b493b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/loading_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/loading_helper.rb" />
-    </list>
+    <list default="true" id="3fef3793-5322-4a1b-91a4-22b3353b493b" name="Default" comment="" />
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="25" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+            <state line="20" column="25" selection-start="789" selection-end="789" vertical-scroll-proportion="0.50933784" vertical-offset="0" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loading_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="loading_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="337" selection-end="337" vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="810">
+            <state line="12" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -804,16 +801,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+        <state line="12" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="337" selection-end="337" vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="810">
+        <state line="20" column="25" selection-start="789" selection-end="789" vertical-scroll-proportion="0.50933784" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
