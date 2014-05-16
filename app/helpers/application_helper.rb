@@ -18,6 +18,12 @@ module ApplicationHelper
     access2csv=Rails.root.to_s + "/app/"
     comando="/usr/bin/java -jar "+access2csv+"access2csv.jar "+access2csv+"products.accdb";
     exec(comando);
+    file = File.open("data.csv", "r+")
+    buffer = file.read
+    file.rewind
+    file.puts "this is my header"
+    file.print buffer
+    file.close
 
 
 
