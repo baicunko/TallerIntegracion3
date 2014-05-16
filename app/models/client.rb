@@ -4,8 +4,7 @@ has_many :contacts
  require 'json'
  require 'uri'
 
-#Variables de la clase Crm
- @@user_name = 'grupo3'
+@@user_name = 'grupo3'
 @@vturl = 'http://integra.ing.puc.cl/vtigerCRM/webservice.php?operation='
 @@login = false
 def self.getchallenge
@@ -24,7 +23,7 @@ def self.getchallenge
          'username' => @@user_name,
          'accessKey' => @md5
 	 
-	p JSON.parse(log.body)['result']
+	#p JSON.parse(log.body)['result']
 	@sessionId = JSON.parse(log.body)['result']['sessionName']
 	@@login = true
 	return @sessionId
@@ -49,46 +48,28 @@ def self.retrieve
 	ret = RestClient.get urlretrieve
 	return ret
 end
-  
-def self.queryContact(rut)
- #cf_707 
- # Client.queryContact('75644') 
- # Crm.query('10839440-4')
- # Crm.query('3307253-8')
- # Crm.query('4362743-0')
- #23093md
- #dejar en variable el expireTime y revisarlo para si pasó hacer login y actualizarlo
- unless (@@login)
- self.getchallenge()
-end
- queryString = "select firstname, lastname, otherstreet, othercity, otherstate from Contacts where cf_707 = '#{rut}';"
- queryParams = URI.encode(queryString)
- urlquery = @@vturl+ 'query&sessionName='+@sessionId+'&query='+queryParams
- result = JSON.parse((RestClient.get urlquery).body)['result'] 
- retorno = result[0]['firstname'] + ', '+result[0]['lastname'] 
-return result
- end
 
- def self.query(rut)
- #cf_705 
+#cf_705 
  # Client.query('7695173-K') 
- # Crm.query('10839440-4')
- # Crm.query('3307253-8')
- # Crm.query('4362743-0')
- # Crm.query('9396278-8')
- # Crm.query('12718114-4')
- # Crm.query('11390384-8')
+ # Client.query('10839440-4')
+ # Client.query('3307253-8')
+ # Client.query('4362743-0')
+ # Client.query('9396278-8')
+ # Client.query('12718114-4')
+ # Client.query('11390384-8')
  #23093md
- #para cada query se autentifica
- #dejar en variable el expireTime y revisarlo para si pasó hacer login y actualizarlo
+ def self.query(rut)
  unless (@@login)
  self.getchallenge()
 end
- queryString = "select accountname, bill_street, bill_city, bill_state from Accounts where cf_705 = '#{rut}';"
+ #queryString = "select accountname, bill_street, bill_city, bill_state from Accounts where cf_705 = '#{rut}';"
+ queryString = "select accountname  from Accounts where cf_705 = '#{rut}';"
  queryParams = URI.encode(queryString)
  urlquery = @@vturl+ 'query&sessionName='+@sessionId+'&query='+queryParams
  result = JSON.parse((RestClient.get urlquery).body)['result'] 
-return result
+ o = result[0]
+ info = 'Cliente: '+ o['accountname'] + ' '  
+return info
  end
  
  def self.extendsesion

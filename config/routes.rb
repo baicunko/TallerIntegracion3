@@ -1,5 +1,6 @@
 RailsApp::Application.routes.draw do
 
+  resources :reservas
 
   resources :productos_jsons
 
