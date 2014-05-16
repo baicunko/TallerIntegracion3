@@ -3,6 +3,7 @@ class StockManagementController < ApplicationController
 
 	def index
 
+
 	end
 
 
@@ -24,6 +25,7 @@ class StockManagementController < ApplicationController
 			# parsed_json2 = ActiveSupport::JSON.decode(parsed_json)
 			# puts parsed_json[i].[_id]
 		end
+		@stores=Store.all
 	end
 
 	def get_getSkusWithStock(almacen_id)
@@ -38,19 +40,19 @@ class StockManagementController < ApplicationController
 		
 	end
 
-	def move_stock
-		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStock', 'Authorization' => "UC grupo3:"+generate_hash.to_s
+	def move_stock(producto_id,almacen_id)
+		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStock?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s, 'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
 		puts "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"+response.to_s
 		
 	end
 
-	def move_stock_to_warehouse
-		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStockBodega', 'Authorization' => "UC grupo3:"+generate_hash.to_s
+	def move_stock_to_warehouse(producto_id,almacen_id)
+		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStockBodega?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s, 'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
 		puts "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"+response.to_s
 		
 	end
-	def dispatch_stock #DELETE
-		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/stock', 'Authorization' => "UC grupo3:"+generate_hash.to_s
+	def dispatch_stock(producto_id,direccion,precio,pedido_id) #DELETE
+		response= RestClient.delete 'http://bodega-integracion-2014.herokuapp.com/stock?productoId='+producto_id.to_s+'&direccion='+direccion.to_s+'&precio='+precio.to_s+'&pedidoId='+pedido_id.to_s, 'Authorization' => "UC grupo3:"+generate_hash("DELETE"+producto_id.to_s+direccion.to_s+precio.to_s,pedido_id.to_s).to_s
 		puts "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"+response.to_s
 		
 	end
