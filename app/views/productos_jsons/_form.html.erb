@@ -1,0 +1,77 @@
+<%= form_for(@productos_json) do |f| %>
+  <% if @productos_json.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@productos_json.errors.count, "error") %> prohibited this productos_json from being saved:</h2>
+
+      <ul>
+      <% @productos_json.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SKU %><br>
+    <%= f.text_field :SKU %>
+  </div>
+  <div class="field">
+    <%= f.label :Marca %><br>
+    <%= f.text_field :Marca %>
+  </div>
+  <div class="field">
+    <%= f.label :Modelo %><br>
+    <%= f.text_field :Modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :PrecioNormal %><br>
+    <%= f.number_field :PrecioNormal %>
+  </div>
+  <div class="field">
+    <%= f.label :PrecioInternet %><br>
+    <%= f.number_field :PrecioInternet %>
+  </div>
+  <div class="field">
+    <%= f.label :Descripcion %><br>
+    <%= f.text_field :Descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :Imagen %><br>
+    <%= f.text_field :Imagen %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria1 %><br>
+    <%= f.text_field :Categoria1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria2 %><br>
+    <%= f.text_field :Categoria2 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria3 %><br>
+    <%= f.text_field :Categoria3 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria4 %><br>
+    <%= f.text_field :Categoria4 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria5 %><br>
+    <%= f.text_field :Categoria5 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria6 %><br>
+    <%= f.text_field :Categoria6 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria7 %><br>
+    <%= f.text_field :Categoria7 %>
+  </div>
+  <div class="field">
+    <%= f.label :Categoria8 %><br>
+    <%= f.text_field :Categoria8 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
