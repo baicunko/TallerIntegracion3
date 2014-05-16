@@ -9,7 +9,6 @@ gem 'money', '6.0.1'
 
 #Extra agregado por mi
 gem 'execjs'
-gem 'therubyracer'
 gem 'thin'
 
 
@@ -21,11 +20,9 @@ gem 'sass-rails', '~> 4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
+gem 'jason'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
 gem "rest_client"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -33,7 +30,6 @@ gem "rest_client"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'httparty'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'ruby-hmac'

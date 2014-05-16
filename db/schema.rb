@@ -774,6 +774,7 @@ ActiveRecord::Schema.define(version: 20140514220047) do
     t.boolean  "reception"
     t.boolean  "dispatch"
     t.boolean  "lung"
+    t.string   "_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

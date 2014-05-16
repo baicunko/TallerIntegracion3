@@ -6,6 +6,7 @@ class CreateStores < ActiveRecord::Migration
       t.boolean :reception
       t.boolean :dispatch
       t.boolean :lung
+      t.string :_id
 
       t.timestamps
     end
