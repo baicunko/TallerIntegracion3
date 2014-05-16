@@ -1,5 +1,5 @@
 module LoadingHelper
-  require 'CSV'
+  require 'csv'
   require 'date'
   require 'net/sftp'
   def self.import

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fef3793-5322-4a1b-91a4-22b3353b493b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" afterPath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/loading_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/loading_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +37,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="22" selection-start="1106" selection-end="1106" vertical-scroll-proportion="-23.076923" vertical-offset="0" max-vertical-offset="1125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="loading_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="25" selection-start="222" selection-end="222" vertical-scroll-proportion="0.13289036" vertical-offset="0" max-vertical-offset="990">
+            <state line="1" column="14" selection-start="35" selection-end="35" vertical-scroll-proportion="0.016611295" vertical-offset="0" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -54,7 +58,7 @@
       <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="402" column="75" selection-start="14773" selection-end="14781" vertical-scroll-proportion="-19.307692" vertical-offset="5528" max-vertical-offset="12495">
+            <state line="1220" column="75" selection-start="44211" selection-end="44211" vertical-scroll-proportion="-19.307692" vertical-offset="17798" max-vertical-offset="24780">
               <folding />
             </state>
           </provider>
@@ -81,7 +85,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="28" selection-start="52" selection-end="67" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="1245">
+            <state line="13" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -90,7 +94,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="258" selection-end="258" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="300">
+            <state line="8" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -99,7 +103,7 @@
       <file leaf-file-name="clients_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/clients_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="23" selection-start="6" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+            <state line="2" column="0" selection-start="6" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1230">
               <folding />
             </state>
           </provider>
@@ -696,7 +700,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/clients_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="23" selection-start="6" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+        <state line="2" column="0" selection-start="6" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1230">
           <folding />
         </state>
       </provider>
@@ -785,30 +789,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="52" selection-end="67" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="75" selection-start="14773" selection-end="14781" vertical-scroll-proportion="-19.307692" vertical-offset="5528" max-vertical-offset="12495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="258" selection-end="258" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="234" selection-end="234" vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="1125">
+        <state line="1220" column="75" selection-start="44211" selection-end="44211" vertical-scroll-proportion="-19.307692" vertical-offset="17798" max-vertical-offset="24780">
           <folding />
         </state>
       </provider>
@@ -820,9 +803,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="22" selection-start="1106" selection-end="1106" vertical-scroll-proportion="-23.076923" vertical-offset="0" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="222" selection-end="222" vertical-scroll-proportion="0.13289036" vertical-offset="0" max-vertical-offset="990">
+        <state line="1" column="14" selection-start="35" selection-end="35" vertical-scroll-proportion="0.016611295" vertical-offset="0" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
