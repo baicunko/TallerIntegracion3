@@ -1,10 +1,13 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
 
 gem 'money', '6.0.1'
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller'
 
 gem 'net-sftp'
 #Extra agregado por mi
