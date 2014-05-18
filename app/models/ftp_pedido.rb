@@ -14,7 +14,8 @@ class FtpPedido < ActiveRecord::Base
 			sftp.file.open("Pedidos/"+file.name, "r") do |d|
 				name = file.name
 				name = name.delete! 'pedido_'
-				name = name.delete! '.xml'				
+				name = name.delete! '.xml'			
+				if FtpPedido.where(id: name)==0
 
 
 		#files = ftp.nlst('pedido_*')
@@ -60,7 +61,7 @@ class FtpPedido < ActiveRecord::Base
 					c = data.at_xpath("cantidad").text
 					#puts p.cantidad
 					#p.save
-					p = FtpPedido.where(id: name, sku: s).first_or_create(fecha: f, hora: h, direccion: d, rut: r, entrega: e, sku: s, cantidad: c, id: name)
+					FtpPedido.where(id: name, sku: s).first_or_create(fecha: f, hora: h, direccion: d, rut: r, entrega: e, sku: s, cantidad: c, id: name)
 
 				end # end pedidos.each
 			end # end file open
