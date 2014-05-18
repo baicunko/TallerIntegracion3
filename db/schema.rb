@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516191745) do
+ActiveRecord::Schema.define(version: 20140516215101) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -815,6 +815,14 @@ ActiveRecord::Schema.define(version: 20140516191745) do
     t.string   "description"
     t.boolean  "default_tax",        default: false
     t.integer  "zone_members_count", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stock_in_stores", force: true do |t|
+    t.integer  "sku"
+    t.string   "store_id"
+    t.integer  "stock"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
