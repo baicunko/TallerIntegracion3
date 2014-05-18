@@ -33,7 +33,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem "rest_client"
 gem 'haml-rails'
+group :production do
 gem "therubyracer"
+end
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
 gem "twitter-bootstrap-rails"

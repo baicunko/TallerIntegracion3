@@ -10,6 +10,7 @@ session = GoogleDrive.login("grupo3tallerintegracion@gmail.com", "grupo3taller")
 
 # Dumps all cells.
 def self.consumir()
+  Reserva.delete_all
  i = 0
  for row in @ws.rows
   if (i>3)
