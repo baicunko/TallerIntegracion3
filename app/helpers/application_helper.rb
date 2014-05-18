@@ -19,6 +19,8 @@ module ApplicationHelper
     comando="/usr/bin/java -jar "+access2csv+"access2csv.jar "+access2csv+"products.accdb";
     system(comando);
     LoadingHelper.import;
+    LoadingHelper.importProductosJson;
+    PreciosTemporalsHelper.crear_tabla;
 
 
 
