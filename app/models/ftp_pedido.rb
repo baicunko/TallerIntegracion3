@@ -36,11 +36,12 @@ class FtpPedido < ActiveRecord::Base
 
 				actual = doc.xpath('//Pedidos')
 				f = actual.at_xpath("@fecha").text
+				puts "fecha pedido" + f
 				h = actual.at_xpath("@hora").text
 				d = actual.at_xpath("direccionId").text
 				r = actual.at_xpath("rut").text
 				e = actual.at_xpath("fecha").text	
-
+				puts "ENTREGA " + e
 				pedidos = doc.xpath("//Pedido")
 				pedidos.each do |data|
 					#p = FtpPedido.new

@@ -5,9 +5,11 @@ gem 'rails', '4.0.4'
 
 
 gem 'money', '6.0.1'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+end
 
 gem 'net-sftp'
 #Extra agregado por mi
