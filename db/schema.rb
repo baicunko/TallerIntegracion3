@@ -855,7 +855,6 @@ ActiveRecord::Schema.define(version: 20140516220853) do
   end
 
 end
-=======
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -869,7 +868,9 @@ end
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20140516220853) do
+
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -952,6 +953,7 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "utilizado"
+
   end
 
   create_table "spree_addresses", force: true do |t|
@@ -1696,6 +1698,14 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.datetime "updated_at"
   end
 
+  create_table "stock_in_stores", force: true do |t|
+    t.integer  "sku"
+    t.string   "store_id"
+    t.integer  "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "stock_managements", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -1707,9 +1717,9 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.boolean  "reception"
     t.boolean  "dispatch"
     t.boolean  "lung"
+    t.string   "_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
 end
-
