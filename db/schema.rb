@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518193805) do
+ActiveRecord::Schema.define(version: 20140518221626) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20140518193805) do
     t.string   "cantidad"
     t.string   "id"
     t.datetime "envio"
+  end
+
+  create_table "optimizar_ftps", force: true do |t|
   end
 
   create_table "precios_temporals", force: true do |t|
