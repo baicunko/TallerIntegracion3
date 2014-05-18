@@ -2,40 +2,37 @@ class Reserva < ActiveRecord::Base
 	#Fuente: http://gimite.net/doc/google-drive-ruby/
 require "rubygems"
 require "google_drive"
+require 'time'
 
-# Logs in.
-# You can also use OAuth. See document of
-# GoogleDrive.login_with_oauth for details.
 session = GoogleDrive.login("grupo3tallerintegracion@gmail.com", "grupo3taller")
 
-# First worksheet of
-# https://docs.google.com/spreadsheet/ccc?key=pz7XtlQC-PYx-jrVMJErTcg
-@ws = session.spreadsheet_by_key("0As9H3pQDLg79dDJzZkU1TldhQmg5MXdDZFM5R1RCQXc").worksheets[0]
-
-# Gets content of A2 cell.
-p @ws[2, 1]  #==> "hoge"
-
-# Changes content of cells.
-# Changes are not sent to the server until you call ws.save().
-#ws[2, 1] = "foo"
-#ws[2, 2] = "bar"
-#ws.save()
+@ws = session.spreadsheet_by_key("0As9H3pQDLg79dHRlSU9STDF5aVEyUFFjZS13U0lJbVE").worksheets[0]
 
 # Dumps all cells.
-def self.mostrar()
-
-for row in 1..@ws.num_rows
-  for col in 1..@ws.num_cols
-    p @ws[row, col]
-  end
+def self.consumir()
+ i = 0
+ for row in @ws.rows
+  if (i>3)
+     sk = row[0]  
+     client = row[1]
+     cantida = row[2].to_i  
+     utilizad =  row[3].to_i
+     fech= row[4].to_datetime
+     responsabl = row[5]
+     res = Reserva.new( cliente: client, sku: sk, cantidad: cantida, responsable: responsabl, utilizado: utilizad, fecha: fech )
+     res.save
+   else
+    i+=1
+   end
+ end
 end
 
-end
+
 
 # Yet another way to do so.
 def self.exponer()
 p @ws.rows  #==> [["fuga", ""], ["foo", "bar]]
 end
 #R Reloads the worksheet to get changes by other clients.
-@ws.reload()
+#@ws.reload()
 end
