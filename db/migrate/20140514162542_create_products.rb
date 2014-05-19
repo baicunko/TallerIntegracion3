@@ -7,6 +7,12 @@ class CreateProducts < ActiveRecord::Migration
       t.datetime :fecha_vigencia
       t.integer :costo_producto
       t.integer :costo_traspaso
+      t.string :direccion
+      t.string :store_id
+      t.string :_id
+      t.boolean :despachado
+
+
 
       t.timestamps
     end

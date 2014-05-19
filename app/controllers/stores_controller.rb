@@ -10,8 +10,11 @@ class StoresController < ApplicationController
   # GET /stores/1
   # GET /stores/1.json
   def show
+    # puts "fddddddddddddddddddddddd"+@store._id
+    # @current_store=Store.where("_id = ?" , params[:_id])_
+    # puts "fddddddddddddddddddddddd"+@current_store.used_space.to_s
+    @stock=StockInStore.where("store_id = ?" , @store._id)
   end
-
   # GET /stores/new
   def new
     @store = Store.new
@@ -69,6 +72,6 @@ class StoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
-      params.require(:store).permit(:id, :used_space, :total_space, :reception, :dispatch, :lung)
+      params.require(:store).permit(:id, :used_space, :total_space, :reception, :dispatch, :lung, :_id)
     end
 end

@@ -69,8 +69,10 @@ gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :bran
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-2-stable'
 
 #Natalia
-gem 'httparty', '0.13.1'
+gem 'httparty'
 gem 'rest-client', '~> 1.6.7'
 gem 'multi_xml', '~> 0.5.5'
 gem 'json', '~> 1.8.1'
 gem 'google_drive', '~> 0.3.9'
+
+end

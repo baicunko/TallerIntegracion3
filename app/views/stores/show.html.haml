@@ -1,0 +1,23 @@
+%p#notice= notice
+%table
+  %thead
+    %tr
+      %th Sku
+      %th Stock
+      / %th
+      / %th
+      / %th
+  %tbody
+    - @stock.each do |s|
+      %tr
+        %td= s.sku
+        %td= s.stock
+        / %td= link_to 'Show', product
+        / # %td= link_to 'Edit', edit_product_path(product)
+        / # %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'Edit', edit_store_path(@store)
+|
+\#{link_to 'Back', stores_path}
+
+

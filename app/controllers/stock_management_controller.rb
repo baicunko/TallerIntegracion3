@@ -17,7 +17,8 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			Store.where(_id: parsed_json[i]['_id']).first.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
+			# Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
+
 			# store= Store.find(_id:parsed_json[i]['_id'])
 			# store.update(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space: 100 ,total_space: parsed_json[i]['totalSpace'])
 			# puts parsed_json[i].to_s
@@ -25,7 +26,9 @@ class StockManagementController < ApplicationController
 			# parsed_json2 = ActiveSupport::JSON.decode(parsed_json)
 			# puts parsed_json[i].[_id]
 		end
+
 		@stores=Store.all
+		response
 	end
 
 	def get_skuswithstock(almacen_id)
@@ -35,8 +38,9 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			StockInStore.where(sku: parsed_json[i]['_id'], store_id: almacen_id).first.update_attributes(stock: parsed_json[i]['total']) 
-			# store= Store.find(_id:parsed_json[i]['_id'])
+			# StockInStore.where(sku: parsed_json[i]['_id'], store_id: almacen_id).first_or_create.update_attributes(stock: parsed_json[i]['total']) 
+		
+		response	# store= Store.find(_id:parsed_json[i]['_id'])
 		end
 	end
 
@@ -50,13 +54,29 @@ class StockManagementController < ApplicationController
 	def get_stock(almacen_id,sku)#falta otro igual con el opcional
 		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/stock?almacenId='+almacen_id.to_s+'&sku='+sku.to_s, 'Authorization' => "UC grupo3:"+generate_hash("GET"+almacen_id.to_s+sku.to_s)
 		puts response.to_s
-		
+		parsed_json = ActiveSupport::JSON.decode(response)
+		(0..parsed_json.length-1).each do |i|
+			JSON.parse(parsed_json[i].to_json)
+			# Product.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(store_id: parsed_json[i]['almacen'],sku:parsed_json[i]['sku'],direccion: parsed_json[i]['direccion'],despachado:parsed_json[i]['despachado'] )	
+		response
+		end
 	end
 
-	def move_stock(producto_id,almacen_id)
-		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStock?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s, 'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
-		puts response.to_s
-		
+	def move_stock(producto_id, almacen_id)
+		puts generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
+		puts producto_id
+		puts almacen_id
+
+		response= HTTParty.post("http://bodega-integracion-2014.herokuapp.com/moveStock",
+    	:query => { 'productoId' => producto_id , 'almacenId' => almacen_id},
+    	:headers => { "Authorization" => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)})
+		# response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStock',
+		# {:params => {'productoId' => producto_id ,'almacenId' => almacen_id,
+		# 'Authorization' => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)}}
+
+		# RestClient.post Integra2::STOCK_API_URL+'moveStock', {:Authorization => generate_auth_hash('POST'+producto.to_s+almacen.to_s), :params=>{:almacenId=>almacen, :productoId=>producto}}
+		# 'productoId' => producto_id , 'almacenId'=> almacen_id ,'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
+		#?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s
 	end
 
 	def move_stock_to_warehouse(producto_id,almacen_id)
