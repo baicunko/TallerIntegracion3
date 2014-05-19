@@ -1,0 +1,23 @@
+%h1 Listing quiebres
+
+%table
+  %tr
+    %th Pedido
+    %th Nombrecliente
+    %th Fechaquiebre
+    %th
+    %th
+    %th
+
+  - @quiebres.each do |quiebre|
+    %tr
+      %td= quiebre.pedido
+      %td= quiebre.nombrecliente
+      %td= quiebre.fechaquiebre
+      %td= link_to 'Show', quiebre
+      %td= link_to 'Edit', edit_quiebre_path(quiebre)
+      %td= link_to 'Destroy', quiebre, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Quiebre', new_quiebre_path

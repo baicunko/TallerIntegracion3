@@ -1,6 +1,10 @@
 RailsApp::Application.routes.draw do
 
+
+  resources :quiebres
+
   resources :apis
+
 
   resources :precios_temporals
 

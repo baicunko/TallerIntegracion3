@@ -26,6 +26,7 @@ class PreciosTemporalsController < ApplicationController
   def create
     @precios_temporal = PreciosTemporal.new(precios_temporal_params)
 
+
     respond_to do |format|
       if @precios_temporal.save
         format.html { redirect_to @precios_temporal, notice: 'Precios temporal was successfully created.' }

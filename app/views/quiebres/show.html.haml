@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Pedido:
+  = @quiebre.pedido
+%p
+  %b Nombrecliente:
+  = @quiebre.nombrecliente
+%p
+  %b Fechaquiebre:
+  = @quiebre.fechaquiebre
+
+= link_to 'Edit', edit_quiebre_path(@quiebre)
+\|
+= link_to 'Back', quiebres_path
