@@ -32,12 +32,64 @@ module ApplicationHelper
     sql = "SELECT * from ftp_pedidos WHERE entrega >= DATE ('now') AND envio IS NULL GROUP BY id ORDER BY entrega DESC"
     records_array = FtpPedido.connection.execute(sql)
     records_array.each do |tupla|
-      p tupla
+      quiebre=false;
+      pedidoEntero=FtpPedido.where(id: tupla["id"])
+      pedidoEntero.each do |tuplaEspecial|
+
+
+
+
+        stockController=StockManagementController.new
+
+        #queryStock="SELECT SUM(stock) FROM stock_in_stores WHERE sku = "+tuplaEspecial["sku"].to_s
+        stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"])
+        #queryRespuesta=StockInStore.connection.execute(queryStock)
+
+        if(stockDisponible>=tuplaEspecial["cantidad"].to_i)
+
+
+
+
+        else
+          quiebre=true;
+        end
+
+      end
+      if(quiebre)
+        #el vecino tiene que mandar la wea, pero nadie lo tiene implementado, no wei.
+        #poner cantidad
+        hola=Quiebre.where(id: tupla["id"])
+        if(hola.count==0)
+          quiebre=Quiebre.new
+          quiebre.nombrecliente=Contact.query(tupla["direccion"])
+          quiebre.fechaquiebre=Time.now
+          quiebre.pedido=tupla["id"];
+          quiebre.save
+        end
+
+
+
+
+
+
+      else
+
+
+
+
+      end
+
+
+
+
     end
 
 
 
 
   end
-
 end
+
+
+
+

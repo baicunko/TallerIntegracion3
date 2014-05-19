@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518193805) do
+ActiveRecord::Schema.define(version: 20140518223449) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 20140518193805) do
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ftp_pedidos", id: false, force: true do |t|
+    t.datetime "fecha",     limit: 255
+    t.datetime "hora",      limit: 255
+    t.string   "direccion"
+    t.string   "rut",       limit: 12
+    t.datetime "entrega",   limit: 255
+    t.integer  "sku",       limit: 255
+    t.string   "cantidad"
+    t.string   "id"
+    t.datetime "envio"
   end
 
   create_table "precios_temporals", force: true do |t|
@@ -74,15 +86,23 @@ ActiveRecord::Schema.define(version: 20140518193805) do
     t.integer  "costo_almacenamiento"
   end
 
+  create_table "quiebres", force: true do |t|
+    t.integer  "pedido"
+    t.string   "nombrecliente"
+    t.datetime "fechaquiebre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "reservas", force: true do |t|
     t.datetime "fecha"
     t.string   "cliente"
     t.string   "sku"
     t.integer  "cantidad"
     t.string   "responsable"
+    t.integer  "utilizado"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "utilizado"
   end
 
   create_table "spree_addresses", force: true do |t|
@@ -846,6 +866,7 @@ ActiveRecord::Schema.define(version: 20140518193805) do
     t.boolean  "reception"
     t.boolean  "dispatch"
     t.boolean  "lung"
+    t.string   "_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
