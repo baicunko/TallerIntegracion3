@@ -28,6 +28,11 @@ def self.consumir()
  end
 end
 
+def self.stockReservado(sku)
+  sql = "select cantidad from reservas WHERE sku ="+sku
+  resultado = Reserva.connection.execute(sql)
+  return resultado[0][0]
+end
 
 
 # Yet another way to do so.
