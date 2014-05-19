@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516213855) do
+ActiveRecord::Schema.define(version: 20140519000044) do
+
+  create_table "apis", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -837,6 +842,13 @@ ActiveRecord::Schema.define(version: 20140516213855) do
     t.boolean  "reception"
     t.boolean  "dispatch"
     t.boolean  "lung"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuarios_claves_apis", id: false, force: true do |t|
+    t.string   "grupo"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
