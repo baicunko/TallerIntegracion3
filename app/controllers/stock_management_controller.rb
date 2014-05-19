@@ -17,7 +17,7 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			# Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
+			Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
 
 			# store= Store.find(_id:parsed_json[i]['_id'])
 			# store.update(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space: 100 ,total_space: parsed_json[i]['totalSpace'])
@@ -38,7 +38,7 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			# StockInStore.where(sku: parsed_json[i]['_id'], store_id: almacen_id).first_or_create.update_attributes(stock: parsed_json[i]['total']) 
+			StockInStore.where(sku: parsed_json[i]['_id'], store_id: almacen_id).first_or_create.update_attributes(stock: parsed_json[i]['total']) 
 		
 		response	# store= Store.find(_id:parsed_json[i]['_id'])
 		end
@@ -57,7 +57,7 @@ class StockManagementController < ApplicationController
 		parsed_json = ActiveSupport::JSON.decode(response)
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
-			# Product.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(store_id: parsed_json[i]['almacen'],sku:parsed_json[i]['sku'],direccion: parsed_json[i]['direccion'],despachado:parsed_json[i]['despachado'] )	
+			Product.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(store_id: parsed_json[i]['almacen'],sku:parsed_json[i]['sku'],direccion: parsed_json[i]['direccion'],despachado:parsed_json[i]['despachado'] )	
 		response
 		end
 	end

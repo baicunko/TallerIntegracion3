@@ -79,4 +79,3 @@ gem 'multi_xml', '~> 0.5.5'
 gem 'json', '~> 1.8.1'
 gem 'google_drive', '~> 0.3.9'
 
-end
