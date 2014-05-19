@@ -191,23 +191,99 @@ class StockManagementController < ApplicationController
     total
   end
 
-  def despacharsku(sku,cantidad)
+  def mover_a_despacho_sku(sku,cantidad)
     i=0
     if(i<=cantidad)
-      @almacen3=get_stock(Store.find(5)._id,sku)
-      puts @almacen3.length
-      (0..@almacen3.length-1).each do |j|
-        if (@almacen3[j]['despachado']==false)
-          puts @almacen3[j]['despachado'].to_s
-          move_stock(@almacen3[j]['_id'],Store.find(1)._id)
+      (2..5).each do |a|
+        @almacen=get_stock(Store.find(a)._id,sku)
+        puts @almacen.length
+        (0..@almacen.length-1).each do |j|
+          if (@almacen[j]['despachado']==false)
+            puts @almacen[j]['despachado'].to_s
+            move_stock(@almacen[j]['_id'],Store.find(1)._id)
+            i+=1
+            if (i == cantidad)
+              break
+            end
+          puts i.to_s
+          end
+        end
+      end
+    end
+  end
+
+  def despachar_sku(sku,cantidad,precio,direccion, pedido_id)#NO ESTÁ PROBADO
+    (0..cantidad-1)
+      @despacho=get_stock(Store.find(1)._id,sku)
+      (0..@despacho.length-1).each do |j|
+        if (@despacho[j]['despachado']==false)
+          puts @despacho[j]['despachado'].to_s
+          dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
           i+=1
           if (i == cantidad)
             break
           end
-          puts i.to_s
+        puts i.to_s
         end
       end
     end
+  end
+
+
+
+      # @almacen2=get_stock(Store.find(2)._id,sku)
+      # puts @almacen2.length
+      # (0..@almacen2.length-1).each do |j|
+      #   if (@almacen2[j]['despachado']==false)
+      #     puts @almacen2[j]['despachado'].to_s
+      #     move_stock(@almacen2[j]['_id'],Store.find(1)._id)
+      #     i+=1
+      #     if (i == cantidad)
+      #       break
+      #     end
+      #     puts i.to_s
+      #   end
+      # end
+
+      # @almacen3=get_stock(Store.find(3)._id,sku)
+      # puts @almacen3.length
+      # (0..@almacen3.length-1).each do |j|
+      #   if (@almacen3[j]['despachado']==false)
+      #     puts @almacen3[j]['despachado'].to_s
+      #     move_stock(@almacen3[j]['_id'],Store.find(1)._id)
+      #     i+=1
+      #     if (i == cantidad)
+      #       break
+      #     end
+      #     puts i.to_s
+      #   end
+      # end
+      # @almacen4=get_stock(Store.find(4)._id,sku)
+      # puts @almacen4.length
+      # (0..@almacen4.length-1).each do |j|
+      #   if (@almacen4[j]['despachado']==false)
+      #     puts @almacen4[j]['despachado'].to_s
+      #     move_stock(@almacen4[j]['_id'],Store.find(1)._id)
+      #     i+=1
+      #     if (i == cantidad)
+      #       break
+      #     end
+      #     puts i.to_s
+      #   end
+      # end
+      # @almacen3=get_stock(Store.find(5)._id,sku)
+      # puts @almacen3.length
+      # (0..@almacen3.length-1).each do |j|
+      #   if (@almacen3[j]['despachado']==false)
+      #     puts @almacen3[j]['despachado'].to_s
+      #     move_stock(@almacen3[j]['_id'],Store.find(1)._id)
+      #     i+=1
+      #     if (i == cantidad)
+      #       break
+      #     end
+      #     puts i.to_s
+      #   end
+
       # total+=@almacen1.length
       # @almacen2=get_stock(Store.find(2)._id,sku)
       # total+=@almacen2.length
@@ -218,9 +294,9 @@ class StockManagementController < ApplicationController
       # total+=@almacen4.length
       # @almacen5=get_stock(Store.find(5)._id,sku)        
       # total+=@almacen5.length
-  end
+ 
 
-end
+
 
 
 
