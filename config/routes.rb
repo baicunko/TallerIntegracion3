@@ -22,10 +22,15 @@ RailsApp::Application.routes.draw do
 
   resources :clients
 
-  namespace :api do
-    namespace :v1 do
-      resources :api
-    end
+  #namespace :api do
+  #  namespace :v1 do
+  #    resources :api
+  #  end
+  #end
+
+  scope :path => "/api" do
+    get "/" => 'api#index', as: 'api_docs'
+    match "/pedirProducto" => "api#despachar_producto_fuera", via: [:post]
   end
 
   # This line mounts Spree's routes at the root of your application.

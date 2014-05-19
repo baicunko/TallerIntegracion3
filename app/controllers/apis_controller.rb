@@ -30,7 +30,7 @@ class ApisController < ApplicationController
       end
     end
 
-    stock_sku = metodoproximoaestarlisto
+    stock_sku = StockManagemet.getcantidadtotal(sku)
 
     if stock_sku == 0
       render :json => [:SKU => sku.to_s, :cantidad => 0].to_json and return
@@ -42,7 +42,7 @@ class ApisController < ApplicationController
     if stock_efectivo > cant
       cantidad_despachada = 0
       cant.times do
-        moveStock(sku, almacen)
+        StockManagement.move_stock(sku, almacen)
         cantidad_despachada += 1
 
       end
