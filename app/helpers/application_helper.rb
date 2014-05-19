@@ -26,4 +26,18 @@ module ApplicationHelper
 
   end
 
+  def self.ProcesarPedidos
+    #Cada 10 minutos este metodo se debe llamar
+    FtpPedido.verPedidos;
+    sql = "SELECT * from ftp_pedidos WHERE entrega >= DATE ('now') AND envio IS NULL GROUP BY id ORDER BY entrega DESC"
+    records_array = FtpPedido.connection.execute(sql)
+    records_array.each do |tupla|
+      p tupla
+    end
+
+
+
+
+  end
+
 end

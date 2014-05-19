@@ -5,9 +5,11 @@ gem 'rails', '4.0.4'
 
 
 gem 'money', '6.0.1'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+end
 
 gem 'net-sftp'
 #Extra agregado por mi
@@ -31,7 +33,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem "rest_client"
 gem 'haml-rails'
+group :production do
 gem "therubyracer"
+end
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
 gem "twitter-bootstrap-rails"

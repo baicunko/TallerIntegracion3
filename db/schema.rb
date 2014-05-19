@@ -1,3 +1,4 @@
+end
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,7 +12,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516220853) do
+
+ActiveRecord::Schema.define(version: 20140518214843) do
+
+  create_table "apis", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+ActiveRecord::Schema.define(version: 20140518221626) do
+
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -44,6 +54,12 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.integer  "sku",       limit: 255
     t.string   "cantidad"
     t.string   "id"
+    t.datetime "envio"
+  end
+
+
+
+  create_table "optimizar_ftps", force: true do |t|
   end
 
   create_table "precios_temporals", force: true do |t|
@@ -80,10 +96,6 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.datetime "fecha_vigencia"
     t.integer  "costo_producto"
     t.integer  "costo_traspaso"
-    t.string   "direccion"
-    t.string   "store_id"
-    t.string   "_id"
-    t.boolean  "despachado"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "costo_almacenamiento"
@@ -95,9 +107,9 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.string   "sku"
     t.integer  "cantidad"
     t.string   "responsable"
-    t.integer  "utilizado"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "utilizado"
   end
 
   create_table "spree_addresses", force: true do |t|
@@ -861,7 +873,6 @@ ActiveRecord::Schema.define(version: 20140516220853) do
     t.boolean  "reception"
     t.boolean  "dispatch"
     t.boolean  "lung"
-    t.string   "_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
