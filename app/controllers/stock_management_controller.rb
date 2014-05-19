@@ -63,29 +63,51 @@ class StockManagementController < ApplicationController
 	end
 
 	def move_stock(producto_id, almacen_id)
-		puts generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
-		puts producto_id
-		puts almacen_id
-
 		response= HTTParty.post("http://bodega-integracion-2014.herokuapp.com/moveStock",
-    	:query => { 'productoId' => producto_id , 'almacenId' => almacen_id},
+    	:body => { 	:productoId => producto_id, 
+    				:almacenId => almacen_id
+    				},
     	:headers => { "Authorization" => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)})
+		
+
+
+
 		# response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStock',
 		# {:params => {'productoId' => producto_id ,'almacenId' => almacen_id,
 		# 'Authorization' => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)}}
 
 		# RestClient.post Integra2::STOCK_API_URL+'moveStock', {:Authorization => generate_auth_hash('POST'+producto.to_s+almacen.to_s), :params=>{:almacenId=>almacen, :productoId=>producto}}
-		# 'productoId' => producto_id , 'almacenId'=> almacen_id ,'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
-		#?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s
+		# # 'productoId' => producto_id , 'almacenId'=> almacen_id ,'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
+		# #?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s
+		# @result = HTTParty.post(@urlstring_to_post.to_str, 
+  #   :body => { :subject => 'This is the screen name', 
+  #              :issue_type => 'Application Problem', 
+  #              :status => 'Open', 
+  #              :priority => 'Normal', 
+  #              :description => 'This is the description for the problem'
+  #            }.to_json,
+  #   :headers => { 'Content-Type' => 'application/json' } )
 	end
 
 	def move_stock_to_warehouse(producto_id,almacen_id)
-		response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStockBodega?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s, 'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
+		response= HTTParty.post('http://bodega-integracion-2014.herokuapp.com/moveStockBodega',
+		:body => { 	:productoId => producto_id, 
+    				:almacenId => almacen_id
+    				},
+    	:headers => { "Authorization" => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)})
+		
 		puts response.to_s
 		
 	end
 	def dispatch_stock(producto_id,direccion,precio,pedido_id) #DELETE
-		response= RestClient.delete 'http://bodega-integracion-2014.herokuapp.com/stock?productoId='+producto_id.to_s+'&direccion='+direccion.to_s+'&precio='+precio.to_s+'&pedidoId='+pedido_id.to_s, 'Authorization' => "UC grupo3:"+generate_hash("DELETE"+producto_id.to_s+direccion.to_s+precio.to_s,pedido_id.to_s).to_s
+		response= HTTParty.delete('http://bodega-integracion-2014.herokuapp.com/stock',
+		:body => { 	:productoId => producto_id, 
+						:direccion => direccion,
+						:precio	=> precio,
+						:pedidoId => pedido_id					
+					},
+    	:headers => { "Authorization" => "UC grupo3:"+generate_hash('DELETE'+producto_id.to_s+direccion.to_s+precio.to_s+pedido_id.to_s)})
+
 		puts response.to_s
 		
 	end
