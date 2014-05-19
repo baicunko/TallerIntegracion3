@@ -6,8 +6,13 @@ class CreateReservas < ActiveRecord::Migration
       t.string :sku
       t.integer :cantidad
       t.string :responsable
+      t.integer :utilizado
+
 
       t.timestamps
     end
+    def change
+   change_column :reservas, :sku, :integer
+  end
   end
 end
