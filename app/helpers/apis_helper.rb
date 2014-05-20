@@ -34,7 +34,7 @@ module ApisHelper
 		hola2=RestClient.post a, 
 			'usuario' => 'grupo3', 
 			'password' => 'grupo3',
-			'almacen_id' => '53571cde682f95b80b7621c1', 
+			'almacenId' => '53571cde682f95b80b7621c1', 
 			'SKU' => sku, 
 			'cantidad' => cant
 		t = JSON.parse(hola1)['error']
