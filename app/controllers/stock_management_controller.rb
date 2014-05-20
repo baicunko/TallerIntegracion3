@@ -1,7 +1,5 @@
 class StockManagementController < ApplicationController
 
-
-
 	require 'json'
 
 	def index
@@ -15,13 +13,8 @@ class StockManagementController < ApplicationController
 		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
 		# puts response.length.to_s
 		parsed_json = ActiveSupport::JSON.decode(response)
-
-
-		puts parsed_json.length
-
 		
 		# puts parsed_json.length
-
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
@@ -175,6 +168,7 @@ class StockManagementController < ApplicationController
   def getcantidadtotal(sku)
     total=0
 
+    
 
 
       @almacen1=get_stock(Store.find(1)._id,sku)
@@ -192,7 +186,8 @@ class StockManagementController < ApplicationController
       @almacen5=get_stock(Store.find(5)._id,sku)        
       #puts "Almacen 5:"+ @almacen5.length.to_s
       total+=@almacen5.length
-
+      
+    
     total
   end
 
@@ -218,7 +213,7 @@ class StockManagementController < ApplicationController
   end
 
   def despachar_sku(sku,cantidad,precio,direccion, pedido_id)#NO ESTÁ PROBADO
-    (0..cantidad-1)
+    (0..cantidad-1).each do |i|
       @despacho=get_stock(Store.find(1)._id,sku)
       (0..@despacho.length-1).each do |j|
         if (@despacho[j]['despachado']==false)
@@ -230,6 +225,24 @@ class StockManagementController < ApplicationController
           end
         puts i.to_s
         end
+      end
+    end
+  end
+
+  def despachar_sku_para_grupos(sku,cantidad,almacen_id)
+    @despacho=get_stock(Store.find(1)._id,sku)
+    (0..cantidad-1).each do |i|
+      (0..@despacho.length-1).each do |j|
+        if (@despacho[j]['despachado']==false)
+          puts @despacho[j]['despachado'].to_s
+          move_stock_to_warehouse(@despacho[j]['_id'],almacen_id)
+          i+=1
+          if (i == cantidad)
+            break
+          end
+        puts i.to_s
+        end
+      end
       end
     end
   end

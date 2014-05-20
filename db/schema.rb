@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20140520021435) do
 
   create_table "apis", force: true do |t|
@@ -90,6 +89,10 @@ ActiveRecord::Schema.define(version: 20140520021435) do
     t.datetime "fecha_vigencia"
     t.integer  "costo_producto"
     t.integer  "costo_traspaso"
+    t.string   "direccion"
+    t.string   "store_id"
+    t.string   "_id"
+    t.boolean  "despachado"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "costo_almacenamiento"
