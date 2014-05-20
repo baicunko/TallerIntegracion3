@@ -92,6 +92,7 @@ module ApplicationHelper
           quiebrerecord.fechaquiebre=Time.now
           quiebrerecord.pedido=tupla["id"];
           costo=0
+=begin
           pedido.each do |j|
             precio=PreciosTemporal.where(SKU:pedido["sku"])
             cantidadComprada=j.cantidad.to_i
@@ -100,6 +101,12 @@ module ApplicationHelper
 
           end
           quiebre.dineroperdido=costo;
+          quiebrerecord.save
+
+
+
+
+=end      quiebre.dineroperdido=0;
           quiebrerecord.save
         end
 
