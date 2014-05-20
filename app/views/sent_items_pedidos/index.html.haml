@@ -13,6 +13,7 @@
       %th= model_class.human_attribute_name(:created_at)
       %th VentaTotal 
   %tbody
+    - a=0
     - @sent_items_pedidos.each do |sent_items_pedido|
       %tr
         %td= link_to sent_items_pedido.id, sent_items_pedido_path(sent_items_pedido)
@@ -22,4 +23,5 @@
         %td= sent_items_pedido.direccion
         %td= sent_items_pedido.pedidoid
         %td= sent_items_pedido.created_at
-        %td= (sent_items_pedido.cantidad*sent_items_pedido.precio)
+        %td= a=a+(sent_items_pedido.cantidad*sent_items_pedido.precio)
+  %td= 'Total Ventas : '+a.to_s
