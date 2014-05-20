@@ -1,6 +1,11 @@
 RailsApp::Application.routes.draw do
 
 
+  get "home/index"
+  
+  get 'stock_management/skuswithstock/:almacen_id' => 'stock_management#get_skuswithstock'
+
+
   resources :quiebres
 
   resources :apis
@@ -16,9 +21,15 @@ RailsApp::Application.routes.draw do
 
   resources :stores
 
+
   get 'stock_management' => 'stock_management#index'
   
   get 'stock_management/get_store' => 'stock_management#get_store'
+
+  get 'stock_management/skuswithstock/:almacen_id' => 'stock_management#get_skuswithstock'
+
+  get 'stores/show2/:almacen_id' =>'stores#show2'
+
 
   resources :clients
 
@@ -39,8 +50,7 @@ RailsApp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+  root 'home#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

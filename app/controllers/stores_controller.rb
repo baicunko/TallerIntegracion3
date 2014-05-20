@@ -4,7 +4,8 @@ class StoresController < ApplicationController
   # GET /stores
   # GET /stores.json
   def index
-    @stores = Store.all
+    a=StockManagementController.new
+    @stores = a.get_store
   end
 
   # GET /stores/1
@@ -13,7 +14,12 @@ class StoresController < ApplicationController
     # puts "fddddddddddddddddddddddd"+@store._id
     # @current_store=Store.where("_id = ?" , params[:_id])_
     # puts "fddddddddddddddddddddddd"+@current_store.used_space.to_s
-    @stock=StockInStore.where("store_id = ?" , @store._id)
+    # @stock=StockInStore.where("store_id = ?" , almacen_id)
+  end
+
+  def show2
+    a=StockManagementController.new
+    @stores = a.get_store
   end
   # GET /stores/new
   def new
@@ -67,7 +73,15 @@ class StoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_store
-      @store = Store.find(params[:id])
+      @store = Store.find(params[:alamcen_id])
+    #      def set_store
+    #   almacen=a.get_store
+    #   almacen.each do |alm|
+    #     if (almacen['_id']==params[:id])
+    #       @store=alm
+    #     end
+    #   # @store = Store.find(params[:id])
+    # end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

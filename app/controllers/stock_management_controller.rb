@@ -28,8 +28,8 @@ class StockManagementController < ApplicationController
 			# puts parsed_json[i].[_id]
 		end
 
-		@stores=Store.all
-		return response.to_json
+		 # @stores=get_skuswithstock(params[:almacen_id])
+		return parsed_json
 	end
 
 	def get_skuswithstock(almacen_id)
@@ -43,7 +43,7 @@ class StockManagementController < ApplicationController
 		
 			# store= Store.find(_id:parsed_json[i]['_id'])
 		end
-    return response
+    return parsed_json
 	end
 
 	def actualizar_skus_with_stock_total
