@@ -30,7 +30,7 @@ RailsApp::Application.routes.draw do
 
   scope :path => "/api" do
     get "/" => 'api#index', as: 'api_docs'
-    match "/pedirProducto" => "api#despachar_producto_fuera", via: [:post]
+    match "/pedirProducto" => "apis#despachar_producto_fuera", via: [:post]
   end
 
   #namespace :api do

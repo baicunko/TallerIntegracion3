@@ -18,7 +18,7 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			# Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
+			#Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
 
 			# store= Store.find(_id:parsed_json[i]['_id'])
 			# store.update(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space: 100 ,total_space: parsed_json[i]['totalSpace'])
@@ -168,7 +168,7 @@ class StockManagementController < ApplicationController
   def getcantidadtotal(sku)
     total=0
 
-    if(!@conexion)
+    
 
 
       @almacen1=get_stock(Store.find(1)._id,sku)
@@ -186,8 +186,8 @@ class StockManagementController < ApplicationController
       @almacen5=get_stock(Store.find(5)._id,sku)        
       #puts "Almacen 5:"+ @almacen5.length.to_s
       total+=@almacen5.length
-      @conexion=true
-    end
+      
+    
     total
   end
 
