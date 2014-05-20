@@ -1,0 +1,44 @@
+= form_for @product, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :sku, :class => 'control-label'
+    .controls
+      = f.text_field :sku, :class => 'text_field'
+  .control-group
+    = f.label :precio, :class => 'control-label'
+    .controls
+      = f.text_field :precio, :class => 'text_field'
+  .control-group
+    = f.label :fecha_actualizacion, :class => 'control-label'
+    .controls
+      = f.text_field :fecha_actualizacion, :class => 'text_field'
+  .control-group
+    = f.label :fecha_vigencia, :class => 'control-label'
+    .controls
+      = f.text_field :fecha_vigencia, :class => 'text_field'
+  .control-group
+    = f.label :costo_producto, :class => 'control-label'
+    .controls
+      = f.text_field :costo_producto, :class => 'text_field'
+  .control-group
+    = f.label :costo_traspaso, :class => 'control-label'
+    .controls
+      = f.text_field :costo_traspaso, :class => 'text_field'
+  .control-group
+    = f.label :direccion, :class => 'control-label'
+    .controls
+      = f.text_field :direccion, :class => 'text_field'
+  .control-group
+    = f.label :store_id, :class => 'control-label'
+    .controls
+      = f.text_field :store_id, :class => 'text_field'
+  .control-group
+    = f.label :despachado, :class => 'control-label'
+    .controls
+      = f.text_field :despachado, :class => 'text_field'
+  .control-group
+    = f.label :costo_almacenamiento, :class => 'control-label'
+    .controls
+      = f.text_field :costo_almacenamiento, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), products_path, :class => 'btn'

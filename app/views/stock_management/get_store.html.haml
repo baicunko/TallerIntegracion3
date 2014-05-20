@@ -1,24 +1,20 @@
 %table
   %thead
     %tr
-      %th Id
-      %th Used space
-      %th Total space
-      %th Reception
-      %th Dispatch
-      %th Lung
-      %th
-      %th
-      %th
+      %th Sku
+      %th Total
+      / %th Total space
+      / %th Reception
+      / %th Dispatch
+      / %th Lung
+      / %th
+      / %th
+      / %th
   %tbody
     - @stores.each do |store|
       %tr
-        %td= store._id
-        %td= store.used_space
-        %td= store.total_space
-        %td= store.reception
-        %td= store.dispatch
-        %td= store.lung
-        %td= link_to 'Show', store
-        %td= link_to 'Edit', edit_store_path(store)
-        %td= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= store['_id']
+        %td= store['total']
+        / %td= link_to 'Show', store
+        / %td= link_to 'Edit', edit_store_path(store)
+        / %td= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }

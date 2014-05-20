@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    a=StockManagementController.new
+    @products = a.get_skuswithstock(@store._id)
   end
 
   # GET /products/1
@@ -71,6 +72,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:sku, :store_id, :costs)
+      params.require(:product).permit(:sku, :store_id, :costs, :_id)
     end
 end
