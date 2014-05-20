@@ -1,7 +1,26 @@
 class ApisController < ApplicationController
-  before_action :set_api, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+
+  def self.hola
+    require 'openssl'
+    require "base64"
+
+
+    autorizacion = UsuariosClavesApi.find_by_grupo('grupo3')
+    sql1 = "Select password from usuarios_claves_apis WHERE grupo = 'grupo3';"
+    records_array = UsuariosClavesApi.connection.execute(sql1)
+    clave = records_array[0][0]
+    hash  = OpenSSL::HMAC.digest('sha1', "HOLA", clave.to_s)
+    pass_nueva=Base64.encode64(hash)
+    p pass_nueva
+    p clave
+
+  end
 
   def despachar_producto_fuera
+
+    require 'openssl'
+    require "base64"
 
     #Verificamos parámetros correctos
     if params["usuario"].nil? or params["password"].nil? or params["almacen_id"].nil? or params["SKU"].nil? or params["cantidad"].nil?
@@ -23,14 +42,21 @@ class ApisController < ApplicationController
       render :json => [:error => "Grupo no existe."].to_json and return
     else
       autorizacion = UsuariosClavesApi.find_by_grupo(user)
-      clave = autorizacion.password
-      pass_nueva = Base64.encode64(Digest::HMAC.digest(clave, ENV["WAREHOUSE_PRIVATE_KEY"], Digest::SHA1))
+      sql1 = "Select password from usuarios_claves_apis WHERE grupo = '#{user}';"
+      records_array = UsuariosClavesApi.connection.execute(sql1)
+      clave = records_array[0][0]
+      pass_nueva = clave
+      #hash  = OpenSSL::HMAC.digest('sha1', "HOLA", pass_recibida.to_s)
+      #pass_nueva=Base64.encode64(hash)
+      #render :json => [:error => pass_nueva].to_json and return
+      #pass_nueva = Base64.encode64(Digest::HMAC.digest(clave, ENV["WAREHOUSE_PRIVATE_KEY"], Digest::SHA1))
       if pass_recibida != pass_nueva
         render :json => [:error => "Contraseña incorrecta."].to_json and return
       end
     end
 
-    stock_sku = metodoproximoaestarlisto
+    s = StockManagementController.new
+    stock_sku = s.getcantidadtotal(sku)
 
     if stock_sku == 0
       render :json => [:SKU => sku.to_s, :cantidad => 0].to_json and return
@@ -42,7 +68,7 @@ class ApisController < ApplicationController
     if stock_efectivo > cant
       cantidad_despachada = 0
       cant.times do
-        moveStock(sku, almacen)
+        StockManagement.move_stock_to_warehouse(sku, almacen)
         cantidad_despachada += 1
 
       end
