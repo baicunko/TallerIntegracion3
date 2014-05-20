@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fef3793-5322-4a1b-91a4-22b3353b493b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/schedule.rb" afterPath="$PROJECT_DIR$/config/schedule.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stock_management_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stock_management_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="46" selection-start="7338" selection-end="7346" vertical-scroll-proportion="0.0" vertical-offset="2955" max-vertical-offset="5640">
+            <state line="356" column="5" selection-start="10999" selection-end="10999" vertical-scroll-proportion="6.1845636" vertical-offset="1654" max-vertical-offset="5640">
               <folding />
             </state>
           </provider>
@@ -84,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedule.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="schedule.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/schedule.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="29" selection-start="580" selection-end="580" vertical-scroll-proportion="0.6896552" vertical-offset="0" max-vertical-offset="609">
+            <state line="28" column="29" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -130,10 +129,10 @@
         <option value="$PROJECT_DIR$/app/models/ftp_pedido.rb" />
         <option value="$PROJECT_DIR$/app/models/contact.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/clickbotons_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/schedule.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
       </list>
     </option>
   </component>
@@ -936,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="46" selection-start="7338" selection-end="7346" vertical-scroll-proportion="0.0" vertical-offset="2955" max-vertical-offset="5640">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="35" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
@@ -980,7 +972,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/schedule.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="29" selection-start="580" selection-end="580" vertical-scroll-proportion="0.6896552" vertical-offset="0" max-vertical-offset="609">
+        <state line="28" column="29" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="356" column="5" selection-start="10999" selection-end="10999" vertical-scroll-proportion="6.1845636" vertical-offset="1654" max-vertical-offset="5640">
           <folding />
         </state>
       </provider>
