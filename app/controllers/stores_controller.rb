@@ -12,6 +12,7 @@ class StoresController < ApplicationController
   # GET /stores/1.json
   def show
     a=StockManagementController.new
+    @almacenID=params[:almacen_id]
     @stores = a.get_skuswithstock(params[:almacen_id])
     # puts "fddddddddddddddddddddddd"+@store._id
     # @current_store=Store.where("_id = ?" , params[:_id])_
