@@ -20,7 +20,7 @@ class StockManagementController < ApplicationController
     (0..parsed_json.length-1).each do |i|
       JSON.parse(parsed_json[i].to_json)
       puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-      #Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
+      Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
 
       # @stores=get_skuswithstock(params[:almacen_id])
 
