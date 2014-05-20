@@ -1,6 +1,8 @@
 RailsApp::Application.routes.draw do
 
 
+  resources :sent_items_pedidos
+
   resources :quiebres
 
   resources :apis

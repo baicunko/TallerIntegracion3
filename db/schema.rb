@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20140520021435) do
+ActiveRecord::Schema.define(version: 20140520041531) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -113,6 +112,17 @@ ActiveRecord::Schema.define(version: 20140520021435) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "fila"
+  end
+
+  create_table "sent_items_pedidos", force: true do |t|
+    t.integer  "sku"
+    t.integer  "cantidad"
+    t.integer  "precio"
+    t.string   "direccion"
+    t.integer  "pedidoid"
+    t.boolean  "respuesta"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "spree_addresses", force: true do |t|
