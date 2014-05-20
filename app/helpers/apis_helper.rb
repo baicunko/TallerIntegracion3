@@ -7,7 +7,7 @@ module ApisHelper
 			a = 'http://integra.ing.puc.cl/api/pedirProducto'
 			if (i==1)
 				a.insert(14,'4')
-			else if (i==2)
+			elsif (i==2)
 				a.insert(14,'5')
 			else
 				a.insert(14,'8')
