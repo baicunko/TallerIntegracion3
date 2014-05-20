@@ -21,13 +21,13 @@ module ApplicationHelper
     LoadingHelper.import;
     LoadingHelper.importProductosJson;
     PreciosTemporalsHelper.crear_tabla;
-    ProcesarPedidos
+    procesarpedido
 
 
 
   end
 
-  def self.ProcesarPedidos
+  def self.procesarpedido
     #Cada 10 minutos este metodo se debe llamar
     stockController=StockManagementController.new
     stockController.get_store

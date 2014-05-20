@@ -12,13 +12,7 @@ class StockManagementController < ApplicationController
     response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
     # puts response.length.to_s
     parsed_json = ActiveSupport::JSON.decode(response)
-
-
     # puts parsed_json.length
-
-
-    # puts parsed_json.length
-
     (0..parsed_json.length-1).each do |i|
       JSON.parse(parsed_json[i].to_json)
       # puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
@@ -60,7 +54,6 @@ class StockManagementController < ApplicationController
 			# Product.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(store_id: parsed_json[i]['almacen'],sku:parsed_json[i]['sku'],direccion: parsed_json[i]['direccion'],despachado:parsed_json[i]['despachado'] )	
 	
 		end
-    
 
     @stores=Store.all
     return response.to_json
@@ -185,8 +178,6 @@ class StockManagementController < ApplicationController
   def getcantidadtotal(sku)
     total=0
 
-
-
     @almacen1=get_stock(Store.find(1)._id,sku)
     total+=@almacen1.length
     #puts "Almacen 1:"+ @almacen1.length.to_s
@@ -227,6 +218,7 @@ class StockManagementController < ApplicationController
     end
   end
 
+
   def despachar_sku(sku,cantidad,precio,direccion, pedido_id)#NO ESTÁ PROBADO
     # (0..cantidad-1).each do |i|
     i=0
@@ -245,136 +237,24 @@ class StockManagementController < ApplicationController
     end
     
   end
+
+  def despachar_sku_para_grupos(sku,cantidad,almacen_id)
+    @despacho=get_stock(Store.find(1)._id,sku)
+    (0..cantidad-1).each do |i|
+      (0..@despacho.length-1).each do |j|
+        if (@despacho[j]['despachado']==false)
+          puts @despacho[j]['despachado'].to_s
+          move_stock_to_warehouse(@despacho[j]['_id'],almacen_id)
+          i+=1
+          if (i == cantidad)
+            break
+          end
+          puts i.to_s
+        end
+      end
+    end
+  end
 end
-
-
-
-
-  # @almacen2=get_stock(Store.find(2)._id,sku)
-  # puts @almacen2.length
-  # (0..@almacen2.length-1).each do |j|
-  #   if (@almacen2[j]['despachado']==false)
-  #     puts @almacen2[j]['despachado'].to_s
-  #     move_stock(@almacen2[j]['_id'],Store.find(1)._id)
-  #     i+=1
-  #     if (i == cantidad)
-  #       break
-  #     end
-  #     puts i.to_s
-  #   end
-  # end
-
-  # @almacen3=get_stock(Store.find(3)._id,sku)
-  # puts @almacen3.length
-  # (0..@almacen3.length-1).each do |j|
-  #   if (@almacen3[j]['despachado']==false)
-  #     puts @almacen3[j]['despachado'].to_s
-  #     move_stock(@almacen3[j]['_id'],Store.find(1)._id)
-  #     i+=1
-  #     if (i == cantidad)
-  #       break
-  #     end
-  #     puts i.to_s
-  #   end
-  # end
-  # @almacen4=get_stock(Store.find(4)._id,sku)
-  # puts @almacen4.length
-  # (0..@almacen4.length-1).each do |j|
-  #   if (@almacen4[j]['despachado']==false)
-  #     puts @almacen4[j]['despachado'].to_s
-  #     move_stock(@almacen4[j]['_id'],Store.find(1)._id)
-  #     i+=1
-  #     if (i == cantidad)
-  #       break
-  #     end
-  #     puts i.to_s
-  #   end
-  # end
-  # @almacen3=get_stock(Store.find(5)._id,sku)
-  # puts @almacen3.length
-  # (0..@almacen3.length-1).each do |j|
-  #   if (@almacen3[j]['despachado']==false)
-  #     puts @almacen3[j]['despachado'].to_s
-  #     move_stock(@almacen3[j]['_id'],Store.find(1)._id)
-  #     i+=1
-  #     if (i == cantidad)
-  #       break
-  #     end
-  #     puts i.to_s
-  #   end
-
-  # total+=@almacen1.length
-  # @almacen2=get_stock(Store.find(2)._id,sku)
-  # total+=@almacen2.length
-  # @almacen3=get_stock(Store.find(3)._id,sku)
-  # puts @almacen3[5]['_id']
-  # total+=@almacen3.length
-  # @almacen4=get_stock(Store.find(4)._id,sku)
-  # total+=@almacen4.length
-  # @almacen5=get_stock(Store.find(5)._id,sku)
-  # total+=@almacen5.length
-
-
-
-
-
-
-
-
-
-=begin
-  parsed_json = ActiveSupport::JSON.decode(@almacen1)
-  (0..parsed_json.length-1).each do |i|
-    JSON.parse(parsed_json[i].to_json)
-    if(parsed_json[i]['sku']==sku)
-      total+=parsed_json[i][total]
-    end
-
-  end
-
-  parsed_json = ActiveSupport::JSON.decode(@almacen2)
-  (0..parsed_json.length-1).each do |i|
-    JSON.parse(parsed_json[i].to_json)
-    if(parsed_json[i]['sku']==sku)
-      total+=parsed_json[i][total]
-    end
-
-  end
-
-  parsed_json = ActiveSupport::JSON.decode(@almacen3)
-  (0..parsed_json.length-1).each do |i|
-    JSON.parse(parsed_json[i].to_json)
-    if(parsed_json[i]['sku']==sku)
-      total+=parsed_json[i][total]
-    end
-
-  end
-
-  parsed_json = ActiveSupport::JSON.decode(@almacen4)
-  (0..parsed_json.length-1).each do |i|
-    JSON.parse(parsed_json[i].to_json)
-    if(parsed_json[i]['sku']==sku)
-      total+=parsed_json[i][total]
-    end
-
-  end
-
-  parsed_json = ActiveSupport::JSON.decode(@almacen5)
-  (0..parsed_json.length-1).each do |i|
-    JSON.parse(parsed_json[i].to_json)
-    if(parsed_json[i]['sku']==sku)
-      total+=parsed_json[i][total]
-    end
-
-  end
-=end
-
-
-
-
-
-
-
 
 
 

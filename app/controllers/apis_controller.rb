@@ -45,12 +45,15 @@ class ApisController < ApplicationController
       sql1 = "Select password from usuarios_claves_apis WHERE grupo = '#{user}';"
       records_array = UsuariosClavesApi.connection.execute(sql1)
       clave = records_array[0][0]
-      pass_nueva = clave
-      #hash  = OpenSSL::HMAC.digest('sha1', "HOLA", pass_recibida.to_s)
-      #pass_nueva=Base64.encode64(hash)
-      #render :json => [:error => pass_nueva].to_json and return
+      #clave = clave.delete! '\\n'
+      
+      #pass_nueva = clave
+      hash  = OpenSSL::HMAC.digest('sha1', "HOLA", pass_recibida.to_s)
+      pass_nueva=Base64.encode64(hash)
+      pass_nueva = pass_nueva.delete! "\n"
+      #render :json => [:error => pass_nueva, :error2 => clave, :passcod => pass_recibida ].to_json and return
       #pass_nueva = Base64.encode64(Digest::HMAC.digest(clave, ENV["WAREHOUSE_PRIVATE_KEY"], Digest::SHA1))
-      if pass_recibida != pass_nueva
+      if clave.to_s != pass_nueva.to_s
         render :json => [:error => "Contraseña incorrecta."].to_json and return
       end
     end
@@ -66,13 +69,9 @@ class ApisController < ApplicationController
     stock_efectivo = stock_sku - stock_reservado
 
     if stock_efectivo > cant
-      cantidad_despachada = 0
-      cant.times do
-        StockManagement.move_stock_to_warehouse(sku, almacen)
-        cantidad_despachada += 1
+        s.despachar_sku_para_grupos(sku,cant,almacen)
 
-      end
-      render :json => [:SKU => sku.to_s, :cantidad => cantidad_despachada.to_i].to_json and return
+      render :json => [:SKU => sku.to_s, :cantidad => cant.to_i].to_json and return
     else
       render :json => [:error => "No hay stock suficiente."].to_json and return
     end
