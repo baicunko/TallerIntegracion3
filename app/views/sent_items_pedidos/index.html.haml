@@ -10,7 +10,6 @@
       %th= model_class.human_attribute_name(:precio)
       %th= model_class.human_attribute_name(:direccion)
       %th= model_class.human_attribute_name(:pedidoid)
-      %th= model_class.human_attribute_name(:respuesta)
       %th= model_class.human_attribute_name(:created_at)
       %th VentaTotal 
   %tbody
@@ -22,6 +21,5 @@
         %td= sent_items_pedido.precio
         %td= sent_items_pedido.direccion
         %td= sent_items_pedido.pedidoid
-        %td= sent_items_pedido.respuesta
         %td= sent_items_pedido.created_at
-        %td
+        %td= (sent_items_pedido.cantidad*sent_items_pedido.precio)
