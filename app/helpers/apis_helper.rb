@@ -3,25 +3,46 @@ module ApisHelper
 	require 'json'
 
 	def self.pedirProducto(sku, cant)
-		3.times do |i|
-			a = 'http://integra.ing.puc.cl/api/pedirProducto'
-			if (i==1)
-				a.insert(14,'4')
-			elsif (i==2)
-				a.insert(14,'5')
-			else
-				a.insert(14,'8')
-			end
-			hola=RestClient.post a, 
+		a = 'http://integra4.ing.puc.cl/api/pedirProducto'
+		hola=RestClient.post a, 
 			'usuario' => 'grupo3', 
-			'password' => 'grupo3',
+			'password' => '05452d511826a15ba32d6fc4f3562ea75b16db8f',
 			'almacen_id' => '53571cde682f95b80b7621c1', 
 			'SKU' => sku, 
 			'cantidad' => cant
-			y = JSON.parse(hola)['error']
-			if (!y)
-				break
-			end
-		end
+		y = JSON.parse(hola)['error']
+		p y
+				if (!y)
+					return
+				end
+
+		
+		a = 'http://integra8.ing.puc.cl/api/pedirProducto'
+		hola1=RestClient.post a, 
+			'usuario' => 'grupo3', 
+			'password' => '05452d511826a15ba32d6fc4f3562ea75b16db8f',
+			'almacen_id' => '53571cde682f95b80b7621c1', 
+			'SKU' => sku, 
+			'cantidad' => cant
+		s = JSON.parse(hola1)[0]['error']
+		p s
+				if (!s)
+					return
+				end
+		
+		a = 'http://integra5.ing.puc.cl/api/v1/pedirProducto'
+		hola2=RestClient.post a, 
+			'usuario' => 'grupo3', 
+			'password' => 'grupo3',
+			'almacenId' => '53571cde682f95b80b7621c1', 
+			'SKU' => sku, 
+			'cantidad' => cant
+		t = JSON.parse(hola1)['error']
+		p s
+				if (!s)
+					return
+				end
+
+		
 	end
 end

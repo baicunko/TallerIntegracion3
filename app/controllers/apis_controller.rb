@@ -20,6 +20,7 @@ class ApisController < ApplicationController
     sku = params["SKU"]
     cant = params["cantidad"].to_i
 
+
     #Verificar grupo y clave
     sql = "Select * from usuarios_claves_apis WHERE grupo = '#{user}';"
     records_array = UsuariosClavesApi.connection.execute(sql)
