@@ -1,5 +1,7 @@
 class StockManagementController < ApplicationController
 
+
+
 	require 'json'
 
 	def index
@@ -13,7 +15,7 @@ class StockManagementController < ApplicationController
 		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
 		puts response.length.to_s
 		parsed_json = ActiveSupport::JSON.decode(response)
-		
+
 		puts parsed_json.length
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
