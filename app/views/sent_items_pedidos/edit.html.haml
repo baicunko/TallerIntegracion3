@@ -1,7 +1,4 @@
-%h1 Editing sent_items_pedido
-
-= render 'form'
-
-= link_to 'Show', @sent_items_pedido
-\|
-= link_to 'Back', sent_items_pedidos_path
+- model_class = SentItemsPedido
+.page-header
+  %h1=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize
+= render :partial => "form"
