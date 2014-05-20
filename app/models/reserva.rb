@@ -15,16 +15,18 @@ class Reserva < ActiveRecord::Base
     for row in @ws.rows
       if (i>3)
         i+=1
-        sk = row[0]
-        client = row[1]
-        cantida = row[2].to_i
-        utilizad =  row[3].to_i
-        fech= row[4].to_datetime
-        responsabl = row[5]
-        probando= Reserva.where(sku:sk,cliente:client,fecha:fech,fila:i)
-        if(probando.count==0)
-          res = Reserva.new( cliente: client, sku: sk, cantidad: cantida, responsable: responsabl, utilizado: utilizad, fecha: fech,fila:i)
-          res.save
+        if(row[4].to_datetime+7.day>Time.now)
+          sk = row[0]
+          client = row[1]
+          cantida = row[2].to_i
+          utilizad =  row[3].to_i
+          fech= row[4].to_datetime
+          responsabl = row[5]
+          probando= Reserva.where(sku:sk,cliente:client,fecha:fech,fila:i)
+          if(probando.count==0)
+            res = Reserva.new( cliente: client, sku: sk, cantidad: cantida, responsable: responsabl, utilizado: utilizad, fecha: fech,fila:i)
+            res.save
+          end
         end
 
 
@@ -34,21 +36,50 @@ class Reserva < ActiveRecord::Base
     end
   end
 
-  def self.stockReservado(sku)
-    valor=0
-    sql = Reserva.where(sku:sku)
-    sql.each do |tuplas|
-      if(tuplas["fecha"]+7.day>Time.now)
-        valor+=tuplas["cantidad"]
-
+  def self.stockReservado(sku,cantidad,rut)
+    updateReservas=Reserva.all
+    updateReservas.each do |j| #reviso todo
+      if(j["fecha"]+7.day<Time.now) #Si es que la reserva esta vencida la cantidad es 0
+        Reserva.delete(j)
       end
     end
-    return valor
 
+    reservascliente=Reserva.where(sku:sku) #cuando estoy pidiendo una reserva por SKU
+    if(reservascliente.count==0)
+
+    end
+
+
+
+
+      todaslasreservasmias=0
+      todaslasreservasdeotros=0
+
+      reservascliente.each do |j|
+        if(j["cliente"]==rut)
+          todaslasreservasmias+=j["cantidad"]-j["utilizado"]
+
+        else
+          todaslasreservasdeotros+=j["cantidad"]
+
+        end
+
+      end
+      p " JOAAOAALALAL"
+      p todaslasreservasdeotros
+      return [todaslasreservasmias, todaslasreservasdeotros]
+
+
+
+    end
+
+
+
+  def self.updateutilizado (sku, cantidadutilizado, rut)
+    reservascliente=Reserva.where(sku: sku, cliente: rut)
+    reservascliente["utilizado"]+=cantidadutilizado
 
   end
-
-
 # Yet another way to do so.
   def self.exponer()
     p @ws.rows  #==> [["fuga", ""], ["foo", "bar]]
