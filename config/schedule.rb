@@ -26,7 +26,7 @@
 
 
 
-every :tuesday, :at => '1:25am' do # Use any day of the week or :weekend, :weekday
+every :tuesday, :at => '2:23am' do # Use any day of the week or :weekend, :weekday
   runner "ApplicationHelper.connect"
 end
 
