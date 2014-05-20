@@ -11,6 +11,7 @@ module ApisHelper
 				a.insert(14,'5')
 			else
 				a.insert(14,'8')
+			end
 			hola=RestClient.post a, 
 			'usuario' => 'grupo3', 
 			'password' => 'grupo3',
