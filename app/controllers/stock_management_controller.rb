@@ -15,13 +15,13 @@ class StockManagementController < ApplicationController
 		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
 		# puts response.length.to_s
 		parsed_json = ActiveSupport::JSON.decode(response)
-<<<<<<< HEAD
+
 
 		puts parsed_json.length
-=======
+
 		
 		# puts parsed_json.length
->>>>>>> 5f6c622c2c9426bd47335585473dc3c517db23fc
+
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
@@ -175,7 +175,7 @@ class StockManagementController < ApplicationController
   def getcantidadtotal(sku)
     total=0
 
-    if(!@conexion)
+
 
 
       @almacen1=get_stock(Store.find(1)._id,sku)
@@ -193,8 +193,8 @@ class StockManagementController < ApplicationController
       @almacen5=get_stock(Store.find(5)._id,sku)        
       #puts "Almacen 5:"+ @almacen5.length.to_s
       total+=@almacen5.length
-      @conexion=true
-    end
+
+
     total
   end
 
