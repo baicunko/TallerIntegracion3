@@ -33,7 +33,7 @@ module ApisHelper
 		b = 'http://integra2.ing.puc.cl/api/pedirProducto'
 		hola2=RestClient.post b, 
 			'usuario' => 'grupo3', 
-			'password' => 'grupo3',
+			'password' => 'kakQAo46rtCeQSIU96HKmQxUKQU=',
 			'almacenId' => '53571cde682f95b80b7621c1', 
 			'SKU' => sku, 
 			'cantidad' => cant

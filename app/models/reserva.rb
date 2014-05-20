@@ -36,6 +36,12 @@ class Reserva < ActiveRecord::Base
     end
   end
 
+  def self.stockReservadoTodo(sku)
+    sql = "select cantidad from reservas WHERE sku ="+sku
+    resultado = Reserva.connection.execute(sql)
+    return resultado[0][0]
+  end
+
   def self.stockReservado(sku,cantidad,rut)
     updateReservas=Reserva.all
     updateReservas.each do |j| #reviso todo
