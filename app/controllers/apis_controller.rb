@@ -1,5 +1,5 @@
 class ApisController < ApplicationController
-  before_action :set_api, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   def despachar_producto_fuera
 

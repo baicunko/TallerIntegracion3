@@ -11,15 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20140518223449) do
-
+ActiveRecord::Schema.define(version: 20140519000044) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -55,12 +52,9 @@ ActiveRecord::Schema.define(version: 20140518223449) do
     t.datetime "envio"
   end
 
-<<<<<<< HEAD
-=======
   create_table "optimizar_ftps", force: true do |t|
   end
 
->>>>>>> 0e4ab88f0e9bbaeb4c24eb441f783e43d1910d46
   create_table "precios_temporals", force: true do |t|
     t.integer  "SKU"
     t.integer  "precio"
@@ -885,7 +879,6 @@ ActiveRecord::Schema.define(version: 20140518223449) do
     t.boolean  "dispatch"
     t.boolean  "lung"
     t.string   "_id"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
