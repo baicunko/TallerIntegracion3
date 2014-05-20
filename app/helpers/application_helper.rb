@@ -22,6 +22,7 @@ module ApplicationHelper
     LoadingHelper.import;
     LoadingHelper.importProductosJson;
     PreciosTemporalsHelper.crear_tabla;
+    UsuariosClavesApi.usuarios_claves
 
 
 
@@ -31,8 +32,10 @@ module ApplicationHelper
   def self.procesarpedido
     #Cada 10 minutos este metodo se debe llamar
 
+
     stockController=StockManagementController.new
     stockController.get_store
+    stockController.liberar_recepcion
     Reserva.consumir
     FtpPedido.verPedidos;
     sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL GROUP BY id";
