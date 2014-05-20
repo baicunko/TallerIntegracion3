@@ -1,5 +1,7 @@
 class StockManagementController < ApplicationController
 
+
+
 	require 'json'
 
 	def index
@@ -13,12 +15,17 @@ class StockManagementController < ApplicationController
 		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
 		# puts response.length.to_s
 		parsed_json = ActiveSupport::JSON.decode(response)
+
+
+		puts parsed_json.length
+
 		
 		# puts parsed_json.length
+
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			# Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
+			#Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
 
 			# store= Store.find(_id:parsed_json[i]['_id'])
 			# store.update(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space: 100 ,total_space: parsed_json[i]['totalSpace'])
@@ -168,26 +175,24 @@ class StockManagementController < ApplicationController
   def getcantidadtotal(sku)
     total=0
 
-    if(!@conexion)
 
 
       @almacen1=get_stock(Store.find(1)._id,sku)
       total+=@almacen1.length
-      puts "Almacen 1:"+ @almacen1.length.to_s
+      #puts "Almacen 1:"+ @almacen1.length.to_s
       @almacen2=get_stock(Store.find(2)._id,sku)
       total+=@almacen2.length
-      puts "Almacen 2:"+ @almacen2.length.to_s
+      #puts "Almacen 2:"+ @almacen2.length.to_s
       @almacen3=get_stock(Store.find(3)._id,sku)
-      puts "Almacen 3:"+ @almacen3.length.to_s
+      #puts "Almacen 3:"+ @almacen3.length.to_s
       total+=@almacen3.length
       @almacen4=get_stock(Store.find(4)._id,sku)
       total+=@almacen4.length
-      puts "Almacen 4:"+ @almacen4.length.to_s
+      #puts "Almacen 4:"+ @almacen4.length.to_s
       @almacen5=get_stock(Store.find(5)._id,sku)        
-      puts "Almacen 5:"+ @almacen5.length.to_s
+      #puts "Almacen 5:"+ @almacen5.length.to_s
       total+=@almacen5.length
-      @conexion=true
-    end
+
     total
   end
 

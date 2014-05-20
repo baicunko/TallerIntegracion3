@@ -44,11 +44,7 @@ module ApplicationHelper
         #queryStock="SELECT SUM(stock) FROM stock_in_stores WHERE sku = "+tuplaEspecial["sku"].to_s
         stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"])
         #queryRespuesta=StockInStore.connection.execute(queryStock)
-
-        if(stockDisponible>=tuplaEspecial["cantidad"].to_i)
-
-
-
+        if(stockDisponible>=tuplaEspecial["cantidad"].to_i && stockDisponible-tuplaEspecial["cantidad"].to_i>=Reserva.stockReservado(tuplaEspecial["sku"]))
 
         else
           quiebre=true;
@@ -56,7 +52,6 @@ module ApplicationHelper
 
       end
       if(quiebre)
-        #el vecino tiene que mandar la wea, pero nadie lo tiene implementado, no wei.
         #poner cantidad
         hola=Quiebre.where(id: tupla["id"])
         if(hola.count==0)
@@ -67,12 +62,15 @@ module ApplicationHelper
           quiebre.save
         end
 
-
-
-
-
-
       else
+
+
+
+
+
+
+
+
 
 
 
