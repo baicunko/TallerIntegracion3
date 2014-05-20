@@ -50,9 +50,6 @@ module LoadingHelper
 
 
 
-  def self.Kappes
-
-  end
 
 
 
