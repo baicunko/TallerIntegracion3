@@ -18,10 +18,11 @@ module ApplicationHelper
     access2csv=Rails.root.to_s + "/app/"
     comando="/usr/bin/java -jar "+access2csv+"access2csv.jar "+access2csv+"products.accdb";
     system(comando);
+
     LoadingHelper.import;
     LoadingHelper.importProductosJson;
     PreciosTemporalsHelper.crear_tabla;
-    procesarpedido
+
 
 
 
@@ -29,12 +30,12 @@ module ApplicationHelper
 
   def self.procesarpedido
     #Cada 10 minutos este metodo se debe llamar
+
     stockController=StockManagementController.new
     stockController.get_store
     Reserva.consumir
-    #FtpPedido.verPedidos;
-    #sql = "SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL AND id=1048 GROUP BY id LIMIT 10"
-    sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL AND id=123456 GROUP BY id";
+    FtpPedido.verPedidos;
+    sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL GROUP BY id";
     records_array = FtpPedido.connection.execute(sql)
 
 
@@ -43,8 +44,6 @@ module ApplicationHelper
       quiebre=false;
       pedido=FtpPedido.where(id: tupla["id"])
       pedido.each do |tuplaEspecial|
-
-#FtpPedido.new
 
         stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"])
         if(stockDisponible>=tuplaEspecial["cantidad"].to_i)
@@ -61,6 +60,7 @@ module ApplicationHelper
           end
           if(reservasmias>0)
             quiebre=false
+
             Reserva.updateutilizado(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i,tuplaEspecial["rut"])
 
           end
@@ -74,6 +74,9 @@ module ApplicationHelper
 
         else
           quiebre=true;
+          executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tupla["id"]
+          FtpPedido.connection.execute(executarenSql)
+          ApisHelper.pedirProducto(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i)
         end
 
       end
@@ -85,17 +88,24 @@ module ApplicationHelper
           quiebrerecord.nombrecliente=Contact.query(tupla["direccion"])
           quiebrerecord.fechaquiebre=Time.now
           quiebrerecord.pedido=tupla["id"];
+          costo=0
+          pedido.each do |j|
+            precio=PreciosTemporal.where(SKU:pedido["sku"])
+            cantidadComprada=j.cantidad.to_i
+            costo=costo+(precio*cantidadComprada)
+
+
+          end
+          quiebre.dineroperdido=costo;
           quiebrerecord.save
         end
 
       else #estos son los pedidos sin quiebre! Si o si existe stock
         pedido.each do |tuplaPedidoEnviar|
           precio=PreciosTemporal.where(SKU:tuplaPedidoEnviar["sku"])
-          #direccion=Contact.queryDireccion('75644')
           direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
           cantidad=tuplaPedidoEnviar.cantidad
           cantidadInteger=cantidad.to_i
-          p precio
           precioInteger=precio[0].precio
 
           stockController.mover_a_despacho_sku(tuplaPedidoEnviar["sku"],cantidadInteger)
