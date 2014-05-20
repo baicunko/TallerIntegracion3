@@ -225,6 +225,7 @@ class StockManagementController < ApplicationController
   end
 
   def mover_a_despacho_sku(sku,cantidad)
+    puts "ESTOY EN MOVER DESPACHO"
     i=0
     if(i<=cantidad)
       (2..5).each do |a|
@@ -235,10 +236,11 @@ class StockManagementController < ApplicationController
             puts @almacen[j]['despachado'].to_s
             move_stock(@almacen[j]['_id'],Store.find(1)._id)
             i+=1
+            puts i.to_s
             if (i == cantidad)
               break
             end
-            puts i.to_s
+            p "SE ACABO EL METODO"
           end
         end
       end
@@ -247,21 +249,32 @@ class StockManagementController < ApplicationController
 
 
   def despachar_sku(sku,cantidad,precio,direccion, pedido_id)#NO ESTÁ PROBADO
-    (0..cantidad-1).each do |i|
-      @despacho=get_stock(Store.find(1)._id,sku)
-      (0..@despacho.length-1).each do |j|
-        if (@despacho[j]['despachado']==false)
-          puts @despacho[j]['despachado'].to_s
-          respuestaServidor=dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
-          SentItemsPedido.new(sku:sku,cantidad:cantidad,precio:precio,direccion:direccion,pedidoid:pedido_id,respuesta:respuestaServidor)
-          i+=1
-          if (i == cantidad)
-            break
-          end
-          puts i.to_s
+    i=0
+    p " ACABO DE ENTRAR A DESPACHAAAR"
+    p sku
+    p cantidad
+    p precio
+    p direccion
+    p pedido_id
+
+    @despacho=get_stock(Store.find(1)._id,sku)
+    (0..@despacho.length-1).each do |j|
+      if (@despacho[j]['despachado']==false)
+        puts @despacho[j]['despachado'].to_s
+        respuestaServidor=dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
+        puts "SEEEERVEEER"
+        puts respuestaServidor
+        puts "SEERRVEEEER"
+        SentItemsPedido.where(sku:sku,cantidad:cantidad,precio:precio,direccion:direccion,pedidoid:pedido_id,respuesta:respuestaServidor).first_or_create(sku:sku,cantidad:cantidad,precio:precio,direccion:direccion,pedidoid:pedido_id,respuesta:respuestaServidor)
+        i+=1
+        if (i == cantidad)
+          break
         end
+        puts i.to_s
+        p "SE ACABO EL METOOOODOOOOO"
       end
     end
+
   end
 
 

@@ -32,9 +32,11 @@ module ApplicationHelper
     stockController=StockManagementController.new
     stockController.get_store
     Reserva.consumir
-    FtpPedido.verPedidos;
-    sql = "SELECT * from ftp_pedidos WHERE entrega >= DATE ('now') AND envio IS NULL AND id=2625 GROUP BY id ORDER BY entrega"
+    #FtpPedido.verPedidos;
+    #sql = "SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL AND id=1048 GROUP BY id LIMIT 10"
+    sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL AND id=123456 GROUP BY id";
     records_array = FtpPedido.connection.execute(sql)
+
 
     records_array.each do |tupla|
 
@@ -42,8 +44,33 @@ module ApplicationHelper
       pedido=FtpPedido.where(id: tupla["id"])
       pedido.each do |tuplaEspecial|
 
+#FtpPedido.new
+
         stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"])
-        if(stockDisponible>=tuplaEspecial["cantidad"].to_i && stockDisponible-tuplaEspecial["cantidad"].to_i>=Reserva.stockReservado(tuplaEspecial["sku"]))
+        if(stockDisponible>=tuplaEspecial["cantidad"].to_i)
+          #Ahora tengo que ver si es que la persona que hizo el pedido tiene reserva
+          reservasmias, reservasotros=Reserva.stockReservado(tuplaEspecial["sku"].to_s,tuplaEspecial.cantidad.to_i,tuplaEspecial["rut"])
+          p reservasmias
+          p reservasotros
+          if(reservasmias==0 && reservasotros<stockDisponible) #caso cuando no he reservado pero si alcanza
+
+          else
+            quiebre=true
+
+
+          end
+          if(reservasmias>0)
+            quiebre=false
+            Reserva.updateutilizado(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i,tuplaEspecial["rut"])
+
+          end
+
+
+
+
+
+
+
 
         else
           quiebre=true;
@@ -62,11 +89,17 @@ module ApplicationHelper
         end
 
       else #estos son los pedidos sin quiebre! Si o si existe stock
-          pedido.each do |tuplaPedidoEnviar|
-          precio=PreciosTemporal.where[SKU:tuplaPedidoEnviar["sku"]]
+        pedido.each do |tuplaPedidoEnviar|
+          precio=PreciosTemporal.where(SKU:tuplaPedidoEnviar["sku"])
+          #direccion=Contact.queryDireccion('75644')
           direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
-          stockController.mover_a_despacho_sku(tuplaPedidoEnviar["sku"],tuplaPedidoEnviar["cantidad"])
-          stockController.despachar_sku(tuplaPedidoEnviar["sku"],tuplaPedidoEnviar["cantidad"],precio,direccion,tupla["id"])
+          cantidad=tuplaPedidoEnviar.cantidad
+          cantidadInteger=cantidad.to_i
+          p precio
+          precioInteger=precio[0].precio
+
+          stockController.mover_a_despacho_sku(tuplaPedidoEnviar["sku"],cantidadInteger)
+          stockController.despachar_sku(tuplaPedidoEnviar["sku"],cantidadInteger,precioInteger,direccion,tupla["id"])
 
         end
 

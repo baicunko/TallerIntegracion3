@@ -11,16 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140520021435) do
-=======
-
-
 ActiveRecord::Schema.define(version: 20140520042907) do
 
->>>>>>> aed7f5c31b2a3ab83fc2a24cf6fc0cbc3717bc98
-
   create_table "apis", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clickbotons", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -96,10 +94,6 @@ ActiveRecord::Schema.define(version: 20140520042907) do
     t.datetime "fecha_vigencia"
     t.integer  "costo_producto"
     t.integer  "costo_traspaso"
-    t.string   "direccion"
-    t.string   "store_id"
-    t.string   "_id"
-    t.boolean  "despachado"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "costo_almacenamiento"
