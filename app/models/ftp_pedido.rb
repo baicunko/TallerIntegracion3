@@ -1,6 +1,6 @@
 class FtpPedido < ActiveRecord::Base
 	require 'net/sftp'
-	require 'Nokogiri'
+	require 'nokogiri'
 
 	def self.verPedidos
 		Net::SFTP.start('integra.ing.puc.cl', 'grupo3', :password => '23093md') do |sftp|
