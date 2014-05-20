@@ -16,7 +16,7 @@ class StockManagementController < ApplicationController
     (0..parsed_json.length-1).each do |i|
       JSON.parse(parsed_json[i].to_json)
       # puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-      # Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
+      Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
 
 		
     end # @stores=get_skuswithstock(params[:almacen_id])
@@ -254,6 +254,36 @@ class StockManagementController < ApplicationController
       end
     end
   end
+
+  def liberar_recepcion
+    # get_skuswithstock
+    @stock_recepcion=get_skuswithstock(Store.find(2)._id)
+    puts @stock_recepcion.length
+    (0..@stock_recepcion.length-1).each do |rec|# (@stock_recepcion.usedSpace>0)
+      puts "Recepción tiene cosas todavia"
+      @almacenes=get_store
+      puts @stock_recepcion[rec]['total']
+      puts @stock_recepcion[rec]['_id']
+      if(@almacenes[2]['usedSpace']<(@almacenes[2]['totalSpace']+@stock_recepcion[rec]['total']))
+        @prods=get_stock(Store.find(2)._id,@stock_recepcion[rec]['_id'])   
+        puts "CABE"
+        @prods.each do |prod|
+          puts prod['_id']
+          move_stock(prod['_id'],Store.find(3)._id)
+          puts "Producto Movido"
+        end
+      else
+        @prods=get_stock(Store.find(2)._id,@stock_recepcion[rec]['_id'])   
+        puts "CABE en Pulmon"
+        @prods.each do |prod|
+          puts prod['_id']
+          move_stock(prod['_id'],Store.find(4)._id)
+        end
+      end
+    end
+      # move_stock(@almacen[j]['_id'],Store.find(1)._id
+  end
+
 end
 
 
