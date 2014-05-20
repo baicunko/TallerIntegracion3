@@ -51,7 +51,7 @@ class ApisController < ApplicationController
       render :json => [:SKU => sku.to_s, :cantidad => 0].to_json and return
     end
 
-    stock_reservado = Reserva.stockReservado(sku)
+    stock_reservado = Reserva.stockReservadoTodo(sku)
     stock_efectivo = stock_sku - stock_reservado
 
     if stock_efectivo > cant
