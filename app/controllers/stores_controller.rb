@@ -11,6 +11,8 @@ class StoresController < ApplicationController
   # GET /stores/1
   # GET /stores/1.json
   def show
+    a=StockManagementController.new
+    @stores = a.get_skuswithstock(params[:almacen_id])
     # puts "fddddddddddddddddddddddd"+@store._id
     # @current_store=Store.where("_id = ?" , params[:_id])_
     # puts "fddddddddddddddddddddddd"+@current_store.used_space.to_s
@@ -73,7 +75,11 @@ class StoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_store
-      @store = Store.find(params[:alamcen_id])
+
+      # @store = Store.where(params[:almacen_id])
+      a=StockManagementController.new
+      # @stores = a.get_store
+      @stores = a.get_skuswithstock(params[:almacen_id])
     #      def set_store
     #   almacen=a.get_store
     #   almacen.each do |alm|

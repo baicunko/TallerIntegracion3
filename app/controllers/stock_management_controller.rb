@@ -1,7 +1,6 @@
 class StockManagementController < ApplicationController
 
 
-
   require 'json'
 
   def index
@@ -9,29 +8,30 @@ class StockManagementController < ApplicationController
 
   end
 
-
-
   def get_store
     response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
     # puts response.length.to_s
     parsed_json = ActiveSupport::JSON.decode(response)
 
 
-    puts parsed_json.length
+    # puts parsed_json.length
 
 
     # puts parsed_json.length
 
     (0..parsed_json.length-1).each do |i|
       JSON.parse(parsed_json[i].to_json)
-      puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-      Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
+      # puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
+      # Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
 
-		 # @stores=get_skuswithstock(params[:almacen_id])
+		
+    end # @stores=get_skuswithstock(params[:almacen_id])
 		return parsed_json
-	end
+	
+  end
 
 	def get_skuswithstock(almacen_id)
+
 		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/skusWithStock?almacenId='+almacen_id.to_s,'Authorization' => "UC grupo3:"+generate_hash("GET"+almacen_id.to_s)
 		# puts response.to_s
 		parsed_json = ActiveSupport::JSON.decode(response)
@@ -58,14 +58,8 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 		 	JSON.parse(parsed_json[i].to_json)
 			# Product.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(store_id: parsed_json[i]['almacen'],sku:parsed_json[i]['sku'],direccion: parsed_json[i]['direccion'],despachado:parsed_json[i]['despachado'] )	
-		
+	
 		end
-      # store= Store.find(_id:parsed_json[i]['_id'])
-      # store.update(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space: 100 ,total_space: parsed_json[i]['totalSpace'])
-      # puts parsed_json[i].to_s
-      # puts parsed_json[i]['grupo'].to_s()
-      # parsed_json2 = ActiveSupport::JSON.decode(parsed_json)
-      # puts parsed_json[i].[_id]
     
 
     @stores=Store.all
@@ -83,8 +77,9 @@ class StockManagementController < ApplicationController
 
       # store= Store.find(_id:parsed_json[i]['_id'])
     end
-    return response
+    return parsed_json
   end
+
 
   def actualizar_skus_with_stock_total
     @store=Store.all
@@ -111,24 +106,6 @@ class StockManagementController < ApplicationController
                             },
                             :headers => { "Authorization" => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)})
 
-
-
-
-    # response= RestClient.post 'http://bodega-integracion-2014.herokuapp.com/moveStock',
-    # {:params => {'productoId' => producto_id ,'almacenId' => almacen_id,
-    # 'Authorization' => "UC grupo3:"+generate_hash('POST'+producto_id.to_s+almacen_id.to_s)}}
-
-    # RestClient.post Integra2::STOCK_API_URL+'moveStock', {:Authorization => generate_auth_hash('POST'+producto.to_s+almacen.to_s), :params=>{:almacenId=>almacen, :productoId=>producto}}
-    # # 'productoId' => producto_id , 'almacenId'=> almacen_id ,'Authorization' => "UC grupo3:"+generate_hash("POST"+producto_id.to_s+almacen_id.to_s).to_s
-    # #?productoId='+producto_id.to_s+'&almacenId='+almacen_id.to_s
-    # @result = HTTParty.post(@urlstring_to_post.to_str,
-    #   :body => { :subject => 'This is the screen name',
-    #              :issue_type => 'Application Problem',
-    #              :status => 'Open',
-    #              :priority => 'Normal',
-    #              :description => 'This is the description for the problem'
-    #            }.to_json,
-    #   :headers => { 'Content-Type' => 'application/json' } )
   end
 
   def move_stock_to_warehouse(producto_id,almacen_id)
@@ -251,21 +228,22 @@ class StockManagementController < ApplicationController
   end
 
   def despachar_sku(sku,cantidad,precio,direccion, pedido_id)#NO ESTÁ PROBADO
-    (0..cantidad-1).each do |martin|
-      @despacho=get_stock(Store.find(1)._id,sku)
-      (0..@despacho.length-1).each do |j|
-        if (@despacho[j]['despachado']==false)
-          puts @despacho[j]['despachado'].to_s
-          respuestaServidor=dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
-          SentItemsPedido.new(sku:sku,cantidad:cantidad,precio:precio,direccion:direccion,pedidoid:pedido_id,respuesta:respuestaServidor)
-          i+=1
-          if (i == cantidad)
-            break
-          end
-          puts i.to_s
+    # (0..cantidad-1).each do |i|
+    i=0
+    @despacho=get_stock(Store.find(1)._id,sku)
+    (0..@despacho.length-1).each do |j|
+      if (@despacho[j]['despachado']==false)
+        puts @despacho[j]['despachado'].to_s
+        respuestaServidor=dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
+        SentItemsPedido.new(sku:sku,cantidad:cantidad,precio:precio,direccion:direccion,pedidoid:pedido_id,respuesta:respuestaServidor)
+        i+=1
+        if (i == cantidad)
+          break
         end
+        puts i.to_s
       end
     end
+    
   end
 end
 
@@ -392,7 +370,7 @@ end
 =end
 
 
-end
+
 
 
 
