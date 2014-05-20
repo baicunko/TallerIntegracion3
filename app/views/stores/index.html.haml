@@ -10,18 +10,15 @@
       %th= model_class.human_attribute_name(:reception)
       %th= model_class.human_attribute_name(:dispatch)
       %th= model_class.human_attribute_name(:lung)
-      %th=t '.actions', :default => t("helpers.actions")
+      %th
   %tbody
     - @stores.each do |store|
       %tr
-        %td= link_to store['_id'], stock_management_get_store_path(almacen_id: store["_id"]), class: 'btn btn-primary', disabled: 'disabled' 
+        %td= store['_id']
         / link_to store['_id'], controller: "stock_management", action: "get_skuswithstock", :almacen_id store['_id']
         %td= store['usedSpace']
         %td= store['totalSpace']
         %td= store['recepcion']
         %td= store['despacho']
         %td= store['pulmon']
-        %td
-         
-
-= link_to t('.new', :default => t("helpers.links.new")), new_store_path, :class => 'btn btn-primary'
+        %td= link_to 'Ver Almacén', 'almacenes/' +store["_id"].to_s, class: 'btn btn-primary', disabled: 'disabled' 
