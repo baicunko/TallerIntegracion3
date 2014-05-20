@@ -22,6 +22,8 @@ RailsApp::Application.routes.draw do
   
   get 'stock_management/get_store' => 'stock_management#get_store'
 
+  get '/person/send_sms_message' => 'clickbotons#callHelper'
+
   resources :clients
 
   #namespace :api do
