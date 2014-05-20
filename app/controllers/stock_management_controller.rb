@@ -25,7 +25,7 @@ class StockManagementController < ApplicationController
 		(0..parsed_json.length-1).each do |i|
 			JSON.parse(parsed_json[i].to_json)
 			puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			#Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace']) 
+			Store.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space:  parsed_json[i]['usedSpace'],total_space: parsed_json[i]['totalSpace'])
 
 			# store= Store.find(_id:parsed_json[i]['_id'])
 			# store.update(lung: parsed_json[i]['pulmon'],dispatch: parsed_json[i]['despacho'] ,reception: parsed_json[i]['recepcion'],used_space: 100 ,total_space: parsed_json[i]['totalSpace'])
@@ -218,12 +218,13 @@ class StockManagementController < ApplicationController
   end
 
   def despachar_sku(sku,cantidad,precio,direccion, pedido_id)#NO ESTÁ PROBADO
-    (0..cantidad-1)
+    (0..cantidad-1).each do |martin|
       @despacho=get_stock(Store.find(1)._id,sku)
       (0..@despacho.length-1).each do |j|
         if (@despacho[j]['despachado']==false)
           puts @despacho[j]['despachado'].to_s
-          dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
+          respuestaServidor=dispatch_stock(@despacho[j]['_id'],direccion,precio,pedido_id)
+          SentItemsPedido.new(sku:sku,cantidad:cantidad,precio:precio,direccion:direccion,pedidoid:pedido_id,respuesta:respuestaServidor)
           i+=1
           if (i == cantidad)
             break
@@ -233,6 +234,7 @@ class StockManagementController < ApplicationController
       end
     end
   end
+end
 
 
 

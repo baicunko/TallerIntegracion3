@@ -70,7 +70,22 @@ end
  o = result[0]
  info = 'Pedido por '+ o['firstname'] + ' ' + o['lastname'] + ' a la direccion: ' + o['otherstreet'] + ', ' +o['othercity'] + ', ' + o['otherstate']  
 return info
- end
+end
+  def self.queryDireccion(rut)
+    unless (@@login)
+      self.getchallenge()
+    end
+    queryString = "select otherstreet, othercity, otherstate from Contacts where cf_707 = '#{rut}';"
+    queryParams = URI.encode(queryString)
+    urlquery = @@vturl+ 'query&sessionName='+@sessionId+'&query='+queryParams
+    result = JSON.parse((RestClient.get urlquery).body)['result']
+    o = result[0]
+    info = o['otherstreet'] + ', ' +o['othercity'] + ', ' + o['otherstate']
+    return info
+  end
+
+
+
  
  def self.extendsesion
  	# extendurl = 'http://integra.ing.puc.cl/vtigerCRM/webservice.php?operation=extendsession'	

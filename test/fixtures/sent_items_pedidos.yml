@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: 1
+  cantidad: 1
+  precio: 1
+  direccion: MyString
+  pedidoid: 1
+  respuesta: false
+
+two:
+  sku: 1
+  cantidad: 1
+  precio: 1
+  direccion: MyString
+  pedidoid: 1
+  respuesta: false

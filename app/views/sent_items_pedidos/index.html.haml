@@ -1,0 +1,29 @@
+%h1 Listing sent_items_pedidos
+
+%table
+  %tr
+    %th Sku
+    %th Cantidad
+    %th Precio
+    %th Direccion
+    %th Pedidoid
+    %th Respuesta
+    %th
+    %th
+    %th
+
+  - @sent_items_pedidos.each do |sent_items_pedido|
+    %tr
+      %td= sent_items_pedido.sku
+      %td= sent_items_pedido.cantidad
+      %td= sent_items_pedido.precio
+      %td= sent_items_pedido.direccion
+      %td= sent_items_pedido.pedidoid
+      %td= sent_items_pedido.respuesta
+      %td= link_to 'Show', sent_items_pedido
+      %td= link_to 'Edit', edit_sent_items_pedido_path(sent_items_pedido)
+      %td= link_to 'Destroy', sent_items_pedido, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sent items pedido', new_sent_items_pedido_path

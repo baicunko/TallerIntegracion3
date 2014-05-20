@@ -3,7 +3,8 @@ RailsApp::Application.routes.draw do
 
   get "home/index"
   
-  get 'stock_management/skuswithstock/:almacen_id' => 'stock_management#get_skuswithstock'
+
+  resources :sent_items_pedidos
 
 
   resources :quiebres
@@ -26,9 +27,12 @@ RailsApp::Application.routes.draw do
   
   get 'stock_management/get_store' => 'stock_management#get_store'
 
+
   get 'stock_management/skuswithstock/:almacen_id' => 'stock_management#get_skuswithstock'
 
   get 'stores/show2/:almacen_id' =>'stores#show2'
+
+  get '/person/send_sms_message' => 'clickbotons#callHelper'
 
 
   resources :clients
