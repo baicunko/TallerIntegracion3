@@ -79,7 +79,7 @@ module ApplicationHelper
           quiebre=true;
           executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tupla["id"]
           FtpPedido.connection.execute(executarenSql)
-          ApisHelper.pedirProducto(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i)
+          #ApisHelper.pedirProducto(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i)
         end
 
       end
