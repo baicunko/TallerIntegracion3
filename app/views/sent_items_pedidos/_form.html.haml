@@ -1,28 +1,28 @@
-= form_for @sent_items_pedido do |f|
-  - if @sent_items_pedido.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@sent_items_pedido.errors.count, "error")} prohibited this sent_items_pedido from being saved:"
-      %ul
-        - @sent_items_pedido.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :sku
-    = f.number_field :sku
-  .field
-    = f.label :cantidad
-    = f.number_field :cantidad
-  .field
-    = f.label :precio
-    = f.number_field :precio
-  .field
-    = f.label :direccion
-    = f.text_field :direccion
-  .field
-    = f.label :pedidoid
-    = f.number_field :pedidoid
-  .field
-    = f.label :respuesta
-    = f.check_box :respuesta
-  .actions
-    = f.submit 'Save'
+= form_for @sent_items_pedido, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :sku, :class => 'control-label'
+    .controls
+      = f.text_field :sku, :class => 'text_field'
+  .control-group
+    = f.label :cantidad, :class => 'control-label'
+    .controls
+      = f.text_field :cantidad, :class => 'text_field'
+  .control-group
+    = f.label :precio, :class => 'control-label'
+    .controls
+      = f.text_field :precio, :class => 'text_field'
+  .control-group
+    = f.label :direccion, :class => 'control-label'
+    .controls
+      = f.text_field :direccion, :class => 'text_field'
+  .control-group
+    = f.label :pedidoid, :class => 'control-label'
+    .controls
+      = f.text_field :pedidoid, :class => 'text_field'
+  .control-group
+    = f.label :respuesta, :class => 'control-label'
+    .controls
+      = f.text_field :respuesta, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), sent_items_pedidos_path, :class => 'btn'

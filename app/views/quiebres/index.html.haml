@@ -1,23 +1,25 @@
-%h1 Listing quiebres
-
-%table
-  %tr
-    %th Pedido
-    %th Nombrecliente
-    %th Fechaquiebre
-    %th
-    %th
-    %th
-
-  - @quiebres.each do |quiebre|
+- model_class = Quiebre
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
     %tr
-      %td= quiebre.pedido
-      %td= quiebre.nombrecliente
-      %td= quiebre.fechaquiebre
-      %td= link_to 'Show', quiebre
-      %td= link_to 'Edit', edit_quiebre_path(quiebre)
-      %td= link_to 'Destroy', quiebre, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:pedido)
+      %th= model_class.human_attribute_name(:nombrecliente)
+      %th= model_class.human_attribute_name(:fechaquiebre)
+      %th= model_class.human_attribute_name(:created_at)
+      %th Quiebre Pedido
 
-%br
+  %tbody
+    - @quiebres.each do |quiebre|
+      %tr
+        %td= link_to quiebre.id, quiebre_path(quiebre)
+        %td= quiebre.pedido
+        %td= quiebre.nombrecliente
+        %td= quiebre.fechaquiebre
+        %td= quiebre.created_at
+        %td= quiebre.dineroperdido
 
-= link_to 'New Quiebre', new_quiebre_path
+
+

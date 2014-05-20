@@ -1,19 +1,16 @@
-= form_for @quiebre do |f|
-  - if @quiebre.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@quiebre.errors.count, "error")} prohibited this quiebre from being saved:"
-      %ul
-        - @quiebre.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :pedido
-    = f.number_field :pedido
-  .field
-    = f.label :nombrecliente
-    = f.text_field :nombrecliente
-  .field
-    = f.label :fechaquiebre
-    = f.datetime_select :fechaquiebre
-  .actions
-    = f.submit 'Save'
+_= form_for @quiebre, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :pedido, :class => 'control-label'
+    .controls
+      = f.text_field :pedido, :class => 'text_field'
+  .control-group
+    = f.label :nombrecliente, :class => 'control-label'
+    .controls
+      = f.text_field :nombrecliente, :class => 'text_field'
+  .control-group
+    = f.label :fechaquiebre, :class => 'control-label'
+    .controls
+      = f.text_field :fechaquiebre, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), quiebres_path, :class => 'btn'
