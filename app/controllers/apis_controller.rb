@@ -1,22 +1,7 @@
 class ApisController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def self.hola
-    require 'openssl'
-    require "base64"
-
-
-    autorizacion = UsuariosClavesApi.find_by_grupo('grupo3')
-    sql1 = "Select password from usuarios_claves_apis WHERE grupo = 'grupo3';"
-    records_array = UsuariosClavesApi.connection.execute(sql1)
-    clave = records_array[0][0]
-    hash  = OpenSSL::HMAC.digest('sha1', "HOLA", clave.to_s)
-    pass_nueva=Base64.encode64(hash)
-    p pass_nueva
-    p clave
-
-  end
-
+  
   def despachar_producto_fuera
 
     require 'openssl'
@@ -34,6 +19,7 @@ class ApisController < ApplicationController
     almacen = params["almacen_id"]
     sku = params["SKU"]
     cant = params["cantidad"].to_i
+
 
     #Verificar grupo y clave
     sql = "Select * from usuarios_claves_apis WHERE grupo = '#{user}';"
@@ -69,6 +55,7 @@ class ApisController < ApplicationController
     stock_efectivo = stock_sku - stock_reservado
 
     if stock_efectivo > cant
+        s.mover_a_despacho_sku(sku,cant)
         s.despachar_sku_para_grupos(sku,cant,almacen)
 
       render :json => [:SKU => sku.to_s, :cantidad => cant.to_i].to_json and return

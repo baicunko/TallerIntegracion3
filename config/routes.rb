@@ -28,7 +28,7 @@ RailsApp::Application.routes.draw do
   get 'stock_management/get_store' => 'stock_management#get_store'
 
 
-  get 'stock_management/skuswithstock/:almacen_id' => 'stock_management#get_skuswithstock'
+  get 'almacenes/:almacen_id' => 'stores#show'
 
   get 'stores/show2/:almacen_id' =>'stores#show2'
 
