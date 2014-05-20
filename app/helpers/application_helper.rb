@@ -21,6 +21,7 @@ module ApplicationHelper
     LoadingHelper.import;
     LoadingHelper.importProductosJson;
     PreciosTemporalsHelper.crear_tabla;
+    ProcesarPedidos
 
 
 
@@ -28,22 +29,20 @@ module ApplicationHelper
 
   def self.ProcesarPedidos
     #Cada 10 minutos este metodo se debe llamar
+    stockController=StockManagementController.new
+    stockController.get_store
+    Reserva.consumir
     FtpPedido.verPedidos;
-    sql = "SELECT * from ftp_pedidos WHERE entrega >= DATE ('now') AND envio IS NULL GROUP BY id ORDER BY entrega DESC"
+    sql = "SELECT * from ftp_pedidos WHERE entrega >= DATE ('now') AND envio IS NULL AND id=2625 GROUP BY id ORDER BY entrega"
     records_array = FtpPedido.connection.execute(sql)
+
     records_array.each do |tupla|
+
       quiebre=false;
-      pedidoEntero=FtpPedido.where(id: tupla["id"])
-      pedidoEntero.each do |tuplaEspecial|
+      pedido=FtpPedido.where(id: tupla["id"])
+      pedido.each do |tuplaEspecial|
 
-
-
-
-        stockController=StockManagementController.new
-
-        #queryStock="SELECT SUM(stock) FROM stock_in_stores WHERE sku = "+tuplaEspecial["sku"].to_s
         stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"])
-        #queryRespuesta=StockInStore.connection.execute(queryStock)
         if(stockDisponible>=tuplaEspecial["cantidad"].to_i && stockDisponible-tuplaEspecial["cantidad"].to_i>=Reserva.stockReservado(tuplaEspecial["sku"]))
 
         else
@@ -53,17 +52,29 @@ module ApplicationHelper
       end
       if(quiebre)
         #poner cantidad
-        hola=Quiebre.where(id: tupla["id"])
-        if(hola.count==0)
-          quiebre=Quiebre.new
-          quiebre.nombrecliente=Contact.query(tupla["direccion"])
-          quiebre.fechaquiebre=Time.now
-          quiebre.pedido=tupla["id"];
-          quiebre.save
+        quiebreClass=Quiebre.where(id: tupla["id"])
+        if(quiebreClass.count==0)
+          quiebrerecord=Quiebre.new
+          quiebrerecord.nombrecliente=Contact.query(tupla["direccion"])
+          quiebrerecord.fechaquiebre=Time.now
+          quiebrerecord.pedido=tupla["id"];
+          quiebrerecord.save
         end
 
-      else
-        
+      else #estos son los pedidos sin quiebre! Si o si existe stock
+          pedido.each do |tuplaPedidoEnviar|
+          precio=PreciosTemporal.where[SKU:tuplaPedidoEnviar["sku"]]
+          direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
+          stockController.mover_a_despacho_sku(tuplaPedidoEnviar["sku"],tuplaPedidoEnviar["cantidad"])
+          stockController.despachar_sku(tuplaPedidoEnviar["sku"],tuplaPedidoEnviar["cantidad"],precio,direccion,tupla["id"])
+
+        end
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,49 @@
+- model_class = Product
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:sku) + ':'
+  %br
+  = @product.sku
+%p
+  %strong= model_class.human_attribute_name(:precio) + ':'
+  %br
+  = @product.precio
+%p
+  %strong= model_class.human_attribute_name(:fecha_actualizacion) + ':'
+  %br
+  = @product.fecha_actualizacion
+%p
+  %strong= model_class.human_attribute_name(:fecha_vigencia) + ':'
+  %br
+  = @product.fecha_vigencia
+%p
+  %strong= model_class.human_attribute_name(:costo_producto) + ':'
+  %br
+  = @product.costo_producto
+%p
+  %strong= model_class.human_attribute_name(:costo_traspaso) + ':'
+  %br
+  = @product.costo_traspaso
+%p
+  %strong= model_class.human_attribute_name(:direccion) + ':'
+  %br
+  = @product.direccion
+%p
+  %strong= model_class.human_attribute_name(:store_id) + ':'
+  %br
+  = @product.store_id
+%p
+  %strong= model_class.human_attribute_name(:despachado) + ':'
+  %br
+  = @product.despachado
+%p
+  %strong= model_class.human_attribute_name(:costo_almacenamiento) + ':'
+  %br
+  = @product.costo_almacenamiento
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), products_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_product_path(@product), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), product_path(@product), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

@@ -1,0 +1,24 @@
+= form_for @store, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :used_space, :class => 'control-label'
+    .controls
+      = f.text_field :used_space, :class => 'text_field'
+  .control-group
+    = f.label :total_space, :class => 'control-label'
+    .controls
+      = f.text_field :total_space, :class => 'text_field'
+  .control-group
+    = f.label :reception, :class => 'control-label'
+    .controls
+      = f.text_field :reception, :class => 'text_field'
+  .control-group
+    = f.label :dispatch, :class => 'control-label'
+    .controls
+      = f.text_field :dispatch, :class => 'text_field'
+  .control-group
+    = f.label :lung, :class => 'control-label'
+    .controls
+      = f.text_field :lung, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), stores_path, :class => 'btn'

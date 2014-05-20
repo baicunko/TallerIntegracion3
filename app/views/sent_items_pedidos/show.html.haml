@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Sku:
+  = @sent_items_pedido.sku
+%p
+  %b Cantidad:
+  = @sent_items_pedido.cantidad
+%p
+  %b Precio:
+  = @sent_items_pedido.precio
+%p
+  %b Direccion:
+  = @sent_items_pedido.direccion
+%p
+  %b Pedidoid:
+  = @sent_items_pedido.pedidoid
+%p
+  %b Respuesta:
+  = @sent_items_pedido.respuesta
+
+= link_to 'Edit', edit_sent_items_pedido_path(@sent_items_pedido)
+\|
+= link_to 'Back', sent_items_pedidos_path
