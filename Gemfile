@@ -12,8 +12,8 @@ gem 'twitter-bootstrap-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'sass-rails', '~> 4.0.2'
 gem 'therubyracer'
-
-
+gem 'datashift'
+gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
 
 
 
