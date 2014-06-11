@@ -5,6 +5,18 @@ class QuiebresController < ApplicationController
   # GET /quiebres.json
   def index
     @quiebres = Quiebre.all
+    @array=[]
+    # fecha=@quiebres.first.created_at
+    # while(fecha<Date.today)
+    #   num=@quiebres.where(created_at:fecha).count
+    #   @array << [fecha.to_datetime.to_i*100, num]
+    #   fecha=fecha+1.day
+    # end
+    @array= [
+              [(Date.today-10.day).to_datetime.to_i*1000, 29.9], 
+              [(Date.today-5.day).to_datetime.to_i*1000, 71.5], 
+              [Date.today.to_datetime.to_i*1000, 106.4]
+            ]
   end
 
   # GET /quiebres/1

@@ -23,3 +23,5 @@
         %td= sent_items_pedido.pedidoid
         %td= sent_items_pedido.created_at
         %td= (sent_items_pedido.cantidad*sent_items_pedido.precio)
+/#reporte-chart{data:{type: "line",text: "Estado del proyecto",ytitle:"Avance del proyecto",categories:"#{@i_dates}",data0:"#{@i_array}",data1:"#{@r_array}"}}
+#reporte-chart{data:{text:"Historial Pedidos", data0:"#{@array}", serie0name:"Pedidos Enviados"}}

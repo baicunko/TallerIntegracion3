@@ -18,11 +18,6 @@ ActiveRecord::Schema.define(version: 20140520202319) do
     t.datetime "updated_at"
   end
 
-  create_table "clickbotons", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "clients", force: true do |t|
     t.string   "name"
     t.string   "address"
@@ -94,6 +89,10 @@ ActiveRecord::Schema.define(version: 20140520202319) do
     t.datetime "fecha_vigencia"
     t.integer  "costo_producto"
     t.integer  "costo_traspaso"
+    t.string   "direccion"
+    t.string   "store_id"
+    t.string   "_id"
+    t.boolean  "despachado"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "costo_almacenamiento"

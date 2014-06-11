@@ -12,6 +12,8 @@ gem 'twitter-bootstrap-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'sass-rails', '~> 4.0.2'
 gem 'therubyracer'
+gem "highcharts-rails", "~> 3.0.0"
+gem 'jquery-rails'
 
 
 
@@ -49,7 +51,6 @@ end
 #gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'ruby-hmac'
