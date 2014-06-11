@@ -79,7 +79,7 @@ module ApplicationHelper
           quiebre=true;
           executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tupla["id"]
           FtpPedido.connection.execute(executarenSql)
-          ApisHelper.pedirProducto(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i)
+          #ApisHelper.pedirProducto(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i)
         end
 
       end
@@ -92,6 +92,7 @@ module ApplicationHelper
           quiebrerecord.fechaquiebre=Time.now
           quiebrerecord.pedido=tupla["id"];
           costo=0
+=begin
           pedido.each do |j|
             precio=PreciosTemporal.where(SKU:pedido["sku"])
             cantidadComprada=j.cantidad.to_i
@@ -100,6 +101,12 @@ module ApplicationHelper
 
           end
           quiebre.dineroperdido=costo;
+          quiebrerecord.save
+
+
+
+
+=end      quiebre.dineroperdido=0;
           quiebrerecord.save
         end
 
