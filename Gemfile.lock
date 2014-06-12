@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_auth_devise.git
-  revision: 321bcd0bffd803882bfeff767e9d588358c52fc9
+  revision: 81a0fbb2db15efbbb50d0d139bbc41aee7fa58a1
   branch: 2-2-stable
   specs:
     spree_auth_devise (2.2.0)
@@ -222,6 +222,8 @@ GEM
       mime-types
     paranoia (2.0.2)
       activerecord (~> 4.0)
+    pg (0.17.1)
+    pg (0.17.1-x86-mingw32)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -398,6 +400,7 @@ DEPENDENCIES
   multi_xml (~> 0.5.5)
   net-scp
   net-sftp
+  pg
   rails (= 4.0.4)
   rest-client (~> 1.6.7)
   rest_client

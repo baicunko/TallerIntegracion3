@@ -14,7 +14,7 @@ gem 'sass-rails', '~> 4.0.2'
 gem 'therubyracer'
 gem 'datashift'
 gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
-
+gem 'pg'
 
 
 group :development do
