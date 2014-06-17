@@ -3,7 +3,7 @@ module ApplicationHelper
   APP_SECRET="n80ou9i5e4u9iix"
   require 'dropbox_sdk'
   require 'json'
-
+  require 'TuitterHelper.rb'
   def self.connect
     code = "wsWFRrcC0rkAAAAAAAAAC925LJBoi7yUZFXn2NyLtuqLapTzJqvoPCav4Pm4sIys"
     client = DropboxClient.new(code)
@@ -217,6 +217,9 @@ module ApplicationHelper
       end
     end
 
+  end
+  def self.mandarATwitter(mensaje)
+    TuitterHelper.sendTweet(mensaje)
   end
 
 
