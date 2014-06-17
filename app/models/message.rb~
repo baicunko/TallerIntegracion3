@@ -1,0 +1,95 @@
+class Message < ActiveRecord::Base
+	require 'amqp'
+
+	def self.GetMessage
+		begin
+			AMQP.start("amqp://jckkgxhc:l8S5CYdqKNlJGYRFWWKOaEJN4DcczTHU@tiger.cloudamqp.com/jckkgxhc") do |connection|	
+				channel = AMQP::Channel.new(connection)
+				queue = AMQP::Queue.new(channel, "ofertas", :auto_delete => false)
+
+				puts "#{queue.name} is ready to go."
+				
+				queue.pop do |mensaje|
+					puts "primer checkpoint"
+					msg = mensaje.split(',')
+					puts "segundo checkpoint: mensaje = #{msg}"
+					sku = (msg[0].split(':'))[1].strip	#obtenemos los datos y les sacamos los espacios en blanco del 
+					precio = (msg[1].split(':'))[1].strip   #principio y final
+					inicio = (msg[2].split(':'))[1].strip
+					fin = (msg[3].split(':'))[1].strip
+	
+					precio = precio.to_i
+					inicio = inicio.to_i
+					fin = fin.to_i
+					puts "tercer checkpoint: sku= #{sku}, precio= #{precio}, inicio= #{inicio}, fin= #{fin}"
+					Message.where(sku: name, precio: precio, incio: inicio, fin: fin).first_or_create(sku: name, precio: precio, incio: inicio, fin: fin, llegada: datetime.now)				#guardamos los datos en la tabla
+					
+					connection.close {
+						EventMachine.stop {exit}
+					}					
+				end
+			end
+			rescue AMQP::TCPConnectionFailed => e
+				puts "Caught AMQP::TCPConnectionFailed"
+			end
+	end
+	def self.PostMessage
+	begin
+			AMQP.start("amqp://jckkgxhc:l8S5CYdqKNlJGYRFWWKOaEJN4DcczTHU@tiger.cloudamqp.com/jckkgxhc") do |connection|	
+				channel = AMQP::Channel.new(connection)
+				queue = AMQP::Queue.new(channel, "ofertas", :auto_delete => true)
+				exchange = channel.direct("")
+				puts "#{queue.name} is ready to go."
+								
+				exchange.publish "{sku: 1, precio: 2, inicio: 3, fin: 4}", :routing_key => queue.name	
+				connection.close {
+					EventMachine.stop {exit}
+				}					
+				
+			end
+			rescue AMQP::TCPConnectionFailed => e
+				puts "Caught AMQP::TCPConnectionFailed"
+			end
+
+	end
+		
+
+
+
+
+
+
+
+
+=begin	require 'bunny' 
+	def self.GetMessage
+
+		b = Bunny.new "jckkgxhc"
+		b.start # start a communication session with the amqp server
+
+		q = b.queue("ofertas") # declare a queue
+		p = b.queue("reposiciones")
+
+		# declare default direct exchange which is bound to all queues
+		e = b.exchange("")
+
+		msg = q.pop[:payload] # get message from the queue
+
+		msg = msg.split(',')
+		sku = (msg[0].split(':'))[1].strip	#obtenemos los datos y les sacamos los espacios en blanco del principio y final
+		precio = (msg[1].split(':'))[1].strip
+		inicio = (msg[2].split(':'))[1].strip
+		fin = (msg[3].split(':'))[1].strip
+
+		precio = precio.to_i
+		inicio = inicio.to_i
+		fin = fin.to_i
+
+		Message.where(sku: name, precio: precio, incio: inicio, fin: fin).first_or_create(sku: name, precio: precio, incio: inicio, fin: fin, llegada: datetime.now)
+
+				
+
+		b.stop # close the connection
+	end
+=end
+end

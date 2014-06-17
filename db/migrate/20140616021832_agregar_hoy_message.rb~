@@ -1,0 +1,5 @@
+class AgregarHoyMessage < ActiveRecord::Migration
+  def change
+	add_column :message, :llegada, :datetime
+  end
+end

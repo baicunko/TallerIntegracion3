@@ -1,0 +1,4 @@
+class MessageRemoveColumnId < ActiveRecord::Migration
+  def change
+  end
+end

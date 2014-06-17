@@ -5,6 +5,8 @@ class Contact < ActiveRecord::Base
  require 'uri'
 
 belongs_to :client
+geocoded_by :address
+after_validation :geocode
 
 #Variables de la clase Crm
 @@user_name = 'grupo3'

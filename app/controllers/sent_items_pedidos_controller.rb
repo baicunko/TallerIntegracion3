@@ -4,7 +4,22 @@ class SentItemsPedidosController < ApplicationController
   # GET /sent_items_pedidos
   # GET /sent_items_pedidos.json
   def index
+    @array=[]
     @sent_items_pedidos = SentItemsPedido.all
+    # fecha=@sent_items_pedidos.first.created_at
+    # while(fecha<Date.today)
+    #   num=@sent_items_pedidos.where(created_at:fecha).count
+    #   @array << [fecha.to_datetime.to_i*100, num]
+    #   fecha=fecha+1.day
+    # end
+    @array= [
+                [(Date.today-10.day).to_datetime.to_i*1000, 29.9], 
+                [(Date.today-5.day).to_datetime.to_i*1000, 71.5], 
+                [Date.today.to_datetime.to_i*1000, 106.4]
+            ]
+
+
+
   end
 
   # GET /sent_items_pedidos/1

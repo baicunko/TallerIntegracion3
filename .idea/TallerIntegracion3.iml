@@ -128,55 +128,7 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="active_utils (v2.1.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activerecord-deprecated_finders (v1.0.3, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="arel (v4.0.2, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.7, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.5.3, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.7.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="daemons (v1.1.9, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="devise (v3.2.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="eventmachine (v1.0.3, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.5, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.9, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.15.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="minitest (v4.7.5, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="monetize (v0.1.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="money (v6.0.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.10.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="railties (v4.0.4, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.2, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_auth_devise (v2.2.0@495965, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spree_gateway (v2.2.1@46b861, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.11.0, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.0.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thin (v1.6.2, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.3, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.39, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-2.0.0-p451 [railstutorial_rails_4_0]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
