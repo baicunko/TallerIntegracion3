@@ -14,12 +14,14 @@ gem 'sass-rails', '~> 4.0.2'
 gem 'therubyracer'
 gem 'datashift'
 gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
-gem 'pg'
+
+
 
 
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+  gem 'sqlite3'
 end
 
 gem 'net-sftp'
@@ -30,7 +32,7 @@ gem 'thin'
 gem 'net-scp'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 gem 'dropbox-sdk'
 gem 'whenever'
 # Use SCSS for stylesheets
@@ -42,6 +44,7 @@ gem 'jason'
 gem 'rest_client'
 gem 'haml-rails'
 group :production do
+  gem 'pg'
 end
 
 
