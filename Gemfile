@@ -16,6 +16,9 @@ gem "highcharts-rails", "~> 3.0.0"
 gem 'jquery-rails'
 gem 'bunny'
 
+gem 'datashift'
+gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
+
 
 
 
@@ -23,6 +26,7 @@ gem 'bunny'
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+  gem 'sqlite3'
 end
 
 gem 'net-sftp'
@@ -33,7 +37,7 @@ gem 'thin'
 gem 'net-scp'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 gem 'dropbox-sdk'
 gem 'whenever'
 # Use SCSS for stylesheets
@@ -45,35 +49,22 @@ gem 'jason'
 gem 'rest_client'
 gem 'haml-rails'
 group :production do
+  gem 'pg'
 end
 
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-#gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'ruby-hmac'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
+gem 'twitter'
+gem 'oauth'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
 gem 'spree', '2.2.1'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-2-stable'

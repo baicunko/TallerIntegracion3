@@ -1,7 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="" />
+    <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30," />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/368/large/347804020140611-27487-croxp.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/368/mini/347804020140611-27487-croxp.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/368/original/347804020140611-27487-croxp.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/368/product/347804020140611-27487-croxp.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/368/small/347804020140611-27487-croxp.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/367/large/354864420140611-27487-m7pdki.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/367/mini/354864420140611-27487-m7pdki.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/367/original/354864420140611-27487-m7pdki.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/367/product/354864420140611-27487-m7pdki.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/367/small/354864420140611-27487-m7pdki.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/369/large/365256520140611-27487-1r3ifwl.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/369/mini/365256520140611-27487-1r3ifwl.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/369/original/365256520140611-27487-1r3ifwl.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/369/product/365256520140611-27487-1r3ifwl.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/spree/products/369/small/365256520140611-27487-1r3ifwl.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Productos.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThisOne.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ThisOne.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ThisOne.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/producto.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/true" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/{" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/TuitterHelper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite.thor" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/1/large/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/1/mini/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/1/original/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/1/product/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/1/small/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/10/large/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/10/mini/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/10/original/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/10/product/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/10/small/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/11/large/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/11/mini/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/11/original/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/11/product/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/11/small/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/12/large/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/12/mini/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/12/original/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/12/product/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/12/small/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/13/large/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/13/mini/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/13/original/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/13/product/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/13/small/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/14/large/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/14/mini/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/14/original/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/14/product/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/14/small/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/15/large/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/15/mini/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/15/original/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/15/product/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/15/small/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/16/large/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/16/mini/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/16/original/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/16/product/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/16/small/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/17/large/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/17/mini/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/17/original/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/17/product/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/17/small/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/18/large/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/18/mini/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/18/original/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/18/product/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/18/small/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/19/large/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/19/mini/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/19/original/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/19/product/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/19/small/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/2/large/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/2/mini/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/2/original/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/2/product/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/2/small/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/20/large/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/20/mini/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/20/original/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/20/product/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/20/small/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/21/large/ror_tote.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/21/mini/ror_tote.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/21/original/ror_tote.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/21/product/ror_tote.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/21/small/ror_tote.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/22/large/ror_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/22/mini/ror_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/22/original/ror_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/22/product/ror_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/22/small/ror_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/23/large/ror_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/23/mini/ror_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/23/original/ror_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/23/product/ror_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/23/small/ror_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/24/large/ror_baseball.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/24/mini/ror_baseball.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/24/original/ror_baseball.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/24/product/ror_baseball.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/24/small/ror_baseball.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/25/large/ror_baseball_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/25/mini/ror_baseball_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/25/original/ror_baseball_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/25/product/ror_baseball_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/25/small/ror_baseball_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/26/large/ror_jr_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/26/mini/ror_jr_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/26/original/ror_jr_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/26/product/ror_jr_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/26/small/ror_jr_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/27/large/ror_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/27/mini/ror_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/27/original/ror_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/27/product/ror_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/27/small/ror_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/28/large/ror_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/28/mini/ror_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/28/original/ror_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/28/product/ror_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/28/small/ror_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/29/large/ror_ringer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/29/mini/ror_ringer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/29/original/ror_ringer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/29/product/ror_ringer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/29/small/ror_ringer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/3/large/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/3/mini/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/3/original/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/3/product/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/3/small/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/30/large/ror_ringer_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/30/mini/ror_ringer_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/30/original/ror_ringer_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/30/product/ror_ringer_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/30/small/ror_ringer_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/31/large/ror_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/31/mini/ror_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/31/original/ror_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/31/product/ror_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/31/small/ror_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/32/large/ror_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/32/mini/ror_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/32/original/ror_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/32/product/ror_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/32/small/ror_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/33/large/apache_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/33/mini/apache_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/33/original/apache_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/33/product/apache_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/33/small/apache_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/34/large/ruby_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/34/mini/ruby_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/34/original/ruby_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/34/product/ruby_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/34/small/ruby_baseball.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/35/large/spree_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/35/mini/spree_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/35/original/spree_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/35/product/spree_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/35/small/spree_bag.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/36/large/spree_tote_front.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/36/mini/spree_tote_front.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/36/original/spree_tote_front.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/36/product/spree_tote_front.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/36/small/spree_tote_front.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/37/large/spree_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/37/mini/spree_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/37/original/spree_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/37/product/spree_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/37/small/spree_tote_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/38/large/spree_ringer_t.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/38/mini/spree_ringer_t.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/38/original/spree_ringer_t.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/38/product/spree_ringer_t.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/38/small/spree_ringer_t.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/39/large/spree_ringer_t_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/39/mini/spree_ringer_t_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/39/original/spree_ringer_t_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/39/product/spree_ringer_t_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/39/small/spree_ringer_t_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/4/large/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/4/mini/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/4/original/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/4/product/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/4/small/ror_baseball_jersey_back_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/40/large/spree_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/40/mini/spree_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/40/original/spree_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/40/product/spree_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/40/small/spree_spaghetti.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/41/large/spree_jersey.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/41/mini/spree_jersey.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/41/original/spree_jersey.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/41/product/spree_jersey.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/41/small/spree_jersey.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/42/large/spree_jersey_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/42/mini/spree_jersey_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/42/original/spree_jersey_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/42/product/spree_jersey_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/42/small/spree_jersey_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/43/large/spree_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/43/mini/spree_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/43/original/spree_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/43/product/spree_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/43/small/spree_stein.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/44/large/spree_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/44/mini/spree_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/44/original/spree_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/44/product/spree_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/44/small/spree_stein_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/45/large/spree_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/45/mini/spree_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/45/original/spree_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/45/product/spree_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/45/small/spree_mug.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/46/large/spree_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/46/mini/spree_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/46/original/spree_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/46/product/spree_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/46/small/spree_mug_back.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/5/large/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/5/mini/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/5/original/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/5/product/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/5/small/ror_baseball_jersey_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/6/large/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/6/mini/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/6/original/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/6/product/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/6/small/ror_baseball_jersey_back_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/7/large/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/7/mini/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/7/original/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/7/product/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/7/small/ror_baseball_jersey_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/8/large/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/8/mini/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/8/original/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/8/product/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/8/small/ror_baseball_jersey_back_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/9/large/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/9/mini/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/9/original/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/9/product/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/spree/products/9/small/ror_baseball_jersey_blue.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb" afterPath="$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb" afterPath="$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" afterPath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +299,12 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="9" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="2430">
+            <state line="25" column="9" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="3585">
               <folding>
-                <marker date="1403021879000" expanded="true" signature="1338:3821" placeholder="do ... end" />
-                <marker date="1403021879000" expanded="true" signature="2513:3819" placeholder="if ... end" />
-                <marker date="1403021879000" expanded="true" signature="3295:3808" placeholder="do ... end" />
+                <marker date="1403021962000" expanded="true" signature="24:7905" placeholder=" ... end" />
+                <marker date="1403021962000" expanded="true" signature="1383:5089" placeholder="do ... end" />
+                <marker date="1403021962000" expanded="true" signature="2558:4999" placeholder="if ... end" />
+                <marker date="1403021962000" expanded="true" signature="3340:3864" placeholder="do ... end" />
               </folding>
             </state>
           </provider>
@@ -42,9 +313,9 @@
       <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="18" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="23" column="18" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="570">
               <folding>
-                <marker date="1403021879000" expanded="true" signature="495:576" placeholder="development:" />
+                <marker date="1403021963000" expanded="true" signature="629:710" placeholder="development:" />
               </folding>
             </state>
           </provider>
@@ -53,7 +324,7 @@
       <file leaf-file-name="20140516213855_change_string_format_in_my_table.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="12" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+            <state line="2" column="12" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -62,16 +333,34 @@
       <file leaf-file-name="20140516220853_changetypeftp.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="42" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="17" column="42" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20140518193805_columnaftpenvio.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20140518193805_columnaftpenvio.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140518193805_columnaftpenvio.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="20" selection-start="1306" selection-end="1306" vertical-scroll-proportion="2.0359282" vertical-offset="0" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -114,19 +403,14 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/helpers/TuitterHelper.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140518193805_columnaftpenvio.rb" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
-  </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1680" />
@@ -450,32 +734,12 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2861635" sideWeight="0.5343348" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42138365" sideWeight="0.5343348" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -564,11 +828,6 @@
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@railstutorial_rails_4_0/gems/actionpack-4.0.4/lib/action_dispatch/journey/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="32" selection-start="324" selection-end="324" vertical-scroll-proportion="0.24509804" vertical-offset="0" max-vertical-offset="1230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8115" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140520202319_add_column_to_quiebre.rb">
@@ -727,11 +986,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="9" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="2430">
+        <state line="25" column="9" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="3585">
           <folding>
-            <marker date="1403021879000" expanded="true" signature="1338:3821" placeholder="do ... end" />
-            <marker date="1403021879000" expanded="true" signature="2513:3819" placeholder="if ... end" />
-            <marker date="1403021879000" expanded="true" signature="3295:3808" placeholder="do ... end" />
+            <marker date="1403021962000" expanded="true" signature="24:7905" placeholder=" ... end" />
+            <marker date="1403021962000" expanded="true" signature="1383:5089" placeholder="do ... end" />
+            <marker date="1403021962000" expanded="true" signature="2558:4999" placeholder="if ... end" />
+            <marker date="1403021962000" expanded="true" signature="3340:3864" placeholder="do ... end" />
           </folding>
         </state>
       </provider>
@@ -764,13 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="15" selection-start="564" selection-end="564" vertical-scroll-proportion="0.5502392" vertical-offset="0" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="45" selection-start="449" selection-end="449" vertical-scroll-proportion="0.29862174" vertical-offset="0" max-vertical-offset="653">
@@ -780,23 +1033,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+        <state line="23" column="18" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="570">
           <folding>
-            <marker date="1403021879000" expanded="true" signature="495:576" placeholder="development:" />
+            <marker date="1403021963000" expanded="true" signature="629:710" placeholder="development:" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="12" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+        <state line="2" column="12" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="42" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+        <state line="17" column="42" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
@@ -804,6 +1057,27 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20140518193805_columnaftpenvio.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="20" selection-start="1306" selection-end="1306" vertical-scroll-proportion="2.0359282" vertical-offset="0" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
