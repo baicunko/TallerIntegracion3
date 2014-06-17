@@ -1,0 +1,21 @@
+class Messages < ActiveRecord::Base
+	require "bunny" # don't forget to put gem "bunny" in your Gemfile 
+
+	def self.GetMessage
+
+		b = Bunny.new "jckkgxhc"
+		b.start # start a communication session with the amqp server
+
+		q = b.queue("ofertas") # declare a queue
+		p = b.queue("reposiciones")
+
+		# declare default direct exchange which is bound to all queues
+		e = b.exchange("")
+
+		msg = q.pop[:payload] # get message from the queue
+
+		
+
+		b.stop # close the connection
+	end
+end
