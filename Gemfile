@@ -6,6 +6,18 @@ gem 'rails', '4.0.4'
 
 gem 'money', '6.0.1'
 
+
+
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
+gem "highcharts-rails", "~> 3.0.0"
+
+gem 'bunny'
+gem 'gmaps4rails'
+
+# gem 'datashift'
+# gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'

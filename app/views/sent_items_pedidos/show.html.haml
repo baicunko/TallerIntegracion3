@@ -1,31 +1,32 @@
 - model_class = SentItemsPedido
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.titleize
+.left
+  %p
+    %strong= model_class.human_attribute_name(:sku) + ':'
+    %br
+    = @sent_items_pedido.sku
+  %p
+    %strong= model_class.human_attribute_name(:cantidad) + ':'
+    %br
+    = @sent_items_pedido.cantidad
+  %p
+    %strong= model_class.human_attribute_name(:precio) + ':'
+    %br
+    = @sent_items_pedido.precio
+  %p
+    %strong= model_class.human_attribute_name(:direccion) + ':'
+    %br
+    = @sent_items_pedido.direccion
+  %p
+    %strong= model_class.human_attribute_name(:pedidoid) + ':'
+    %br
+    = @sent_items_pedido.pedidoid
+  %p
+    %strong= model_class.human_attribute_name(:respuesta) + ':'
+    %br
+    = @sent_items_pedido.respuesta
 
-%p
-  %strong= model_class.human_attribute_name(:sku) + ':'
-  %br
-  = @sent_items_pedido.sku
-%p
-  %strong= model_class.human_attribute_name(:cantidad) + ':'
-  %br
-  = @sent_items_pedido.cantidad
-%p
-  %strong= model_class.human_attribute_name(:precio) + ':'
-  %br
-  = @sent_items_pedido.precio
-%p
-  %strong= model_class.human_attribute_name(:direccion) + ':'
-  %br
-  = @sent_items_pedido.direccion
-%p
-  %strong= model_class.human_attribute_name(:pedidoid) + ':'
-  %br
-  = @sent_items_pedido.pedidoid
-%p
-  %strong= model_class.human_attribute_name(:respuesta) + ':'
-  %br
-  = @sent_items_pedido.respuesta
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), sent_items_pedidos_path, :class => 'btn'

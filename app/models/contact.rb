@@ -84,7 +84,6 @@ end
     result = JSON.parse((RestClient.get urlquery).body)['result']
     o = result[0]
     info = o['otherstreet'] + ', ' +o['othercity'] + ', ' + o['otherstate']
-    @direccion_contacto = info
     return info
   end
 
@@ -97,3 +96,12 @@ end
 	# @sessionId = JSON.
  end
 end
+#RUTA:
+#URI.encode(direccion) y ponerlo en url
+#url = http://maps.googleapis.com/maps/api/directions/json?origin=CarlosSilvaVildosola9632&destination=Matucana200&sensor=false
+#response["routes"][0]["legs"][0]["distance"]["value"]
+
+#IMAGEN DE mapa:  
+#URI.encode(direccion) y ponerlo en url
+#Geocoder.coordinates(direccion)
+# http://maps.googleapis.com/maps/api/staticmap?center=Carlos%20Silva%20Vildosola%209632,Santiago&zoom=14&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:S%7CCarlos%20Silva%20Vildosola%209632,Santiago&sensor=false

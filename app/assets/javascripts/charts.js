@@ -18,65 +18,182 @@ load_charts =function(){
             name: $('#reporte-chart').data("serie0name"),
             data: $('#reporte-chart').data("data0")
         }]
-        //     chart: {
-        //         // type: 'bar'
-        //         type: $("#reporte-chart").data("type"),
-        //         height: 300
-        //     },
-        //     title: {
-        //         // text: 'Fruit Consumption'
-        //         text: $("#reporte-chart").data("text"),
-        //         align: 'left'
-        //     },
-        //     xAxis: {
-        //         // categories: ['Apples', 'Bananas', 'Oranges']
-        //         type: 'datetime',
-        //         dateTimeLabelFormats: { // don't display the dummy year
-        //                              month: '%b %e, %Y'
-        //                         },
-        //          // tickInterval: 2678400000
-        //        minTickInterval: 3600*24*30*1000,//time in milliseconds
-        //         minRange: 3600*24*30*1000,
-        //         ordinal: false, //this sets the fixed time formats
-        //     minPadding: 0.05,
-        //     maxPadding: 0.05
-        //     },
-        //     yAxis: {
-        //         title: {
-        //             // text: 'Fruit eaten'
-        //             text: $("#reporte-chart").data("ytitle") 
-        //         },
-        //         max: 100,
-        //         min: 0
-
-        //     },
-        //     legend: {
-        //     layout: 'vertical',
-        //     floating: true,
-        //     backgroundColor: '#FFFFFF',
-        //     align: 'left',
-        //     verticalAlign: 'top',
-        //     y: 20,
-        //     x: 50
-        //     },
-        //     tooltip: {
-        //             headerFormat: '<b>{series.name}</b><br>',
-        //             pointFormat: '{point.x:%e. %b}: {point.y:.2f} %'
-        //         },        
-        //     series: [{
-        //         name: 'Ideal',
-        //         data: $('#reporte-chart').data("data0"),
-        //         marker: {
-        //             enabled: false
-        //         }
-        //     }, {
-        //         name: 'Real',
-        //         data: $('#reporte-chart').data("data1"),
-        //         marker: {
-        //             enabled: false
-        //         }
-        //     }]
         });
+    }
+    if($('#reporte2-chart').length>0){
+        $('#reporte2-chart').highcharts({
+            title: {
+            text: $("#reporte2-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte2-chart').data("serie0name"),
+            data: $('#reporte2-chart').data("data0")
+        }]
+        });
+    }
+        if($('#reporte3-chart').length>0){
+        $('#reporte3-chart').highcharts({
+            title: {
+            text: $("#reporte3-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte3-chart').data("serie0name"),
+            data: $('#reporte3-chart').data("data0")
+        }]
+        });
+    }
+            if($('#reporte4-chart').length>0){
+        $('#reporte4-chart').highcharts({
+            title: {
+            text: $("#reporte4-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte4-chart').data("serie0name"),
+            data: $('#reporte4-chart').data("data0")
+        }]
+        });
+    }
+            if($('#reporte5-chart').length>0){
+        $('#reporte5-chart').highcharts({
+            title: {
+            text: $("#reporte5-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte5-chart').data("serie0name"),
+            data: $('#reporte5-chart').data("data0")
+        }]
+        });
+    }
+            if($('#reporte6-chart').length>0){
+        $('#reporte6-chart').highcharts({
+            title: {
+            text: $("#reporte6-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte6-chart').data("serie0name"),
+            data: $('#reporte6-chart').data("data0")
+        }]
+        });
+    }
+    if($('#reporte7-chart').length>0){
+        $('#reporte7-chart').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Ventas vs. Quiebres por semana'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                week: '%e. %b'
+            }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Monto en CLP'
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+            },
+            legend: {
+                align: 'right',
+                x: -70,
+                verticalAlign: 'top',
+                y: 20,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            // tooltip: {
+            //     formatter: function() {
+            //         return '<b>'+ ((this.x)/1000).to_datetime +'</b><br/>'+
+            //             this.series.name +': '+ this.y +'<br/>'+
+            //             'Total: '+ this.point.stackTotal;
+            //     }
+            // },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            textShadow: '0 0 3px black, 0 0 3px black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Quibres',
+                data: $('#reporte7-chart').data("data0")
+
+            }, {
+                name: 'Despachados',
+                data: $('#reporte7-chart').data("data1")
+
+            }]
+        
+    });
+    
+
+
+
+
+
     }
 }; 
 $(document).on('page:load',load_charts);
