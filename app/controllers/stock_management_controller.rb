@@ -3,10 +3,7 @@ class StockManagementController < ApplicationController
 
   require 'json'
 
-  def index
 
-
-  end
 
   def get_store
     response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/almacenes', 'Authorization' => "UC grupo3:"+generate_hash("GET").to_s
@@ -24,40 +21,14 @@ class StockManagementController < ApplicationController
 	
   end
 
-	def get_skuswithstock(almacen_id)
 
-		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/skusWithStock?almacenId='+almacen_id.to_s,'Authorization' => "UC grupo3:"+generate_hash("GET"+almacen_id.to_s)
-		# puts response.to_s
-		parsed_json = ActiveSupport::JSON.decode(response)
-		(0..parsed_json.length-1).each do |i|
-			JSON.parse(parsed_json[i].to_json)
-			# puts parsed_json[i].to_s #FALTA ACTUALIZAR LOS CAMBIOS!
-			# StockInStore.where(sku: parsed_json[i]['_id'], store_id: almacen_id).first_or_create.update_attributes(stock: parsed_json[i]['total']) 
-		
-			# store= Store.find(_id:parsed_json[i]['_id'])
-		end
-    return parsed_json
-	end
 
-	def actualizar_skus_with_stock_total
-		@store=Store.all
-		@store.each do |s|
-			get_skuswithstock(s._id)
-		end
-	end
 
-	def get_stock(almacen_id,sku)#falta otro igual con el opcional
-		response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/stock?almacenId='+almacen_id.to_s+'&sku='+sku.to_s, 'Authorization' => "UC grupo3:"+generate_hash("GET"+almacen_id.to_s+sku.to_s)
-		parsed_json = ActiveSupport::JSON.decode(response)
-		(0..parsed_json.length-1).each do |i|
-		 	JSON.parse(parsed_json[i].to_json)
-			# Product.where(_id: parsed_json[i]['_id']).first_or_create.update_attributes(store_id: parsed_json[i]['almacen'],sku:parsed_json[i]['sku'],direccion: parsed_json[i]['direccion'],despachado:parsed_json[i]['despachado'] )	
-	
-		end
 
-    @stores=Store.all
-    return response.to_json
-  end
+
+
+
+
 
   def get_skuswithstock(almacen_id)
     response= RestClient.get 'http://bodega-integracion-2014.herokuapp.com/skusWithStock?almacenId='+almacen_id.to_s,'Authorization' => "UC grupo3:"+generate_hash("GET"+almacen_id.to_s)
