@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140617200145) do
 
-
   create_table "apis", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
