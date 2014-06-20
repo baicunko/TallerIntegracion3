@@ -13,7 +13,6 @@
       %th= model_class.human_attribute_name(:created_at)
       %th VentaTotal 
   %tbody
-    - a=0
     - @sent_items_pedidos.each do |sent_items_pedido|
       %tr
         %td= link_to sent_items_pedido.id, sent_items_pedido_path(sent_items_pedido)
@@ -24,8 +23,7 @@
         %td= sent_items_pedido.pedidoid
         %td= sent_items_pedido.created_at
         %td= (sent_items_pedido.cantidad*sent_items_pedido.precio)
-        %td= a=a+(sent_items_pedido.cantidad*sent_items_pedido.precio)
-  %td= 'Total Ventas : '+a.to_s
+  %td= 'Total Ventas : '+@ventas_totales.to_s 
 
 /#reporte-chart{data:{type: "line",text: "Estado del proyecto",ytitle:"Avance del proyecto",categories:"#{@i_dates}",data0:"#{@i_array}",data1:"#{@r_array}"}}
 #reporte-chart{data:{text:"Historial Pedidos", data0:"#{@array}", serie0name:"Pedidos Enviados"}}

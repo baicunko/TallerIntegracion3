@@ -5,18 +5,30 @@ class SentItemsPedidosController < ApplicationController
   # GET /sent_items_pedidos.json
   def index
     @array=[]
+    @ventas_totales=0
+
     @sent_items_pedidos = SentItemsPedido.all
-    # fecha=@sent_items_pedidos.first.created_at
-    # while(fecha<Date.today)
-    #   num=@sent_items_pedidos.where(created_at:fecha).count
-    #   @array << [fecha.to_datetime.to_i*100, num]
-    #   fecha=fecha+1.day
+    @sent_items_pedidos.each do |p|
+      @ventas_totales+=(p.cantidad*p.precio)
+    end
+    @grafico=SentItemsPedido.group("date(created_at)").count
+    @grafico.each do |g|
+       @array << [g[0].to_datetime.to_i*1000, g[1]]
+     end
+    # if !@sent_items_pedidos.first.nil?
+      # start_date=@sent_items_pedidos.order("created_at").first.created_at
+      # end_date=@sent_items_pedidos.order("created_at").last.created_at
+      # while(start_date<=end_date)
+        # num=@sent_items_pedidos.where(created_at:start_date).count
+        # @array << [start_date.to_datetime.to_i*100, num]
+        # start_date=start_date+1.day
+      # end
     # end
-    @array= [
-                [(Date.today-10.day).to_datetime.to_i*1000, 29.9], 
-                [(Date.today-5.day).to_datetime.to_i*1000, 71.5], 
-                [Date.today.to_datetime.to_i*1000, 106.4]
-            ]
+    # @array= [
+    #             [(Date.today-10.day).to_datetime.to_i*1000, 29.9], 
+    #             [(Date.today-5.day).to_datetime.to_i*1000, 71.5], 
+    #             [Date.today.to_datetime.to_i*1000, 106.4]
+    #         ]
 
 
 

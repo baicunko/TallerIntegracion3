@@ -18,64 +18,106 @@ load_charts =function(){
             name: $('#reporte-chart').data("serie0name"),
             data: $('#reporte-chart').data("data0")
         }]
-        //     chart: {
-        //         // type: 'bar'
-        //         type: $("#reporte-chart").data("type"),
-        //         height: 300
-        //     },
-        //     title: {
-        //         // text: 'Fruit Consumption'
-        //         text: $("#reporte-chart").data("text"),
-        //         align: 'left'
-        //     },
-        //     xAxis: {
-        //         // categories: ['Apples', 'Bananas', 'Oranges']
-        //         type: 'datetime',
-        //         dateTimeLabelFormats: { // don't display the dummy year
-        //                              month: '%b %e, %Y'
-        //                         },
-        //          // tickInterval: 2678400000
-        //        minTickInterval: 3600*24*30*1000,//time in milliseconds
-        //         minRange: 3600*24*30*1000,
-        //         ordinal: false, //this sets the fixed time formats
-        //     minPadding: 0.05,
-        //     maxPadding: 0.05
-        //     },
-        //     yAxis: {
-        //         title: {
-        //             // text: 'Fruit eaten'
-        //             text: $("#reporte-chart").data("ytitle") 
-        //         },
-        //         max: 100,
-        //         min: 0
-
-        //     },
-        //     legend: {
-        //     layout: 'vertical',
-        //     floating: true,
-        //     backgroundColor: '#FFFFFF',
-        //     align: 'left',
-        //     verticalAlign: 'top',
-        //     y: 20,
-        //     x: 50
-        //     },
-        //     tooltip: {
-        //             headerFormat: '<b>{series.name}</b><br>',
-        //             pointFormat: '{point.x:%e. %b}: {point.y:.2f} %'
-        //         },        
-        //     series: [{
-        //         name: 'Ideal',
-        //         data: $('#reporte-chart').data("data0"),
-        //         marker: {
-        //             enabled: false
-        //         }
-        //     }, {
-        //         name: 'Real',
-        //         data: $('#reporte-chart').data("data1"),
-        //         marker: {
-        //             enabled: false
-        //         }
-        //     }]
+        });
+    }
+    if($('#reporte2-chart').length>0){
+        $('#reporte2-chart').highcharts({
+            title: {
+            text: $("#reporte2-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte2-chart').data("serie0name"),
+            data: $('#reporte2-chart').data("data0")
+        }]
+        });
+    }
+        if($('#reporte3-chart').length>0){
+        $('#reporte3-chart').highcharts({
+            title: {
+            text: $("#reporte3-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte3-chart').data("serie0name"),
+            data: $('#reporte3-chart').data("data0")
+        }]
+        });
+    }
+            if($('#reporte4-chart').length>0){
+        $('#reporte4-chart').highcharts({
+            title: {
+            text: $("#reporte4-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte4-chart').data("serie0name"),
+            data: $('#reporte4-chart').data("data0")
+        }]
+        });
+    }
+            if($('#reporte5-chart').length>0){
+        $('#reporte5-chart').highcharts({
+            title: {
+            text: $("#reporte5-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte5-chart').data("serie0name"),
+            data: $('#reporte5-chart').data("data0")
+        }]
+        });
+    }
+            if($('#reporte6-chart').length>0){
+        $('#reporte6-chart').highcharts({
+            title: {
+            text: $("#reporte6-chart").data("text")
+        },
+            xAxis: {
+            type: 'datetime'
+        },
+            yAxis: {
+            title: {
+            text: 'Cantidad'
+        }
+        },   
+        
+        series: [{
+            name: $('#reporte6-chart').data("serie0name"),
+            data: $('#reporte6-chart').data("data0")
+        }]
         });
     }
 }; 

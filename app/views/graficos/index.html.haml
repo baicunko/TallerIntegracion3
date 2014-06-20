@@ -1,0 +1,61 @@
+/ #reporte-chart{data:{text:"Historial Quiebres",data0:"#{@q_array}", serie0name:"Quiebres"}}
+%h1 Ventas
+.row.navs
+  %ul.nav.nav-pills.nav-justified
+    %li
+      %a{"data-toggle" => "tab", href: "#tab1"} 
+        %i.fa.fa-bar-chart-o
+        Historial Completo
+    %li.active
+      %a{"data-toggle" => "tab", href: "#tab2"} 
+        %i.fa.fa-bar-chart-o
+        Último Mes
+    %li
+      %a{"data-toggle" => "tab", href: "#tab3"} 
+        %i.fa.fa-bar-chart-o
+        Última Semana   
+
+
+.row
+  .tab-content
+    #tab1.tab-pane
+      .row
+      #reporte-chart{data:{text:"Historial Ventas",data0:"#{@v1_array}", serie0name:"Ventas"}}
+    #tab2.tab-pane.active
+      .row
+      #reporte2-chart{data:{text:"Historial Ventas",data0:"#{@v2_array}", serie0name:"Ventas"}}
+    #tab3.tab-pane
+      .row
+      #reporte3-chart{data:{text:"Historial Ventas",data0:"#{@v3_array}", serie0name:"Ventas"}}
+
+%h1 Quiebres
+
+
+.row.navs
+  %ul.nav.nav-pills.nav-justified
+    %li
+      %a{"data-toggle" => "tab", href: "#tab4"} 
+        %i.fa.fa-bar-chart-o
+        Historial Completo
+    %li.active
+      %a{"data-toggle" => "tab", href: "#tab5"} 
+        %i.fa.fa-bar-chart-o
+        Último Mes
+    %li
+      %a{"data-toggle" => "tab", href: "#tab6"} 
+        %i.fa.fa-bar-chart-o
+        Última Semana    
+
+
+.row
+  .tab-content
+    #tab4.tab-pane
+      .row 
+      #reporte4-chart{data:{text:"Historial Quiebres",data0:"#{@r1_array}", serie0name:"Quiebres"}}
+    #tab5.tab-pane.active
+      .row
+      #reporte5-chart{data:{text:"Historial Quiebres",data0:"#{@r2_array}", serie0name:"Quiebres"}}
+    
+    #tab6.tab-pane
+      .row
+      #reporte6-chart{data:{text:"Historial Quiebres",data0:"#{@r3_array}", serie0name:"Quiebres"}}

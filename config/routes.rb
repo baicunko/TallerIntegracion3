@@ -1,6 +1,7 @@
 RailsApp::Application.routes.draw do
 
 
+  get "graficos/index"
   get "home/index"
   
 
