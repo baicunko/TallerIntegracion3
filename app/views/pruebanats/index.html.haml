@@ -1,0 +1,17 @@
+%h1 Listing pruebanats
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @pruebanats.each do |pruebanat|
+    %tr
+      %td= link_to 'Show', pruebanat
+      %td= link_to 'Edit', edit_pruebanat_path(pruebanat)
+      %td= link_to 'Destroy', pruebanat, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Pruebanat', new_pruebanat_path
