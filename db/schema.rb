@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617002802) do
+ActiveRecord::Schema.define(version: 20140619164259) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20140617002802) do
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "ftp_pedidos", id: false, force: true do |t|
@@ -97,10 +99,6 @@ ActiveRecord::Schema.define(version: 20140617002802) do
     t.datetime "fecha_vigencia"
     t.integer  "costo_producto"
     t.integer  "costo_traspaso"
-    t.string   "direccion"
-    t.string   "store_id"
-    t.string   "_id"
-    t.boolean  "despachado"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "costo_almacenamiento"
@@ -127,9 +125,9 @@ ActiveRecord::Schema.define(version: 20140617002802) do
     t.string   "sku"
     t.integer  "cantidad"
     t.string   "responsable"
-    t.integer  "utilizado"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "utilizado"
     t.integer  "fila"
   end
 
@@ -905,7 +903,6 @@ ActiveRecord::Schema.define(version: 20140617002802) do
     t.boolean  "reception"
     t.boolean  "dispatch"
     t.boolean  "lung"
-    t.string   "_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

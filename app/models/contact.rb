@@ -3,10 +3,10 @@ class Contact < ActiveRecord::Base
  require 'rest_client'
  require 'json'
  require 'uri'
+ require 'geocoder'
 
 belongs_to :client
 geocoded_by :address
-after_validation :geocode
 
 #Variables de la clase Crm
 @@user_name = 'grupo3'
@@ -73,6 +73,7 @@ end
  info = 'Pedido por '+ o['firstname'] + ' ' + o['lastname'] + ' a la direccion: ' + o['otherstreet'] + ', ' +o['othercity'] + ', ' + o['otherstate']  
 return info
 end
+  
   def self.queryDireccion(rut)
     unless (@@login)
       self.getchallenge()
@@ -83,6 +84,7 @@ end
     result = JSON.parse((RestClient.get urlquery).body)['result']
     o = result[0]
     info = o['otherstreet'] + ', ' +o['othercity'] + ', ' + o['otherstate']
+    @direccion_contacto = info
     return info
   end
 
