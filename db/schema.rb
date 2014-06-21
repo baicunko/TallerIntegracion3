@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617002802) do
+ActiveRecord::Schema.define(version: 20140620215638) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -104,6 +104,15 @@ ActiveRecord::Schema.define(version: 20140617002802) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "costo_almacenamiento"
+  end
+
+  create_table "promociones_activas", force: true do |t|
+    t.integer  "original"
+    t.integer  "nuevo"
+    t.string   "fin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "sku"
   end
 
   create_table "quiebres", force: true do |t|

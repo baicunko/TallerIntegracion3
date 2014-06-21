@@ -1,9 +1,16 @@
+class Probando
+  include HTTParty
+  default_timeout 10000000
+end
+
 module ApplicationHelper
   APP_KEY="ic0hidmnoxyvp9q"
   APP_SECRET="n80ou9i5e4u9iix"
   require 'dropbox_sdk'
   require 'json'
   require 'TuitterHelper.rb'
+  require 'rubygems'
+
   def self.connect
     code = "wsWFRrcC0rkAAAAAAAAAC925LJBoi7yUZFXn2NyLtuqLapTzJqvoPCav4Pm4sIys"
     client = DropboxClient.new(code)
@@ -21,13 +28,16 @@ module ApplicationHelper
     system(comando);
 
     LoadingHelper.import;
-    LoadingHelper.importProductosJson;
     PreciosTemporalsHelper.crear_tabla;
     UsuariosClavesApi.usuarios_claves
 
 
 
 
+  end
+  def self.importarJson
+    #Llamarlo una vez nomas
+    LoadingHelper.importProductosJson;
   end
 
   def self.procesarpedido
@@ -53,12 +63,73 @@ module ApplicationHelper
         if(stockDisponible>=tuplaEspecial["cantidad"].to_i)
           #Ahora tengo que ver si es que la persona que hizo el pedido tiene reserva
           reservasmias, reservasotros=Reserva.stockReservado(tuplaEspecial["sku"].to_s,tuplaEspecial.cantidad.to_i,tuplaEspecial["rut"])
-          p reservasmias
-          p reservasotros
-          if(reservasmias==0 && reservasotros<stockDisponible) #caso cuando no he reservado pero si alcanza
+          if(reservasmias==0 && reservasotros<stockDisponible) #Le envio las cosas a Cox
+            precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
+            direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
+            cantidadInteger=tuplaEspecial["cantidad"].to_i
+            precioInteger=precio[0].precio
+            stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
+            stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tupla["id"])
 
           else
-            quiebre=true
+            diferenciaProductos=reservasotros+tuplaEspecial["cantidad"].to_i-stockDisponible
+            ApisHelper.pedirProducto(tuplaEspecial["sku"],diferenciaProductos)
+            #Aca yo puedo mandarle al cliente el stock disponible menos las reservas
+            precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
+            direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
+            cantidadInteger=stockDisponible-reservasotros
+            precioInteger=precio[0].precio
+            stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
+            stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tupla["id"])
+            sleep(2)
+            stockDisponible2=stockController.getcantidadtotal(tuplaEspecial["sku"])
+            if(diferenciaProductos>stockDisponible2-stockDisponible)
+              #Me llegaron los productos faltantes, los mando
+              precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
+              direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
+              cantidadInteger=diferenciaProductos
+              precioInteger=precio[0].precio
+              stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
+              stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tupla["id"])
+
+
+
+            else
+              #hubo quiebre
+              #primero veo si puedo mandar algo de lo que me llego
+              if(stockDisponible2-stockDisponible>0)
+                #significa que puedo mandar algo
+                precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
+                direccion=Contact.queryDireccion(tuplaPedidoEnviar["direccion"])
+                cantidadInteger=stockDisponible2-stockDisponible
+                precioInteger=precio[0].precio
+                stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
+                stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tupla["id"])
+
+                #Y tengo que hacer un quiebre por lo que me falto.
+                diferenciaProductos-(stockDisponible2-stockDisponible)
+                quiebrerecord=Quiebre.new
+                quiebrerecord.nombrecliente=Contact.query(tupla["direccion"])
+                quiebrerecord.fechaquiebre=Time.now
+                quiebrerecord.pedido=tupla["id"];
+                costo=0
+
+
+
+              else
+
+              end
+
+
+            end
+
+
+
+
+
+
+            end
+
 
 
           end
@@ -66,14 +137,6 @@ module ApplicationHelper
             quiebre=false
 
             Reserva.updateutilizado(tuplaEspecial["sku"],tuplaEspecial.cantidad.to_i,tuplaEspecial["rut"])
-
-          end
-
-
-
-
-
-
 
 
         else
@@ -86,8 +149,7 @@ module ApplicationHelper
       end
       if(quiebre)
         #poner cantidad
-        quiebreClass=Quiebre.where(id: tupla["id"])
-        if(quiebreClass.count==0)
+
           quiebrerecord=Quiebre.new
           quiebrerecord.nombrecliente=Contact.query(tupla["direccion"])
           quiebrerecord.fechaquiebre=Time.now
@@ -109,7 +171,7 @@ module ApplicationHelper
 
 =end      quiebre.dineroperdido=0;
           quiebrerecord.save
-        end
+
 
       else #estos son los pedidos sin quiebre! Si o si existe stock
         pedido.each do |tuplaPedidoEnviar|
@@ -138,7 +200,8 @@ module ApplicationHelper
   def self.spreeIntegration
 
     #Tengo que actualizar los stocks en el spree
-    stockEnSpree= HTTParty.get("http://localhost:3000/store/api/stock_locations/1/stock_items?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4&per_page=3000")
+
+    stockEnSpree= Probando.get('http://localhost:3000/store/api/stock_locations/1/stock_items?token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202&per_page=20000')
     b=StockManagementController.new
 
     $stockAlmacen1=b.get_skuswithstock(Store.find(1)._id);
@@ -166,18 +229,39 @@ module ApplicationHelper
 
       end
 
+
       #Tengo que buscar  el stock
 
     end
+    preciosSpree(stockEnSpree)
 
   end
   def self.backOrderFalse
+    #Tambien tengo que aprovechar de cambiar todo a CLP
 
     @todos=Spree::StockItem.all
     @todos.each do |producto|
       producto['backorderable']=false
       producto.save
     end
+
+    @precios=Spree::Price.all
+    @precios.each do |precio|
+      precio['currency']="CLP"
+      precio.save
+    end
+
+    @variantes=Spree::Variant.all
+    @variantes.each do |varianteSpree|
+      if(varianteSpree['sku'].include? '.')
+        varianteSpree['sku']=varianteSpree['sku'].to_s[0..-3]
+        varianteSpree.save
+      end
+
+    end
+
+
+
   end
 
   def self.stockPorSKU(sku,jsonParseadoAlmacen)
@@ -199,17 +283,17 @@ module ApplicationHelper
     #Depsues usando el order number saco el shipment number http://localhost:3000/store/api/orders/R156162404?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4&per_page=100000
     #por ultimo ship http://localhost:3000/store/api/orders/R156162404/shipments/H35327667308/ship?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4&per_page=100000
     #primero en verdad hay que sacar todas las ordenes que esten en estado complete
-    ordenes= HTTParty.get("http://localhost:3000/store/api/orders?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4&per_page=20000")
+    ordenes= HTTParty.get("http://localhost:3000/store/api/orders?token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202&per_page=20000")
     ordenes['orders'].each do |ordenRevisar|
       if(ordenRevisar['state'].to_s=="complete" && ordenRevisar['shipment_state'].to_s!="shipped")
         #la orden esta en estado completa, tengo que capturar primero
-        linkCapturar="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/payments/"+ordenRevisar['id'].to_s+"/capture?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4"
+        linkCapturar="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/payments/"+ordenRevisar['id'].to_s+"/capture?token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202"
         respuestaCapture=HTTParty.put(linkCapturar)
         #Ahora que tengo capturado el metodo de pago, tengo que sacar el shipment number
-        linkShipment="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4"
+        linkShipment="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"?token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202"
         respuestaLinkShipment=HTTParty.get(linkShipment)
         #Ahora puedo sacar el shipment number que me sirve para marcar una orden como enviada
-        linkShip="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/shipments/"+respuestaLinkShipment['shipments'][0]['number'].to_s+"/ship?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4"
+        linkShip="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/shipments/"+respuestaLinkShipment['shipments'][0]['number'].to_s+"/ship?token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202"
         shipmentNumber=HTTParty.put(linkShip)
         #Listo! Con esto tenemos que se envio el pedido, solo me falta integrarlo con la api de envio de stock y no habria problemas.
         #Agregar valor metiendo las transacciones en las mismas tablas que usamos pa los ftp pedidos
@@ -221,6 +305,99 @@ module ApplicationHelper
   def self.mandarATwitter(mensaje)
     TuitterHelper.sendTweet(mensaje)
   end
+
+  def self.preciosSpree(jsonConPrecios)
+    #En este metodo tengo que ver las cosas que se obtienen de la cola y ver cual es el precio que efectivamente corresponde!
+    #Hay una tabla llamada productosJson donde estan los precios por defecto, en caso de no haber promoción usamos esa tabla.
+    #hacer un query que SELECT * FROM tablaKappes WHERE NOW < > ORDER BY TIME LIMIT 1; ELSE productos Json LISTO!
+    #Si el precio de spree es Distinto al de la tabla kappes que encontre significa que se activo promocion, enviar twitter.
+
+
+
+    time=Time.now.to_f
+    @tdas=PromocionesActivas.all;
+
+
+    @tdas.each do |promocionvencida|
+      if(promocionvencida.fin.to_i<time.to_i)
+        #ESTA VENCIDA.
+        #QUE HAGO
+        linkActualizar="http://localhost:3000/store/api/products/"+promocionvencida.id.to_s+"?product[price]="+promocionvencida.original.to_s+"&token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202"
+        HTTParty.put(linkActualizar)
+        promocionvencida.delete
+
+
+
+      end
+
+
+    end
+
+
+    sql="SELECT * FROM messages WHERE inicio<"+time.to_s+" AND fin>"+time.to_s+" ORDER BY llegada ASC";
+    records_array = Message.connection.execute(sql)
+    records_array.each do |recordo|
+
+
+      nombre,costoprecio,idproducto,slug=getPrecioForSku(jsonConPrecios,recordo['sku'].delete!('|'))
+      if(costoprecio!=recordo['precio'].to_i)
+       #Los precios son distintos, actualizo el Spree y mando un Twitter.
+        b=PromocionesActivas.new
+        b.original=costoprecio
+        b.nuevo=recordo['precio'].to_i
+        b.fin=recordo['fin']
+        b.sku=recordo['sku']
+        b.save
+        linkActualizar="http://localhost:3000/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=511a20dabe1d92acd1dc58703bad37ce85c42d3230fc5202"
+        HTTParty.put(linkActualizar)
+        mandarATwitter(nombre.to_s+" ahora a "+b.nuevo.to_s+" http://www.centralahorro.cl/store/"+slug.to_s);
+
+
+
+
+
+
+      else
+        #Los precios son iguales, no hago nada de nada.
+
+
+      end
+
+
+    end
+
+
+
+
+  end
+
+
+
+  def self.getPrecioForSku(json,sku)
+    #busco dentro del json el sku buscado
+    precio=0
+    idproducto=0;
+    nombre=""
+    slug=""
+
+    json['stock_items'].each do |i|
+
+
+      if(i['variant']['sku']==sku)
+        precio+=(i['variant']['price']).to_i
+        idproducto+=(i['id']).to_i
+        nombre+=i['variant']['name'].to_s
+        slug+=i['variant']['slug'].to_s
+
+      end
+
+
+    end
+    return nombre,precio,idproducto,slug
+
+
+  end
+
 
 
 
