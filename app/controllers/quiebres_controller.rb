@@ -6,17 +6,21 @@ class QuiebresController < ApplicationController
   def index
     @quiebres = Quiebre.all
     @array=[]
+    @quiebres_totales=0
+    @quiebres.each do |q|
+      @quiebres_totales+=q.dineroperdido
+    end
     # fecha=@quiebres.first.created_at
     # while(fecha<Date.today)
     #   num=@quiebres.where(created_at:fecha).count
     #   @array << [fecha.to_datetime.to_i*100, num]
     #   fecha=fecha+1.day
     # end
-    @array= [
-              [(Date.today-10.day).to_datetime.to_i*1000, 29.9], 
-              [(Date.today-5.day).to_datetime.to_i*1000, 71.5], 
-              [Date.today.to_datetime.to_i*1000, 106.4]
-            ]
+    @grafico=Quiebre.group("date(created_at)").count
+    @grafico.each do |g|
+       @array << [g[0].to_datetime.to_i*1000, g[1]]
+     end
+    # if !@
   end
 
   # GET /quiebres/1

@@ -15,9 +15,10 @@ gem 'therubyracer'
 gem "highcharts-rails", "~> 3.0.0"
 gem 'jquery-rails'
 gem 'bunny'
+gem 'gmaps4rails'
 
-gem 'datashift'
-gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
+# gem 'datashift'
+# gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
 
 
 

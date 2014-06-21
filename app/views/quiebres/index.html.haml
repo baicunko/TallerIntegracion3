@@ -20,6 +20,7 @@
         %td= quiebre.fechaquiebre
         %td= quiebre.created_at
         %td= quiebre.dineroperdido
+    %td= 'Total Quiebre : '+@quiebres_totales.to_s 
 #reporte-chart{data:{text:"Historial Quiebres",data0:"#{@array}", serie0name:"Quiebres"}}
 
 
