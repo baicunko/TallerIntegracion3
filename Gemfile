@@ -16,7 +16,7 @@ gem "highcharts-rails", "~> 3.0.0"
 gem 'jquery-rails'
 gem 'bunny'
 gem 'gmaps4rails'
-gem 'datashift', '~> 0.14.0'
+gem 'datashift', '~> 0.15.0'
 gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
 
 
