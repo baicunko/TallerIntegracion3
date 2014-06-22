@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20140617200145) do
-
+ActiveRecord::Schema.define(version: 20140621001146) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -125,6 +123,7 @@ ActiveRecord::Schema.define(version: 20140617200145) do
     t.datetime "updated_at"
     t.integer  "dineroperdido"
     t.integer  "cantidad"
+    t.string   "sku"
   end
 
   create_table "reposicions", id: false, force: true do |t|
