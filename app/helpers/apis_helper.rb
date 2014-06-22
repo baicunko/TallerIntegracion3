@@ -23,6 +23,8 @@ module ApisHelper
 
 			sleep(2)
 			stockdisp = stockcontrol.total_sku_stock(sku)
+      p stockdisp
+      p "Estoy en la linea 27"
 			if(stockdisp>=cant)
 				return
 			else
@@ -40,6 +42,8 @@ module ApisHelper
 				#		end
 				sleep(2)
 				stockdisp = stockcontrol.total_sku_stock(sku)
+        p stockdisp
+        p "Estoy en la linea 46"
 				if(stockdisp>=cant)
 					return
 				else
@@ -57,6 +61,7 @@ module ApisHelper
 							end
 					sleep(2)
 					stockdisp = stockcontrol.total_sku_stock(sku)
+          p stockdisp
 					if(stockdisp>=cant)
 						return
 					else
