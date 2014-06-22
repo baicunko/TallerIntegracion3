@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621001146) do
+ActiveRecord::Schema.define(version: 20140622234156) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -922,10 +922,8 @@ ActiveRecord::Schema.define(version: 20140621001146) do
   end
 
   create_table "usuarios_claves_apis", id: false, force: true do |t|
-    t.string   "grupo"
-    t.string   "password"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "grupo"
+    t.string "password"
   end
 
 end
