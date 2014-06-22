@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" afterPath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,8 +16,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TallerIntegracion3@IRB_console__TallerIntegracion3.coverage" NAME="IRB console: TallerIntegracion3 Coverage Results" MODIFIED="1403292891554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@stock_management_controller.coverage" NAME="stock_management_controller Coverage Results" MODIFIED="1403316705505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="TallerIntegracion3" />
+    <SUITE FILE_PATH="coverage/TallerIntegracion3@IRB_console__TallerIntegracion3.coverage" NAME="IRB console: TallerIntegracion3 Coverage Results" MODIFIED="1403292891554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@application_helper.coverage" NAME="application_helper Coverage Results" MODIFIED="1403316728652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/helpers" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@Production__TallerIntegracion3.coverage" NAME="Production: TallerIntegracion3 Coverage Results" MODIFIED="1403024344609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@Development__TallerIntegracion3.coverage" NAME="Development: TallerIntegracion3 Coverage Results" MODIFIED="1403316568890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
@@ -38,10 +34,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="373" column="34" selection-start="16875" selection-end="16875" vertical-scroll-proportion="0.46920052" vertical-offset="5237" max-vertical-offset="6675">
+            <state line="362" column="9" selection-start="16411" selection-end="16411" vertical-scroll-proportion="0.0" vertical-offset="5237" max-vertical-offset="6675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="17" selection-start="446" selection-end="446" vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -73,16 +78,16 @@
         <option value="$PROJECT_DIR$/app/helpers/twitter_helper.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/helpers/TuitterHelper.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140518193805_columnaftpenvio.rb" />
         <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20140620215638_removesku_from_promociones_activas.rb" />
         <option value="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -125,6 +130,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,8 +280,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,7 +670,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24105866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2446352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39832285" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22084367" sideWeight="0.46566522" order="7" side_tool="true" content_ui="tabs" />
@@ -673,13 +678,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -701,16 +706,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/log/production.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/stock_in_store.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/apis_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="6" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.87628865" vertical-offset="0" max-vertical-offset="2190" />
@@ -761,11 +756,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="449" selection-end="449" vertical-scroll-proportion="0.29862174" vertical-offset="0" max-vertical-offset="653" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12285" />
@@ -794,11 +784,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20140516213855_change_string_format_in_my_table.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="12" selection-start="84" selection-end="84" vertical-scroll-proportion="0.057251908" vertical-offset="0" max-vertical-offset="524" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
@@ -833,30 +818,22 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs20/time.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1163" column="16" selection-start="46443" selection-end="46451" vertical-scroll-proportion="0.33333334" vertical-offset="17245" max-vertical-offset="17865">
-          <folding />
-        </state>
+        <state line="1163" column="16" selection-start="46443" selection-end="46451" vertical-scroll-proportion="0.33333334" vertical-offset="17245" max-vertical-offset="17865" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140617002802_mod_tabla_reposiciones.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140616173348_message_remove_column_id.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140616021832_agregar_hoy_message.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/message.rb">
@@ -879,11 +856,6 @@
         <state line="124" column="0" selection-start="3636" selection-end="3636" vertical-scroll-proportion="0.29593495" vertical-offset="1678" max-vertical-offset="2790" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.thor">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/promociones_activas.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628" />
@@ -901,65 +873,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140617002005_create_reposicions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140616021301_create_messages.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140520202319_add_column_to_quiebre.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="50" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0477707" vertical-offset="0" max-vertical-offset="628">
-          <folding />
-        </state>
+        <state line="2" column="50" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0477707" vertical-offset="0" max-vertical-offset="628" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140620215638_removesku_from_promociones_activas.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.1433121" vertical-offset="0" max-vertical-offset="628">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="447" selection-end="447" vertical-scroll-proportion="0.2388535" vertical-offset="135" max-vertical-offset="1290">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.1433121" vertical-offset="0" max-vertical-offset="628" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140620204551_create_promociones_activas.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="37" selection-start="88" selection-end="107" vertical-scroll-proportion="0.0477707" vertical-offset="0" max-vertical-offset="628">
-          <folding />
-        </state>
+        <state line="2" column="37" selection-start="88" selection-end="107" vertical-scroll-proportion="0.0477707" vertical-offset="0" max-vertical-offset="628" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/reserva.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="11" selection-start="1257" selection-end="1257" vertical-scroll-proportion="-0.28821656" vertical-offset="841" max-vertical-offset="1515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="30" selection-start="3582" selection-end="3582" vertical-scroll-proportion="0.48556876" vertical-offset="1559" max-vertical-offset="14025">
-          <folding />
-        </state>
+        <state line="44" column="11" selection-start="1257" selection-end="1257" vertical-scroll-proportion="-0.28821656" vertical-offset="841" max-vertical-offset="1515" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140621001146_add_sku_to_quiebre.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0952986" vertical-offset="0" max-vertical-offset="787">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0952986" vertical-offset="0" max-vertical-offset="787" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/quiebre.rb">
@@ -974,14 +918,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="11" selection-start="5997" selection-end="5997" vertical-scroll-proportion="0.0" vertical-offset="2910" max-vertical-offset="4260">
-          <folding />
-        </state>
+        <state line="194" column="11" selection-start="5997" selection-end="5997" vertical-scroll-proportion="0.0" vertical-offset="2910" max-vertical-offset="4260" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="373" column="34" selection-start="16875" selection-end="16875" vertical-scroll-proportion="0.46920052" vertical-offset="5237" max-vertical-offset="6675">
+        <state line="362" column="9" selection-start="16411" selection-end="16411" vertical-scroll-proportion="0.0" vertical-offset="5237" max-vertical-offset="6675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.thor">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="398" selection-end="398" vertical-scroll-proportion="0.25128865" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="30" selection-start="3582" selection-end="3582" vertical-scroll-proportion="0.48623854" vertical-offset="1474" max-vertical-offset="14055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="21" selection-start="137" selection-end="137" vertical-scroll-proportion="0.15463917" vertical-offset="0" max-vertical-offset="776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="17" selection-start="446" selection-end="446" vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
