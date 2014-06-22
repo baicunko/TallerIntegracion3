@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +46,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="17" selection-start="446" selection-end="446" vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="1260">
+            <state line="18" column="25" selection-start="472" selection-end="472" vertical-scroll-proportion="0.34793815" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -972,7 +972,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="446" selection-end="446" vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="1260">
+        <state line="18" column="25" selection-start="472" selection-end="472" vertical-scroll-proportion="0.34793815" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
