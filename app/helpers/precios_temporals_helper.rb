@@ -4,7 +4,7 @@ module PreciosTemporalsHelper
 		query = "SELECT sku AS SKU, precio from products where fecha_vigencia>date('now') AND fecha_actualizacion<date('now')"
 		results = Product.connection.execute(query)
 		results.each do |t|
-			product = PreciosTemporal.where(SKU: t["SKU"])
+			product = PreciosTemporal.where(sku: t["SKU"])
 
 	      	if product.count == 1
 	      		p "EL COUNT ES 1 CONCHAT"
@@ -12,7 +12,7 @@ module PreciosTemporalsHelper
 	      	
 	      	else
 		        user=PreciosTemporal.new
-		        user.SKU=t["SKU"]
+		        user.sku=t["SKU"]
 		        user.precio=t["precio"]
 		        user.save
 			end

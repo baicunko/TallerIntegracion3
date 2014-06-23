@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -36,16 +36,25 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6675">
+            <state line="31" column="33" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="6675">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loading_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="precios_temporals_helper.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="41" selection-start="280" selection-end="280" vertical-scroll-proportion="0.18480493" vertical-offset="0" max-vertical-offset="487">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="11" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.33264887" vertical-offset="363" max-vertical-offset="945">
+            <state line="36" column="0" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
               <folding />
             </state>
           </provider>
@@ -104,6 +113,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20140518223449_create_quiebres.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140621001146_add_sku_to_quiebre.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb" />
       </list>
     </option>
   </component>
@@ -658,13 +668,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140520041531_create_sent_items_pedidos.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140520021435_add_column_to_reserva.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
@@ -1003,16 +1006,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6675">
+        <state line="36" column="0" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/loading_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="11" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.33264887" vertical-offset="363" max-vertical-offset="945">
+        <state line="31" column="33" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="6675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="41" selection-start="280" selection-end="280" vertical-scroll-proportion="0.18480493" vertical-offset="0" max-vertical-offset="487">
           <folding />
         </state>
       </provider>
