@@ -29,8 +29,10 @@
       else
         autorizacion = UsuariosClavesApi.find_by_grupo(user)
         sql1 = "Select password from usuarios_claves_apis WHERE grupo = '#{user}';"
+        p sql1; 
         records_array = UsuariosClavesApi.connection.execute(sql1)
         clave = records_array[0][0]
+        p clave
         #clave = clave.delete! '\\n'
 
         #pass_nueva = clave
@@ -51,10 +53,11 @@
         render :json => [:SKU => sku.to_s, :cantidad => 0].to_json and return
       end
 
+      stock_reservado = Reserva.stockReservadoTodo(sku)
       if stock_reservado.nil?
         stock_reservado = 0
-      else
-        stock_reservado = Reserva.stockReservadoTodo(sku)
+      end
+
 
       stock_efectivo = stock_sku - stock_reservado
 
@@ -69,7 +72,7 @@
 
 
 
-      end
+
       end
 
     # GET /apis
