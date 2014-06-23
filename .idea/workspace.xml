@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140622234156_agregar_datos_grupos.rb" afterPath="$PROJECT_DIR$/db/migrate/20140622234156_agregar_datos_grupos.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/usuarios_claves_api.rb" afterPath="$PROJECT_DIR$/app/models/usuarios_claves_api.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,19 +36,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="7" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.221519" vertical-offset="390" max-vertical-offset="6690">
+            <state line="33" column="6" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="6690">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usuarios_claves_api.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="usuarios_claves_api.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/usuarios_claves_api.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="11" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+            <state line="7" column="33" selection-start="704" selection-end="704" vertical-scroll-proportion="0.21560575" vertical-offset="0" max-vertical-offset="487">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20140622234156_agregar_datos_grupos.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20140622234156_agregar_datos_grupos.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
               <folding />
             </state>
           </provider>
@@ -105,6 +118,8 @@
         <option value="$PROJECT_DIR$/app/controllers/apis_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/apis_helper.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140622225526_changecolumn_spree.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140622234156_agregar_datos_grupos.rb" />
+        <option value="$PROJECT_DIR$/app/models/usuarios_claves_api.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       </list>
     </option>
@@ -628,11 +643,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/promociones_activas.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@global/gems/bundler-1.5.3/lib/bundler.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="294" column="0" selection-start="9045" selection-end="9045" vertical-scroll-proportion="0.0" vertical-offset="4205" max-vertical-offset="6420" />
@@ -963,16 +973,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/usuarios_claves_api.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140622234156_agregar_datos_grupos.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+        <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="7" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.221519" vertical-offset="390" max-vertical-offset="6690">
+        <state line="33" column="6" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="6690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/usuarios_claves_api.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="704" selection-end="704" vertical-scroll-proportion="0.21560575" vertical-offset="0" max-vertical-offset="487">
           <folding />
         </state>
       </provider>
