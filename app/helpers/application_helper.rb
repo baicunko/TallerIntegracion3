@@ -230,7 +230,7 @@
 
       #Tengo que actualizar los stocks en el spree
 
-      stockEnSpree= Probando.get("http://localhost:3000/store/api/stock_locations/1/stock_items?token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae&per_page=20000")
+      stockEnSpree= Probando.get("http://localhost:3000/store/api/stock_locations/1/stock_items?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=20000")
       b=StockManagementController.new
 
       $stockAlmacen1=b.get_skuswithstock(Store.find(1)._id);
@@ -312,17 +312,17 @@
       #Depsues usando el order number saco el shipment number http://localhost:3000/store/api/orders/R156162404?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4&per_page=100000
       #por ultimo ship http://localhost:3000/store/api/orders/R156162404/shipments/H35327667308/ship?token=2d322b9538440950685ad9c4d0d35bec9f670c9b0c01d5c4&per_page=100000
       #primero en verdad hay que sacar todas las ordenes que esten en estado complete
-      ordenes= HTTParty.get("http://localhost:3000/store/api/orders?token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae&per_page=20000")
+      ordenes= HTTParty.get("http://localhost:3000/store/api/orders?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=20000")
       ordenes['orders'].each do |ordenRevisar|
         if(ordenRevisar['state'].to_s=="complete" && ordenRevisar['shipment_state'].to_s!="shipped")
           #la orden esta en estado completa, tengo que capturar primero
-          linkCapturar="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/payments/"+ordenRevisar['id'].to_s+"/capture?token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae"
+          linkCapturar="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/payments/"+ordenRevisar['id'].to_s+"/capture?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           respuestaCapture=HTTParty.put(linkCapturar)
           #Ahora que tengo capturado el metodo de pago, tengo que sacar el shipment number
-          linkShipment="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"?token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae"
+          linkShipment="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           respuestaLinkShipment=HTTParty.get(linkShipment)
           #Ahora puedo sacar el shipment number que me sirve para marcar una orden como enviada
-          linkShip="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/shipments/"+respuestaLinkShipment['shipments'][0]['number'].to_s+"/ship?token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae"
+          linkShip="http://localhost:3000/store/api/orders/"+ordenRevisar['number'].to_s+"/shipments/"+respuestaLinkShipment['shipments'][0]['number'].to_s+"/ship?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           shipmentNumber=HTTParty.put(linkShip)
           #Listo! Con esto tenemos que se envio el pedido, solo me falta integrarlo con la api de envio de stock y no habria problemas.
           #Agregar valor metiendo las transacciones en las mismas tablas que usamos pa los ftp pedidos
@@ -351,7 +351,7 @@
         if(promocionvencida.fin.to_i<time.to_i)
           #ESTA VENCIDA.
           #QUE HAGO
-          linkActualizar="http://localhost:3000/store/api/products/"+promocionvencida.id.to_s+"?product[price]="+promocionvencida.original.to_s+"&token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae"
+          linkActualizar="http://localhost:3000/store/api/products/"+promocionvencida.id.to_s+"?product[price]="+promocionvencida.original.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           HTTParty.put(linkActualizar)
           promocionvencida.delete
 
@@ -377,7 +377,7 @@
           b.fin=recordo['fin']
           b.sku=recordo['sku']
           b.save
-          linkActualizar="http://localhost:3000/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=3b622f00f899b2bf0fa15018a5ed93eb4dea24232b83d2ae"
+          linkActualizar="http://localhost:3000/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           HTTParty.put(linkActualizar)
           mandarATwitter("#ofertagrupo3 "+nombre.to_s+" "+b.nuevo.to_s+"http://www.centralahorro.cl/store/"+slug.to_s);
 

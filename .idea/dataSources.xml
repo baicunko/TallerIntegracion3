@@ -10,8 +10,9 @@
     <data-source source="LOCAL" name="Rails TallerIntegracion3: production" uuid="b7c49a4b-8cd7-4084-b766-51cea8b491a2">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:taller_integracion</jdbc-url>
-      <user-name>administrator</user-name>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/taller</jdbc-url>
+      <user-name>taller</user-name>
+      <user-password>dfdedfcbdfc6dfc6dfcfdfd8</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails TallerIntegracion3: test" uuid="9c4171e4-0ca0-4c9f-9bad-1ed082dacd72">
