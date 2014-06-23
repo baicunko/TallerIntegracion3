@@ -29,7 +29,7 @@
       else
         autorizacion = UsuariosClavesApi.find_by_grupo(user)
         sql1 = "Select password from usuarios_claves_apis WHERE grupo = '#{user}';"
-        p sql1; 
+        p sql1;
         records_array = UsuariosClavesApi.connection.execute(sql1)
         clave = records_array[0][0]
         p clave
