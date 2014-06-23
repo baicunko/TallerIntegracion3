@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/reserva.rb" afterPath="$PROJECT_DIR$/app/models/reserva.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -32,10 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20140623021020_modifycolumnareserva.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20140623021020_modifycolumnareserva.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140623021020_modifycolumnareserva.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="27" selection-start="93" selection-end="93" vertical-scroll-proportion="0.061601643" vertical-offset="0" max-vertical-offset="487">
+            <state line="4" column="3" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reserva.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/reserva.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.43037975" vertical-offset="426" max-vertical-offset="1590">
               <folding />
             </state>
           </provider>
@@ -107,8 +117,8 @@
         <option value="$PROJECT_DIR$/app/models/usuarios_claves_api.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/apis_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/reserva.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140623021020_modifycolumnareserva.rb" />
+        <option value="$PROJECT_DIR$/app/models/reserva.rb" />
       </list>
     </option>
   </component>
@@ -941,13 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/reserva.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="26" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.41906872" vertical-offset="426" max-vertical-offset="1515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="74" selection-start="62" selection-end="132" vertical-scroll-proportion="0.06465517" vertical-offset="0" max-vertical-offset="464">
@@ -985,7 +988,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140623021020_modifycolumnareserva.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="27" selection-start="93" selection-end="93" vertical-scroll-proportion="0.061601643" vertical-offset="0" max-vertical-offset="487">
+        <state line="4" column="3" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/reserva.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.43037975" vertical-offset="426" max-vertical-offset="1590">
           <folding />
         </state>
       </provider>
