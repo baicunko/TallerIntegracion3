@@ -51,24 +51,20 @@ class ApisController < ApplicationController
       render :json => [:SKU => sku.to_s, :cantidad => 0].to_json and return
     end
 
+    stock_reservado = Reserva.stockReservadoTodo(sku)
+
     if stock_reservado.nil?
       stock_reservado = 0
-    else
-      stock_reservado = Reserva.stockReservadoTodo(sku)
-      
+    end
     stock_efectivo = stock_sku - stock_reservado
 
     if stock_efectivo > cant
         s.mover_a_despacho_sku(sku,cant)
         s.despachar_sku_para_grupos(sku,cant,almacen)
-
       render :json => [:SKU => sku.to_s, :cantidad => cant.to_i].to_json and return
     else
       render :json => [:error => "No hay stock suficiente."].to_json and return
     end
-
-    
-
   end
 
   # GET /apis
