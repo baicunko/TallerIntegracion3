@@ -40,11 +40,7 @@
       sql = "select cantidad from reservas WHERE sku="+sku.to_s
       resultado = Reserva.connection.execute(sql)
       begin
-      if(resultado[0].length==0)
-        return 0
-      else
         return resultado[0]["cantidad"]
-      end
       rescue
         return 0
       end
