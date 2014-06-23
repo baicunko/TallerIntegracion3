@@ -15,6 +15,12 @@ class SentItemsPedidosController < ApplicationController
     @grafico.each do |g|
        @array << [g[0].to_datetime.to_i*1000, g[1]]
      end
+        # @users = User.all
+
+    @hash = Gmaps4rails.build_markers(@sent_items_pedidos) do |pedido, marker|
+      marker.lat pedido.latitude
+      marker.lng pedido.longitude
+    end
     # if !@sent_items_pedidos.first.nil?
       # start_date=@sent_items_pedidos.order("created_at").first.created_at
       # end_date=@sent_items_pedidos.order("created_at").last.created_at
@@ -37,6 +43,14 @@ class SentItemsPedidosController < ApplicationController
   # GET /sent_items_pedidos/1
   # GET /sent_items_pedidos/1.json
   def show
+    pedido=SentItemsPedido.find params[:id]
+
+    # @users = User.all
+    @hash1=Geocoder.coordinates(pedido.direccion)
+    @hash = Gmaps4rails.build_markers(pedido) do |user, marker|
+      marker.lat @hash1[0]
+      marker.lng @hash1[1]
+  end
   end
 
   # GET /sent_items_pedidos/new

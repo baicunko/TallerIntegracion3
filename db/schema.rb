@@ -154,6 +154,8 @@
     t.boolean  "respuesta"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "spree_addresses", force: true do |t|
