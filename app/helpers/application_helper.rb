@@ -363,8 +363,8 @@
 
       end
 
-
-      sql="SELECT * FROM messages WHERE inicio<"+time.to_s+" AND fin>"+time.to_s+" ORDER BY llegada ASC";
+      hola=time.to_s
+      sql="SELECT * FROM messages WHERE inicio::integer<"+hola+" AND fin::integer>"+hola+" ORDER BY llegada ASC";
       records_array = Message.connection.execute(sql)
       records_array.each do |recordo|
 
