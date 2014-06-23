@@ -170,6 +170,8 @@ class StockManagementController < ApplicationController
 
   def mover_a_despacho_sku(sku,cantidad)
     puts "ESTOY EN MOVER DESPACHO"
+    puts "Me mandaron "+cantidad.to_s
+    puts "Y el SKU ES"+sku.to_s
     i=0
     if(i<=cantidad)
       (2..5).each do |a|
@@ -181,9 +183,7 @@ class StockManagementController < ApplicationController
             move_stock(@almacen[j]['_id'],Store.find(1)._id)
             i+=1
             puts i.to_s
-            if (i == cantidad)
-              break
-            end
+            return if (i == cantidad)
             p "SE ACABO EL METODO"
           end
         end

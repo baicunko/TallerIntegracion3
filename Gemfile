@@ -17,17 +17,12 @@ gem 'jquery-rails'
 gem 'bunny'
 gem 'gmaps4rails'
 gem 'geocoder'
-
 # gem 'datashift'
 # gem 'datashift_spree',:git => 'https://github.com/cfgrok/datashift_spree.git',:branch => 'master'
 
-
-
-
-
+gem 'better_errors'
+gem 'binding_of_caller'
 group :development do
-	gem 'better_errors'
-	gem 'binding_of_caller'
   gem 'sqlite3'
 end
 
@@ -53,7 +48,7 @@ gem 'haml-rails'
 group :production do
   gem 'pg'
 end
-
+gem 'addressable'
 
 
 gem 'turbolinks'
@@ -79,4 +74,5 @@ gem 'multi_xml', '~> 0.5.5'
 gem 'json', '~> 1.8.1'
 
 gem 'google_drive', '~> 0.3.9'
+gem 'rack-mini-profiler'
 

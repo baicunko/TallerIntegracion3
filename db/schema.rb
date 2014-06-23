@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140621235136) do
+=======
+ActiveRecord::Schema.define(version: 20140622234156) do
+>>>>>>> adf407625371f434a511d9e331b78b1a624138ed
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -106,6 +110,15 @@ ActiveRecord::Schema.define(version: 20140621235136) do
     t.integer  "costo_almacenamiento"
   end
 
+  create_table "promociones_activas", force: true do |t|
+    t.integer  "original"
+    t.integer  "nuevo"
+    t.string   "fin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "sku"
+  end
+
   create_table "quiebres", force: true do |t|
     t.integer  "pedido"
     t.string   "nombrecliente"
@@ -114,6 +127,7 @@ ActiveRecord::Schema.define(version: 20140621235136) do
     t.datetime "updated_at"
     t.integer  "dineroperdido"
     t.integer  "cantidad"
+    t.string   "sku"
   end
 
   create_table "reposicions", id: false, force: true do |t|
@@ -914,10 +928,8 @@ ActiveRecord::Schema.define(version: 20140621235136) do
   end
 
   create_table "usuarios_claves_apis", id: false, force: true do |t|
-    t.string   "grupo"
-    t.string   "password"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "grupo"
+    t.string "password"
   end
 
 end
