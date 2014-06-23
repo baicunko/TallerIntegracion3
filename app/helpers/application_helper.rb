@@ -377,7 +377,7 @@
           b.original=costoprecio.to_i
           b.nuevo=recordo['precio'].to_i
           b.fin=recordo['fin'].to_s
-          b.sku=recordo['sku'.to_i
+          b.sku=recordo['sku'].to_i
           b.save
           linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           HTTParty.put(linkActualizar)
