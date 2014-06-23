@@ -31,7 +31,7 @@
         sql1 = "Select password from usuarios_claves_apis WHERE grupo = '#{user}';"
         logger.fatal sql1
         records_array = UsuariosClavesApi.connection.execute(sql1)
-        clave = records_array[0][0]
+        clave = records_array[0]["password"].to_s
         logger.fatal clave
         logger.fatal 'acabo de imprimir la clave'
         #clave = clave.delete! '\\n'
