@@ -11,11 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140621235136) do
-=======
+
 ActiveRecord::Schema.define(version: 20140622234156) do
->>>>>>> adf407625371f434a511d9e331b78b1a624138ed
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
