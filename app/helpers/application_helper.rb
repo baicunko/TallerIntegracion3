@@ -31,7 +31,7 @@
 
       LoadingHelper.import;
       PreciosTemporalsHelper.crear_tabla;
-      #UsuariosClavesApi.usuarios_claves
+      UsuariosClavesApi.usuarios_claves
 
 
 
@@ -48,7 +48,7 @@
 
       stockController=StockManagementController.new
       stockController.get_store
-      #stockController.liberar_recepcion
+      stockController.liberar_recepcion
       Reserva.consumir
       FtpPedido.verPedidos;
       sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL";
