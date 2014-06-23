@@ -4,7 +4,7 @@ class CreateQuiebres < ActiveRecord::Migration
       t.integer :pedido
       t.string :nombrecliente
       t.datetime :fechaquiebre
-
+      t.string :sku
       t.timestamps
     end
   end
