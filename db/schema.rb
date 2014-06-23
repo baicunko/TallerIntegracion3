@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20140622225526) do
 
   # These are extensions that must be enabled in order to support this database
@@ -925,10 +926,8 @@ ActiveRecord::Schema.define(version: 20140622225526) do
   end
 
   create_table "usuarios_claves_apis", id: false, force: true do |t|
-    t.string   "grupo"
-    t.string   "password"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "grupo"
+    t.string "password"
   end
 
 end
