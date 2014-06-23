@@ -7,10 +7,11 @@ test:
 production:
     adapter: postgresql
     encoding: unicode
-    database: taller_integracion
+    database: taller
     pool: 5
-    username: administrator
-    password:
+    host: localhost
+    username: taller
+    password: taller
 
 development:
   adapter: sqlite3
