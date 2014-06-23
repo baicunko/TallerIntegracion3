@@ -33,6 +33,8 @@
         records_array = UsuariosClavesApi.connection.execute(sql1)
         clave = records_array[0]["password"].to_s
         logger.fatal clave
+        logger.fatal 'AHORA VIENE EL RECORDS'
+        logger.fatal records_array
         logger.fatal 'acabo de imprimir la clave'
         #clave = clave.delete! '\\n'
 
