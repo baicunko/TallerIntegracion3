@@ -927,4 +927,4 @@
     t.string "password"
   end
 
-end
+

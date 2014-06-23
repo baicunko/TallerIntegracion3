@@ -85,6 +85,6 @@ class QuiebresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quiebre_params
-      params.require(:quiebre).permit(:pedido, :nombrecliente, :fechaquiebre)
+      params.require(:quiebre).permit(:pedido, :nombrecliente, :fechaquiebre, :sku)
     end
 end
