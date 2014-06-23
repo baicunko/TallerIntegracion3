@@ -4,23 +4,23 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-    adapter: postgresql
-    encoding: unicode
-    database: TallerIntegracion
-    pool: 5
-    host: localhost
-    username: postgres
-    password:
-
 #production:
 #    adapter: postgresql
 #    encoding: unicode
-#    database: taller
+#    database: TallerIntegracion
 #    pool: 5
 #    host: localhost
-#    username: taller
-#    password: taller
+#    username: postgres
+#    password:
+
+production:
+    adapter: postgresql
+    encoding: unicode
+    database: taller
+    pool: 5
+    host: localhost
+    username: taller
+    password: taller
 
 development:
   adapter: sqlite3

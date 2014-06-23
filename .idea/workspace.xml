@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -33,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="379" column="30" selection-start="17186" selection-end="17186" vertical-scroll-proportion="0.38353413" vertical-offset="5494" max-vertical-offset="6825">
+            <state line="409" column="7" selection-start="17774" selection-end="17774" vertical-scroll-proportion="0.0" vertical-offset="3334" max-vertical-offset="6825">
               <folding />
             </state>
           </provider>
@@ -87,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="80" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state line="24" column="12" selection-start="414" selection-end="414" vertical-scroll-proportion="0.704501" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -149,8 +149,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20140621001146_add_sku_to_quiebre.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140516203744_create_precios_temporals.rb" />
         <option value="$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -965,13 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="80" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140516220853_changetypeftp.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="73" selection-start="97" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
@@ -1037,7 +1030,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="379" column="30" selection-start="17186" selection-end="17186" vertical-scroll-proportion="0.38353413" vertical-offset="5494" max-vertical-offset="6825">
+        <state line="409" column="7" selection-start="17774" selection-end="17774" vertical-scroll-proportion="0.0" vertical-offset="3334" max-vertical-offset="6825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="12" selection-start="414" selection-end="414" vertical-scroll-proportion="0.704501" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
