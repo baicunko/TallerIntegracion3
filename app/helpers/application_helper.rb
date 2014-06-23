@@ -10,7 +10,7 @@
     require 'json'
     require 'TuitterHelper.rb'
     require 'rubygems'
-    require 'HTTParty'
+
 
 
     def self.connect
