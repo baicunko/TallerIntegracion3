@@ -28,7 +28,6 @@
       access2csv=Rails.root.to_s + "/app/"
       comando="/usr/bin/java -jar "+access2csv+"access2csv.jar "+access2csv+"products.accdb";
       system(comando);
-
       LoadingHelper.import;
       PreciosTemporalsHelper.crear_tabla;
       UsuariosClavesApi.usuarios_claves
