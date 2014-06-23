@@ -45,7 +45,7 @@
       <file leaf-file-name="reserva.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/reserva.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.87341774" vertical-offset="426" max-vertical-offset="1590">
+            <state line="48" column="16" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.60126585" vertical-offset="435" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
@@ -995,7 +995,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/reserva.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.87341774" vertical-offset="426" max-vertical-offset="1590">
+        <state line="48" column="16" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.60126585" vertical-offset="435" max-vertical-offset="1650">
           <folding />
         </state>
       </provider>
