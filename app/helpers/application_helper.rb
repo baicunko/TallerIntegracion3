@@ -61,7 +61,7 @@
 
 
 
-          stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"])
+          stockDisponible=stockController.getcantidadtotal(tuplaEspecial["sku"]).to_i
           if(stockDisponible>=tuplaEspecial["cantidad"].to_i)
             #Ahora tengo que ver si es que la persona que hizo el pedido tiene reserva
             reservasmias, reservasotros=Reserva.stockReservado(tuplaEspecial["sku"].to_s,tuplaEspecial["cantidad"].to_i,tuplaEspecial["rut"])
@@ -72,19 +72,19 @@
               precioInteger=precio[0].precio
               stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
               stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tuplaEspecial["id"])
-            elsif(reservasmias==0 && tuplaEspecial["cantidad"].to_i>stockDisponible-reservasotros && stockDisponible-reservasotros>=0)
+            elsif(reservasmias==0 && tuplaEspecial["cantidad"].to_i>stockDisponible.to_i-reservasotros && stockDisponible-reservasotros>=0)
               diferenciaProductos=reservasotros+tuplaEspecial["cantidad"].to_i-stockDisponible
               ApisHelper.pedirProducto(tuplaEspecial["sku"],diferenciaProductos)
               #Aca yo puedo mandarle al cliente el stock disponible menos las reservas
               precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
               direccion=Contact.queryDireccion(tuplaEspecial["direccion"])
-              cantidadInteger=stockDisponible-reservasotros
+              cantidadInteger=stockDisponible.to_i-reservasotros.to_i
               precioInteger=precio[0].precio
               stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
               stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tuplaEspecial["id"])
               sleep(2)
-              stockDisponible2=stockController.getcantidadtotal(tuplaEspecial["sku"])
-              if(diferenciaProductos>stockDisponible2-stockDisponible)
+              stockDisponible2=stockController.getcantidadtotal(tuplaEspecial["sku"]).to_i
+              if(diferenciaProductos>stockDisponible2.to_i-stockDisponible.to_i)
                 #Me llegaron los productos faltantes, los mando
                 precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
                 direccion=Contact.queryDireccion(tuplaEspecial["direccion"])
@@ -109,7 +109,7 @@
                   quiebrerecord.fechaquiebre=Time.now
                   quiebrerecord.pedido=tuplaEspecial["id"]
                   quiebrerecord.sku=tuplaEspecial["sku"].to_s
-                  quiebrerecord.cantidad=diferenciaProductos-(stockDisponible2-stockDisponible)
+                  quiebrerecord.cantidad=diferenciaProductos.to_i-(stockDisponible2-stockDisponible).to_i
                   quiebrerecord.dineroperdido=(diferenciaProductos-(stockDisponible2-stockDisponible))*precio
                   quiebrerecord.save
 
@@ -155,7 +155,7 @@
             p "No hya stock disponible, tengo que pedir!"
             #Primero tengo que despachar lo que puedo
             #Da lo mismo las reservas aca, si no tengo disponible para despachar las reservas pierden prioridas
-            diferenciaPorEnviar=tuplaEspecial["cantidad"]-stockDisponible
+            diferenciaPorEnviar=tuplaEspecial["cantidad"].to_i-stockDisponible.to_i
             ApisHelper.pedirProducto(tuplaEspecial["sku"],diferenciaPorEnviar)
             #ahora si es que tengo stock hago un envio
 
@@ -169,13 +169,13 @@
             end
             sleep(1)
             #ya mande entonces si es que tenia algo disponible, ahora tengo que ver si es que me llego algo
-            stockDisponible2=stockController.getcantidadtotal(tuplaEspecial["sku"])
+            stockDisponible2=stockController.getcantidadtotal(tuplaEspecial["sku"]).to_i
             if(stockDisponible2>0)
               #me llegaron mas cosas por enviar!
               if(stockDisponible2>=diferenciaPorEnviar)
                 precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
                 direccion=Contact.queryDireccion(tuplaEspecial["direccion"])
-                cantidadInteger=diferenciaPorEnviar
+                cantidadInteger=diferenciaPorEnviar.to_i
                 precioInteger=precio[0].precio
                 stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
                 stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tuplaEspecial["id"])
@@ -183,10 +183,10 @@
 
               else
                 #no me llego todo lo que tenia, le mando lo que me llego nomas y quiebro
-                diferenciaPorEnviar=diferenciaPorEnviar-stockDisponible2
+                diferenciaPorEnviar=diferenciaPorEnviar.to_i-stockDisponible2.to_i
                 precio=PreciosTemporal.where(SKU:tuplaEspecial["sku"])
                 direccion=Contact.queryDireccion(tuplaEspecial["direccion"])
-                cantidadInteger=stockDisponible2
+                cantidadInteger=stockDisponible2.to_i
                 precioInteger=precio[0].precio
                 stockController.mover_a_despacho_sku(tuplaEspecial["sku"],cantidadInteger)
                 stockController.despachar_sku(tuplaEspecial["sku"],cantidadInteger,precioInteger,direccion,tuplaEspecial["id"])
