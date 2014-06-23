@@ -21,6 +21,7 @@
       cant = params["cantidad"].to_i
 
 
+
       #Verificar grupo y clave
       sql = "Select * from usuarios_claves_apis WHERE grupo = '#{user}';"
       records_array = UsuariosClavesApi.connection.execute(sql)
@@ -63,6 +64,7 @@
 
 
       stock_efectivo = stock_sku - stock_reservado
+
 
       if stock_efectivo > cant
           s.mover_a_despacho_sku(sku,cant)
