@@ -37,7 +37,7 @@ class Reserva < ActiveRecord::Base
   end
 
   def self.stockReservadoTodo(sku)
-    sql = "select cantidad from reservas WHERE sku ="+sku
+    sql = "select cantidad from reservas WHERE sku="+sku
     resultado = Reserva.connection.execute(sql)
     return resultado[0][0]
   end
