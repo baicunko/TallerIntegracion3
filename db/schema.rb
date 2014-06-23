@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617200145) do
+ActiveRecord::Schema.define(version: 20140621235136) do
 
   create_table "apis", force: true do |t|
     t.datetime "created_at"
@@ -143,6 +143,8 @@ ActiveRecord::Schema.define(version: 20140617200145) do
     t.boolean  "respuesta"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "spree_addresses", force: true do |t|

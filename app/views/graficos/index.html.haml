@@ -59,37 +59,6 @@
     #tab6.tab-pane
       .row
       #reporte6-chart{data:{text:"Historial Quiebres",data0:"#{@r3_array}", serie0name:"Quiebres"}}
-.graf3
-  %h1 Quiebrescxcx
 
-
-  .row
-    %ul.nav.nav-pills
-      %li
-        %a{"data-toggle" => "tab", href: "#tab4"} 
-          %i.fa.fa-bar-chart-o
-          Historial Completo
-      %li
-        %a{"data-toggle" => "tab", href: "#tab5"} 
-          %i.fa.fa-bar-chart-o
-          Último Mes
-      %li
-        %a{"data-toggle" => "tab", href: "#tab6"} 
-          %i.fa.fa-bar-chart-o
-          Última Semana    
-
-
-  .row
-    .tab-content
-      #tab4.tab-pane
-        .row 
-        #reporte4-chart{data:{text:"Historial Quiebres",data0:"#{@r1_array}", serie0name:"Quiebres"}}
-      #tab5.tab-pane
-        .row
-        #reporte5-chart{data:{text:"Historial Quiebres",data0:"#{@r2_array}", serie0name:"Quiebres"}}
-      
-      #tab6.tab-pane
-        .row
-        #reporte6-chart{data:{text:"Historial Quiebres",data0:"#{@r3_array}", serie0name:"Quiebres"}}
 %h1 Ventas vs Quiebres Últimas Semanas
 #reporte7-chart{data:{data0:"#{@b_q_array}",data1:"#{@b_v_array}"}}
