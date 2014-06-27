@@ -263,7 +263,7 @@
         #Tengo que buscar  el stock
 
       end
-      preciosSpree(stockEnSpree)
+
 
     end
     def self.backOrderFalse
@@ -337,14 +337,15 @@
       TuitterHelper.sendTweet(mensaje)
     end
 
-    def self.preciosSpree(jsonConPrecios)
+    def self.preciosSpree
       #En este metodo tengo que ver las cosas que se obtienen de la cola y ver cual es el precio que efectivamente corresponde!
       #Hay una tabla llamada productosJson donde estan los precios por defecto, en caso de no haber promoción usamos esa tabla.
       #hacer un query que SELECT * FROM tablaKappes WHERE NOW < > ORDER BY TIME LIMIT 1; ELSE productos Json LISTO!
       #Si el precio de spree es Distinto al de la tabla kappes que encontre significa que se activo promocion, enviar twitter.
 
 
-
+      link="http://integra3.ing.puc.cl/store/api/products?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=10000"
+      jsonConPrecios=Probando.get(link)
       time=(Time.now.to_f * 1000).to_i
       @tdas=PromocionesActivas.all
 
@@ -380,7 +381,7 @@
 
         Rails.logger.fatal costoprecio.to_i-recordo['precio'].to_i
         Rails.logger.fatal "ACABO DE IMPRIMIR WEAS"
-        if(costoprecio.to_s!=recordo['precio'].to_s)
+        if(costoprecio.to_s==recordo['precio'].to_s)
          #Los precios son distintos, actualizo el Spree y mando un Twitter.
           b=PromocionesActivas.new
           b.original=costoprecio.to_i
@@ -393,7 +394,7 @@
           b.save
           linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           HTTParty.put(linkActualizar)
-          mandarATwitter("#ofertagrupo3 "+nombreproducto.to_s+" a $"+b.nuevo.to_s+" hasta el: "+tiempoenString.to_s+" http://www.centralahorro.cl/store/products/"+slug.to_s);
+          mandarATwitter("#ofertagrupo3 "+nombreproducto.to_s+" a $"+b.nuevo.to_s+" válido hasta el: "+tiempoenString.to_s+" http://www.centralahorro.cl/store/products/"+slug.to_s);
 
 
 
@@ -431,14 +432,14 @@
       nombre=""
       slug=""
 
-      json['stock_items'].each do |i|
+      json['products'].each do |i|
 
 
-        if(i['variant']['sku']==sku)
-          precio+=(i['variant']['price']).to_i
+        if(i['master']['sku']==sku)
+          precio+=(i['master']['price']).to_i
           idproducto+=(i['id']).to_i
-          nombre+=i['variant']['name'].to_s
-          slug+=i['variant']['slug'].to_s
+          nombre+=i['master']['name'].to_s
+          slug+=i['master']['slug'].to_s
 
         end
 
