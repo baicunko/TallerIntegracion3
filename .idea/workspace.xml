@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -44,7 +45,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.3322034" vertical-offset="584" max-vertical-offset="1260">
+            <state line="39" column="26" selection-start="852" selection-end="852" vertical-scroll-proportion="0.840678" vertical-offset="89" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -1037,7 +1038,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.3322034" vertical-offset="584" max-vertical-offset="1260">
+        <state line="39" column="26" selection-start="852" selection-end="852" vertical-scroll-proportion="0.840678" vertical-offset="89" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
