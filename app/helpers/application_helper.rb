@@ -400,8 +400,8 @@
 
 
       end
-      rescue
-        logger.fatal "SE CAYO EL METODO DE CAMBIAR PRCIOS, NO DEBENN HABER MENSAJES"
+      rescue => e
+        Rails.logger.info "Error al nose que  #{e}"
       end
 
 
