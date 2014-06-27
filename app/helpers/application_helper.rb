@@ -372,6 +372,12 @@
 
 
         nombre,costoprecio,idproducto,slug=getPrecioForSku(jsonConPrecios,recordo['sku'].delete!('|'))
+
+        Rails.logger.fatal "HPALAALALALA"
+        Rails.logger.fatal costoprecio.to_i
+        Rails.logger.fatal recordo['precio'].to_i
+        Rails.logger.fatal costoprecio.to_i-recordo['precio'].to_i
+        Rails.logger.fatal "ACABO DE IMPRIMIR WEAS"
         if(costoprecio.to_i!=recordo['precio'].to_i)
          #Los precios son distintos, actualizo el Spree y mando un Twitter.
           b=PromocionesActivas.new
