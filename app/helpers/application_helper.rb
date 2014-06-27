@@ -333,6 +333,7 @@
 
     end
     def self.mandarATwitter(mensaje)
+      sleep(4)
       TuitterHelper.sendTweet(mensaje)
     end
 
@@ -344,7 +345,7 @@
 
 
 
-      time=Time.now.to_f
+      time=(Time.now.to_f * 1000).to_i
       @tdas=PromocionesActivas.all;
 
 
@@ -364,7 +365,7 @@
       end
 
       hola=time.to_s
-      sql="SELECT * FROM messages WHERE inicio::decimal<"+hola+" AND fin::decimal>"+hola+" ORDER BY llegada ASC";
+      sql="SELECT * FROM messages WHERE inicio::decimal<"+hola+" AND fin::decimal>"+hola+" ORDER BY llegada ASC"
       records_array = Message.connection.execute(sql)
       begin
       records_array.each do |recordo|
