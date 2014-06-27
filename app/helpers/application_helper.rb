@@ -385,7 +385,7 @@
           tiempoenString= tiempofinal.strftime("%d/%m - %H:%M")
           b.save
           #linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
-          HTTParty.put(linkActualizar)
+          #HTTParty.put(linkActualizar)
           mandarATwitter("#ofertagrupo3 "+nombreproducto.to_s+" a $"+b.nuevo.to_s+" hasta el: "+tiempoenString.to_s+" http://www.centralahorro.cl/store/products/"+slug.to_s);
 
 
