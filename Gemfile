@@ -74,5 +74,5 @@ gem 'json', '~> 1.8.1'
 
 gem 'google_drive', '~> 0.3.9'
 gem 'rack-mini-profiler'
-gem 'devise'
+#gem 'devise'
 
