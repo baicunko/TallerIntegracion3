@@ -382,7 +382,7 @@
           b.save
           linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           HTTParty.put(linkActualizar)
-          mandarATwitter("#ofertagrupo3 "+nombre.to_s+" "+b.nuevo.to_s+"http://www.centralahorro.cl/store/"+slug.to_s);
+          mandarATwitter("#ofertagrupo3 "+nombre.to_s+" "+b.nuevo.to_s+"$ http://www.centralahorro.cl/store/"+slug.to_s);
 
 
 
