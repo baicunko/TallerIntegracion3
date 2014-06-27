@@ -372,7 +372,8 @@
 
 
         nombre,costoprecio,idproducto,slug=getPrecioForSku(jsonConPrecios,recordo['sku'].delete!('|'))
-        if(costoprecio==recordo['precio'].to_i)
+        if(true)
+          #costoprecio==recordo['precio'].to_i
          #Los precios son distintos, actualizo el Spree y mando un Twitter.
           b=PromocionesActivas.new
           b.original=costoprecio.to_i
@@ -380,12 +381,12 @@
           b.fin=recordo['fin'].to_s
           b.sku=recordo['sku'].to_i
           tiempofinal=Time.at(recordo['fin'].to_i/1000)
-          nombreproducto=nombre.to_s[0..20]
-          tiempoenString= tiempofinal.strftime("%d/%m %H:%M")
+          nombreproducto=nombre.to_s[0..21]
+          tiempoenString= tiempofinal.strftime("%d/%m - %H:%M")
           b.save
-          linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
+          #linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           HTTParty.put(linkActualizar)
-          mandarATwitter("#ofertagrupo3 "+nombreproducto.to_s+" a $"+b.nuevo.to_s+" hasta: "+tiempoenString.to_s+" http://www.centralahorro.cl/store/products/"+slug.to_s);
+          mandarATwitter("#ofertagrupo3 "+nombreproducto.to_s+" a $"+b.nuevo.to_s+" hasta el: "+tiempoenString.to_s+" http://www.centralahorro.cl/store/products/"+slug.to_s);
 
 
 

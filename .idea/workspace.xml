@@ -36,7 +36,7 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="379" column="35" selection-start="17183" selection-end="17183" vertical-scroll-proportion="0.375" vertical-offset="5460" max-vertical-offset="6885">
+            <state line="374" column="15" selection-start="16925" selection-end="16925" vertical-scroll-proportion="0.125" vertical-offset="5535" max-vertical-offset="6900">
               <folding />
             </state>
           </provider>
@@ -920,7 +920,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="379" column="35" selection-start="17183" selection-end="17183" vertical-scroll-proportion="0.375" vertical-offset="5460" max-vertical-offset="6885">
+        <state line="374" column="15" selection-start="16925" selection-end="16925" vertical-scroll-proportion="0.125" vertical-offset="5535" max-vertical-offset="6900">
           <folding />
         </state>
       </provider>
