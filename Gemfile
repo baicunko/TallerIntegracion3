@@ -51,7 +51,6 @@ end
 gem 'addressable'
 
 
-gem 'turbolinks'
 gem 'ruby-hmac'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
