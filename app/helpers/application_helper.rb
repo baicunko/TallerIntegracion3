@@ -372,7 +372,7 @@
 
 
         nombre,costoprecio,idproducto,slug=getPrecioForSku(jsonConPrecios,recordo['sku'].delete!('|'))
-        if(costoprecio!=recordo['precio'].to_i)
+        if(costoprecio.to_i!=recordo['precio'].to_i)
          #Los precios son distintos, actualizo el Spree y mando un Twitter.
           b=PromocionesActivas.new
           b.original=costoprecio.to_i
