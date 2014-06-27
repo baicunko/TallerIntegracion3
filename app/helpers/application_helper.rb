@@ -379,7 +379,7 @@
           b.nuevo=recordo['precio'].to_i
           b.fin=recordo['fin'].to_s
           b.sku=recordo['sku'].to_i
-          tiempofinal=Time.at(recordo['fin']/1000)
+          tiempofinal=Time.at(recordo['fin'].to_i/1000)
           nombreproducto=nombre.to_s[0..20]
           tiempoenString= tiempofinal.strftime("%d/%m %H:%M")
           b.save
