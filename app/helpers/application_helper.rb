@@ -439,7 +439,7 @@
 
 
         if(i['master']['sku']==sku)
-          precio+=(i['master']['price']).to_i
+          precio+=(i['price']).to_i
           idproducto+=(i['id']).to_i
           nombre+=i['master']['name'].to_s
           slug+=i['master']['slug'].to_s
