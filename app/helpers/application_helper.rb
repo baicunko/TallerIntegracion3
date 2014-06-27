@@ -389,6 +389,8 @@
           b.fin=recordo['fin'].to_s
           b.sku=recordo['sku'].to_i
           Rails.logger.fatal "ENTRE AL IF"
+          Rails.logger.fatal "ENTRE AL IF"
+
           tiempofinal=Time.at(recordo['fin'].to_i/1000)
           nombreproducto=nombre.to_s[0..21]
           tiempoenString= tiempofinal.strftime("%d/%m - %H:%M")
