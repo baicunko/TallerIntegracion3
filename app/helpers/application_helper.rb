@@ -43,13 +43,13 @@
     end
 
     def self.procesarpedido
-      #Cada 10 minutos este metodo se debe llamar
+      #Cada 30 minutos este metodo se debe llamar
 
 
       stockController=StockManagementController.new
       stockController.get_store
       stockController.liberar_recepcion
-      Reserva.consumir
+      Q
       FtpPedido.verPedidos;
       sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL";
       records_array = FtpPedido.connection.execute(sql)
@@ -333,7 +333,7 @@
 
     end
     def self.mandarATwitter(mensaje)
-      sleep(10)
+      sleep(3)
       TuitterHelper.sendTweet(mensaje)
     end
 
@@ -372,8 +372,7 @@
 
 
         nombre,costoprecio,idproducto,slug=getPrecioForSku(jsonConPrecios,recordo['sku'].delete!('|'))
-        if(true)
-          #costoprecio==recordo['precio'].to_i
+        if(costoprecio!=recordo['precio'].to_i)
          #Los precios son distintos, actualizo el Spree y mando un Twitter.
           b=PromocionesActivas.new
           b.original=costoprecio.to_i
@@ -384,8 +383,8 @@
           nombreproducto=nombre.to_s[0..21]
           tiempoenString= tiempofinal.strftime("%d/%m - %H:%M")
           b.save
-          #linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
-          #HTTParty.put(linkActualizar)
+          linkActualizar="http://integra3.ing.puc.cl/store/api/products/"+idproducto.to_s+"?product[price]="+b.nuevo.to_s+"&token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
+          HTTParty.put(linkActualizar)
           mandarATwitter("#ofertagrupo3 "+nombreproducto.to_s+" a $"+b.nuevo.to_s+" hasta el: "+tiempoenString.to_s+" http://www.centralahorro.cl/store/products/"+slug.to_s);
 
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/schedule.rb" afterPath="$PROJECT_DIR$/config/schedule.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -36,7 +37,25 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="387" column="11" selection-start="17610" selection-end="17610" vertical-scroll-proportion="0.7" vertical-offset="5385" max-vertical-offset="6900">
+            <state line="229" column="29" selection-start="10836" selection-end="10852" vertical-scroll-proportion="0.075" vertical-offset="3390" max-vertical-offset="6885">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ftp_pedido.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="11" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/schedule.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="7" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -63,7 +82,7 @@
       <file leaf-file-name="stock_management_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="39" selection-start="4758" selection-end="4758" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="4260">
+            <state line="167" column="9" selection-start="5334" selection-end="5334" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="4260">
               <folding />
             </state>
           </provider>
@@ -97,7 +116,6 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/app/views/quiebres/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/sent_items_pedidos/index.html.haml" />
-        <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/app/helpers/twitter_helper.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/helpers/TuitterHelper.rb" />
@@ -123,6 +141,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20140516203744_create_precios_temporals.rb" />
         <option value="$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       </list>
     </option>
@@ -626,18 +645,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140617002802_mod_tabla_reposiciones.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140617002005_create_reposicions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.21912351" vertical-offset="0" max-vertical-offset="753">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.5544148" vertical-offset="0" max-vertical-offset="487" />
@@ -897,16 +904,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="39" selection-start="4758" selection-end="4758" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="4260">
+        <state line="24" column="12" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/config/schedule.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+        <state line="36" column="7" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
@@ -918,9 +925,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="9" selection-start="5334" selection-end="5334" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="4260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="387" column="11" selection-start="17610" selection-end="17610" vertical-scroll-proportion="0.7" vertical-offset="5385" max-vertical-offset="6900">
+        <state line="229" column="29" selection-start="10836" selection-end="10852" vertical-scroll-proportion="0.075" vertical-offset="3390" max-vertical-offset="6885">
           <folding />
         </state>
       </provider>
