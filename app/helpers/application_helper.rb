@@ -333,7 +333,7 @@
 
     end
     def self.mandarATwitter(mensaje)
-      sleep(4)
+      sleep(10)
       TuitterHelper.sendTweet(mensaje)
     end
 
