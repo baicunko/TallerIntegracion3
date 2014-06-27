@@ -344,8 +344,7 @@
       #Si el precio de spree es Distinto al de la tabla kappes que encontre significa que se activo promocion, enviar twitter.
 
 
-      link="http://integra3.ing.puc.cl/store/api/products?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=10000"
-      jsonConPrecios=Probando.get(link)
+
       time=(Time.now.to_f * 1000).to_i
       @tdas=PromocionesActivas.all
 
@@ -364,7 +363,8 @@
 
 
       end
-
+      link="http://integra3.ing.puc.cl/store/api/products?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=10000"
+      jsonConPrecios=Probando.get(link)
       hola=time.to_s
       sql="SELECT * FROM messages WHERE inicio::decimal<"+hola+" AND fin::decimal>"+hola+" ORDER BY llegada ASC"
       records_array = Message.connection.execute(sql)
@@ -388,6 +388,7 @@
           b.nuevo=recordo['precio'].to_i
           b.fin=recordo['fin'].to_s
           b.sku=recordo['sku'].to_i
+          Rails.logger.fatal "ENTRE AL IF"
           tiempofinal=Time.at(recordo['fin'].to_i/1000)
           nombreproducto=nombre.to_s[0..21]
           tiempoenString= tiempofinal.strftime("%d/%m - %H:%M")
