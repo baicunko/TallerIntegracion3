@@ -364,7 +364,7 @@
 
       end
       link="http://integra3.ing.puc.cl/store/api/products?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=10000"
-      jsonConPrecios=Probando.get(link)
+      jsonConPrecios=HTTParty.get(link)
       hola=time.to_s
       sql="SELECT * FROM messages WHERE inicio::decimal<"+hola+" AND fin::decimal>"+hola+" ORDER BY llegada ASC"
       records_array = Message.connection.execute(sql)
