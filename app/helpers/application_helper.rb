@@ -378,7 +378,7 @@
         Rails.logger.fatal recordo['precio'].to_i
         Rails.logger.fatal costoprecio.to_i-recordo['precio'].to_i
         Rails.logger.fatal "ACABO DE IMPRIMIR WEAS"
-        if(costoprecio.to_i!=recordo['precio'].to_i)
+        if(costoprecio.to_s!=recordo['precio'].to_s)
          #Los precios son distintos, actualizo el Spree y mando un Twitter.
           b=PromocionesActivas.new
           b.original=costoprecio.to_i

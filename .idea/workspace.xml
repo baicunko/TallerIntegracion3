@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +35,7 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="379" column="26" selection-start="17125" selection-end="17125" vertical-scroll-proportion="0.425" vertical-offset="5430" max-vertical-offset="6975">
+            <state line="380" column="51" selection-start="17202" selection-end="17202" vertical-scroll-proportion="0.45" vertical-offset="5430" max-vertical-offset="6975">
               <folding />
             </state>
           </provider>
@@ -923,7 +921,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="379" column="26" selection-start="17125" selection-end="17125" vertical-scroll-proportion="0.425" vertical-offset="5430" max-vertical-offset="6975">
+        <state line="380" column="51" selection-start="17202" selection-end="17202" vertical-scroll-proportion="0.45" vertical-offset="5430" max-vertical-offset="6975">
           <folding />
         </state>
       </provider>
