@@ -410,6 +410,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   datashift
   datashift_spree!
+  devise
   dropbox-sdk
   execjs
   geocoder
