@@ -374,8 +374,10 @@
         nombre,costoprecio,idproducto,slug=getPrecioForSku(jsonConPrecios,recordo['sku'].delete!('|'))
 
         Rails.logger.fatal "HPALAALALALA"
+        Rails.logger.fatal idproducto
         Rails.logger.fatal costoprecio.to_s
         Rails.logger.fatal recordo['precio'].to_s
+
         Rails.logger.fatal costoprecio.to_i-recordo['precio'].to_i
         Rails.logger.fatal "ACABO DE IMPRIMIR WEAS"
         if(costoprecio.to_s!=recordo['precio'].to_s)
