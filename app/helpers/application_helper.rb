@@ -214,9 +214,11 @@
           end
 
 
-
-          executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tuplaEspecial["id"].to_s+" AND sku="+tuplaEspecial["sku"].to_s
-          FtpPedido.connection.execute(executarenSql)
+          actualizar=FtpPedido.where(id:tuplaEspecial["id"],sku:tuplaEspecial["sku"])
+          actualizar.envio=Time.now
+          actualizar.save
+          #executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tuplaEspecial["id"].to_s+" AND sku="+tuplaEspecial["sku"].to_s
+          #FtpPedido.connection.execute(executarenSql)
 
 
       end
