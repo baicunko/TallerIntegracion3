@@ -15,8 +15,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TallerIntegracion3@stock_management_controller.coverage" NAME="stock_management_controller Coverage Results" MODIFIED="1403316705505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@IRB_console__TallerIntegracion3.coverage" NAME="IRB console: TallerIntegracion3 Coverage Results" MODIFIED="1403292891554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
+    <SUITE FILE_PATH="coverage/TallerIntegracion3@stock_management_controller.coverage" NAME="stock_management_controller Coverage Results" MODIFIED="1403316705505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@application_helper.coverage" NAME="application_helper Coverage Results" MODIFIED="1403889223004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/helpers" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@Production__TallerIntegracion3.coverage" NAME="Production: TallerIntegracion3 Coverage Results" MODIFIED="1403024344609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
     <SUITE FILE_PATH="coverage/TallerIntegracion3@Development__TallerIntegracion3.coverage" NAME="Development: TallerIntegracion3 Coverage Results" MODIFIED="1403316568890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TallerIntegracion3" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="39" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.6597938" vertical-offset="430" max-vertical-offset="8025">
+            <state line="73" column="87" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.20261438" vertical-offset="1002" max-vertical-offset="8025">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="ftp_pedido.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="36" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="6" column="36" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -81,7 +81,7 @@
       <file leaf-file-name="message.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/message.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="60" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+            <state line="2" column="23" selection-start="60" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1305">
               <folding />
             </state>
           </provider>
@@ -176,8 +176,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,6 +268,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -599,8 +599,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.application_helper" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.stock_management_controller" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.stock_management_controller" />
+        <item index="1" class="java.lang.String" itemvalue="Ruby.application_helper" />
         <item index="2" class="java.lang.String" itemvalue="IRB console.IRB console: TallerIntegracion3" />
       </list>
     </recent_temporary>
@@ -660,7 +660,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2912088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2948718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39727464" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22084367" sideWeight="0.46566522" order="7" side_tool="true" content_ui="tabs" />
@@ -668,13 +668,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -928,37 +928,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="246" selection-end="246" vertical-scroll-proportion="0.3051643" vertical-offset="0" max-vertical-offset="639">
-          <folding />
-        </state>
+        <state line="13" column="14" selection-start="246" selection-end="246" vertical-scroll-proportion="0.3051643" vertical-offset="0" max-vertical-offset="639" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/apis_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="75" selection-start="4149" selection-end="4218" vertical-scroll-proportion="0.69483566" vertical-offset="1851" max-vertical-offset="2490">
-          <folding />
-        </state>
+        <state line="153" column="75" selection-start="4149" selection-end="4218" vertical-scroll-proportion="0.69483566" vertical-offset="1851" max-vertical-offset="2490" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@railstutorial_rails_4_0/gems/aws-sdk-1.27.0/lib/aws/iam/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="5" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.8035714" vertical-offset="0" max-vertical-offset="3090">
-          <folding />
-        </state>
+        <state line="33" column="5" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.8035714" vertical-offset="0" max-vertical-offset="3090" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.14610389" vertical-offset="0" max-vertical-offset="616">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.14610389" vertical-offset="0" max-vertical-offset="616" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="39" selection-start="199" selection-end="199" vertical-scroll-proportion="0.073051944" vertical-offset="0" max-vertical-offset="616">
-          <folding />
-        </state>
+        <state line="3" column="39" selection-start="199" selection-end="199" vertical-scroll-proportion="0.073051944" vertical-offset="0" max-vertical-offset="616" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/message.rb">
@@ -970,9 +960,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="30" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.5063291" vertical-offset="300" max-vertical-offset="1110">
-          <folding />
-        </state>
+        <state line="36" column="30" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.5063291" vertical-offset="300" max-vertical-offset="1110" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
@@ -1012,7 +1000,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="39" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.6597938" vertical-offset="430" max-vertical-offset="8025">
+        <state line="73" column="87" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.20261438" vertical-offset="1002" max-vertical-offset="8025">
           <folding />
         </state>
       </provider>
