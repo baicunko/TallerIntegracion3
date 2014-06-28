@@ -355,7 +355,7 @@
             sku=itemEnviar['variant']['sku'].to_s
             precioIndividiaulalala=itemEnviar['variant']['price'].to_i
             stockController.mover_a_despacho_sku(sku,cantidad)
-            stockController.despachar_sku(sku,cantidad,precioIndividiaulalala,direccionSapo['ship_address']['address1'],idpedido)
+            stockController.despachar_sku(sku,cantidad,precioIndividiaulalala,direccionSapo['ship_address']['address1'].to_s,idpedido)
 
           end
 

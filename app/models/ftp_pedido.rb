@@ -2,6 +2,11 @@ class FtpPedido < ActiveRecord::Base
   require 'net/sftp'
   require 'nokogiri'
 
+  include Mongo
+  mongo_client = MongoClient.new
+  db = mongo_client.db("pedidosftp")
+  @coll = db.collection("pedidos")
+
   def self.verPedidos
     Net::SFTP.start('integra.ing.puc.cl', 'grupo3', :password => '23093md') do |sftp|
       files = sftp.dir.foreach('Pedidos') do |file|
@@ -26,6 +31,11 @@ class FtpPedido < ActiveRecord::Base
                 s = data.at_xpath("sku").text
                 c = data.at_xpath("cantidad").text
                 FtpPedido.where(id: name, sku: s).first_or_create(fecha: f, hora: h, direccion: d, rut: r, entrega: e, sku: s, cantidad: c, id: name)
+                begin
+                  MongoLaLleva(name, s, f, h, d, r, e, c)
+                rescue	=> e
+                  Rails.logger.info "Error al pedir productos a bodegas externas. #{e}"
+                end
                 OptimizarFtp.where(id: name).first_or_create(id: name)
               end #end if name
             end # end pedidos.each
@@ -34,5 +44,19 @@ class FtpPedido < ActiveRecord::Base
       end #end foreach
     end #end sftp
   end #end metodo
+
+  def self.MongoLaLleva(name, s, f, h, d, r, e, c)
+    i = @coll.find(id: name, sku: s).to_a.count
+    puts "Aca va el conteo"
+    puts i
+    if i == 0
+      p "ACA INICIO NATA"
+      doc = {"fecha" => f, "hora" => h, "direccion" => d, "rut" => r, "entrega" => e, "sku" => s, "cantidad" => c, "id" => name}
+      p doc
+      id = @coll.insert(doc)
+      p id
+      p "ACA FIN NATA"
+    end
+  end
 end
 
