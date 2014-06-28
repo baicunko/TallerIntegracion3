@@ -49,7 +49,6 @@
       stockController=StockManagementController.new
       stockController.get_store
       stockController.liberar_recepcion
-      Q
       FtpPedido.verPedidos;
       sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL";
       records_array = FtpPedido.connection.execute(sql)

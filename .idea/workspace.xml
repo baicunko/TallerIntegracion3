@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ftp_pedido.rb" afterPath="$PROJECT_DIR$/app/models/ftp_pedido.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -34,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="357" column="133" selection-start="15903" selection-end="15903" vertical-scroll-proportion="0.0" vertical-offset="5125" max-vertical-offset="8040">
+            <state line="50" column="39" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.6597938" vertical-offset="430" max-vertical-offset="8025">
               <folding />
             </state>
           </provider>
@@ -52,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ftp_pedido.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ftp_pedido.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.8192771" vertical-offset="522" max-vertical-offset="1020">
+            <state line="6" column="36" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -73,7 +72,7 @@
       <file leaf-file-name="schedule.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/schedule.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="33" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="840">
+            <state line="37" column="43" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="840">
               <folding />
             </state>
           </provider>
@@ -135,8 +134,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/stock_management_controller.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/ftp_pedido.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       </list>
     </option>
   </component>
@@ -997,23 +996,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="133" selection-start="15903" selection-end="15903" vertical-scroll-proportion="0.0" vertical-offset="5125" max-vertical-offset="8040">
+        <state line="6" column="36" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/schedule.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="33" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="840">
+        <state line="37" column="43" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.8192771" vertical-offset="522" max-vertical-offset="1020">
+        <state line="50" column="39" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.6597938" vertical-offset="430" max-vertical-offset="8025">
           <folding />
         </state>
       </provider>
