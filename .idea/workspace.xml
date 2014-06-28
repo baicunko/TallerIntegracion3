@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" afterPath="$PROJECT_DIR$/.idea/TallerIntegracion3.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ftp_pedido.rb" afterPath="$PROJECT_DIR$/app/models/ftp_pedido.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/schedule.rb" afterPath="$PROJECT_DIR$/config/schedule.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
@@ -46,10 +45,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ftp_pedido.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ftp_pedido.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2216" selection-end="2216" vertical-scroll-proportion="1.8674699" vertical-offset="0" max-vertical-offset="1020">
+            <state line="8" column="50" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="74" selection-start="1974" selection-end="1974" vertical-scroll-proportion="0.53797466" vertical-offset="300" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
@@ -116,12 +133,12 @@
         <option value="$PROJECT_DIR$/db/migrate/20140516203744_create_precios_temporals.rb" />
         <option value="$PROJECT_DIR$/app/helpers/precios_temporals_helper.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/app/models/ftp_pedido.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       </list>
     </option>
   </component>
@@ -954,20 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="8" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.36585367" vertical-offset="450" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="1" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.8042414" vertical-offset="647" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="167" column="9" selection-start="5334" selection-end="5334" vertical-scroll-proportion="0.5511182" vertical-offset="2160" max-vertical-offset="4260">
@@ -998,7 +1001,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2216" selection-end="2216" vertical-scroll-proportion="1.8674699" vertical-offset="0" max-vertical-offset="1020">
+        <state line="8" column="50" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="74" selection-start="1974" selection-end="1974" vertical-scroll-proportion="0.53797466" vertical-offset="300" max-vertical-offset="1110">
           <folding />
         </state>
       </provider>

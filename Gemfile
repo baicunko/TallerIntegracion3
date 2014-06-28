@@ -71,7 +71,7 @@ gem 'httparty'
 gem 'rest-client', '~> 1.6.7'
 gem 'multi_xml', '~> 0.5.5'
 gem 'json', '~> 1.8.1'
-
+gem 'mongo'
 gem 'google_drive', '~> 0.3.9'
 gem 'rack-mini-profiler'
 #gem 'devise'
