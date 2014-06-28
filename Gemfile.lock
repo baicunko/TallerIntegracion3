@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/cfgrok/datashift_spree.git
-  revision: 194a7823e18e4e0602230215b60da0d3eaafcbac
-  branch: master
-  specs:
-    datashift_spree (0.5.0)
-      datashift (>= 0.12.0)
-      mechanize
-
-GIT
   remote: https://github.com/spree/spree_auth_devise.git
   revision: 81a0fbb2db15efbbb50d0d139bbc41aee7fa58a1
   branch: 2-2-stable
@@ -106,9 +97,6 @@ GEM
     colorize (0.7.3)
     commonjs (0.2.7)
     daemons (1.1.9)
-    datashift (0.15.0)
-      rubyzip
-      spreadsheet
     debug_inspector (0.0.2)
     deface (1.0.0)
       colorize (>= 0.5.8)
@@ -122,8 +110,6 @@ GEM
       warden (~> 1.2.3)
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
-    domain_name (0.5.19)
-      unf (>= 0.0.5, < 1.0.0)
     dropbox-sdk (1.6.4)
       json
     equalizer (0.0.9)
@@ -154,8 +140,6 @@ GEM
     hike (1.2.3)
     http (0.6.1)
       http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.2)
-      domain_name (~> 0.5)
     http_parser.rb (0.6.0)
     httparty (0.13.1)
       json (~> 1.8)
@@ -185,15 +169,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mechanize (2.7.2)
-      domain_name (~> 0.5, >= 0.5.1)
-      http-cookie (~> 1.0.0)
-      mime-types (~> 1.17, >= 1.17.2)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 2.5, >= 2.5.2)
-      nokogiri (~> 1.4)
-      ntlm-http (~> 0.1, >= 0.1.1)
-      webrobots (>= 0.0.9, < 0.2)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (1.25.1)
@@ -207,8 +182,6 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     naught (1.0.0)
-    net-http-digest_auth (1.4)
-    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -217,7 +190,6 @@ GEM
     netrc (0.7.7)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
-    ntlm-http (0.1.1)
     oauth (0.4.7)
     oauth2 (0.9.4)
       faraday (>= 0.8, < 0.10)
@@ -271,8 +243,6 @@ GEM
     rest_client (1.7.3)
       netrc (~> 0.7.7)
     ruby-hmac (0.4.0)
-    ruby-ole (1.2.11.7)
-    rubyzip (1.1.4)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -286,8 +256,6 @@ GEM
       sass-rails
       thor (~> 0.14)
     simple_oauth (0.2.0)
-    spreadsheet (0.9.7)
-      ruby-ole (>= 1.0)
     spree (2.2.1)
       spree_api (= 2.2.1)
       spree_backend (= 2.2.1)
@@ -361,8 +329,6 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.9.2)
-    turbolinks (2.2.2)
-      coffee-rails
     twitter (5.11.0)
       addressable (~> 2.3)
       buftok (~> 0.2.0)
@@ -383,9 +349,6 @@ GEM
     uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.6)
     uuidtools (2.1.4)
     versioncake (1.2.0)
       actionpack (>= 3.2)
@@ -394,7 +357,6 @@ GEM
       tzinfo
     warden (1.2.3)
       rack (>= 1.0)
-    webrobots (0.1.1)
     whenever (0.9.2)
       activesupport (>= 2.3.4)
       chronic (>= 0.6.3)
@@ -408,9 +370,6 @@ DEPENDENCIES
   binding_of_caller
   bunny
   coffee-rails (~> 4.0.0)
-  datashift
-  datashift_spree!
-  devise
   dropbox-sdk
   execjs
   geocoder
@@ -443,7 +402,6 @@ DEPENDENCIES
   sqlite3
   therubyracer
   thin
-  turbolinks
   twitter
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)

@@ -38,3 +38,13 @@ every 30.minutes  do # Use any day of the week or :weekend, :weekday
   runner "ApplicationHelper.procesarpedido"
 end
 
+every 7.minutes  do # Use any day of the week or :weekend, :weekday
+  runner "ApplicationHelper.spreeIntegration"
+end
+
+every 10.minutes do
+  runner "Message.GetMessageCant"
+end
+
+
+

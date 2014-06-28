@@ -263,6 +263,9 @@
         #Tengo que buscar  el stock
 
       end
+      preciosSpree
+      procesarPedidosSpree
+
 
 
     end
@@ -317,8 +320,68 @@
       ordenes['orders'].each do |ordenRevisar|
         if(ordenRevisar['state'].to_s=="complete" && ordenRevisar['shipment_state'].to_s!="shipped")
           #la orden esta en estado completa, tengo que capturar primero
-          linkCapturar="http://integra3.ing.puc.cl/store/api/orders/"+ordenRevisar['number'].to_s+"/payments/"+ordenRevisar['id'].to_s+"/capture?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
+
+          #linkgetidpedidopayment
+          linkpayment="http://integra3.ing.puc.cl/store/api/orders/"+ordenRevisar['number'].to_s+"/payments?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
+          idpayment=HTTParty.get(linkpayment)
+
+
+
+
+
+
+          p idpayment
+          iddelpago=idpayment['payments'][0]
+          p iddelpago
+          p "IMPRIME LA WEA"
+          linkCapturar="http://integra3.ing.puc.cl/store/api/orders/"+ordenRevisar['number'].to_s+"/payments/"+iddelpago['id'].to_s+"/capture?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
+          p linkCapturar
+          p ordenRevisar['number']
           respuestaCapture=HTTParty.put(linkCapturar)
+
+
+
+          linkdireccion="http://integra3.ing.puc.cl/store/api/checkouts/"+ordenRevisar['number']+"?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
+          linkSKU="http://integra3.ing.puc.cl/store/api/orders/"+ordenRevisar['number'].to_s+"?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a&per_page=100"
+          itemes=HTTParty.get(linkSKU)
+          direccionSapo=HTTParty.put(linkdireccion)
+          stockController=StockManagementController.new
+
+          idpedido=200000+Random.rand(1000000)
+          p itemes;
+          #Reviso todos los items y llamo a la basura de cox
+          itemes['line_items'].each do |itemEnviar|
+            cantidad=itemEnviar['quantity'].to_i
+            sku=itemEnviar['variant']['sku'].to_s
+            precioIndividiaulalala=itemEnviar['variant']['price'].to_i
+            stockController.mover_a_despacho_sku(sku,cantidad)
+            stockController.despachar_sku(sku,cantidad,precioIndividiaulalala,direccionSapo['ship_address']['address1'],idpedido)
+
+          end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           #Ahora que tengo capturado el metodo de pago, tengo que sacar el shipment number
           linkShipment="http://integra3.ing.puc.cl/store/api/orders/"+ordenRevisar['number'].to_s+"?token=c3e93df2a2f0344c5d210ce4ebda88684d360f109a90329a"
           respuestaLinkShipment=HTTParty.get(linkShipment)
@@ -327,6 +390,8 @@
           shipmentNumber=HTTParty.put(linkShip)
           #Listo! Con esto tenemos que se envio el pedido, solo me falta integrarlo con la api de envio de stock y no habria problemas.
           #Agregar valor metiendo las transacciones en las mismas tablas que usamos pa los ftp pedidos
+
+
 
         end
       end
