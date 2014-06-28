@@ -52,8 +52,6 @@
       FtpPedido.verPedidos;
       sql="SELECT * from ftp_pedidos WHERE entrega <= DATE ('now') AND envio IS NULL";
       records_array = FtpPedido.connection.execute(sql)
-
-
       records_array.each do |tuplaEspecial|
 
 
@@ -215,7 +213,7 @@
 
 
           actualizar=FtpPedido.where(id:tuplaEspecial["id"],sku:tuplaEspecial["sku"])
-          actualizar.envio=Time.now
+          actualizar.update(envio: Time.now)
           actualizar.save
           #executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tuplaEspecial["id"].to_s+" AND sku="+tuplaEspecial["sku"].to_s
           #FtpPedido.connection.execute(executarenSql)
