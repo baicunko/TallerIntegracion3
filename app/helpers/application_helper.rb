@@ -211,10 +211,15 @@
 
           end
 
-
+          begin
           actualizar=FtpPedido.where(id:tuplaEspecial["id"],sku:tuplaEspecial["sku"])
           actualizar.update(envio: Time.now)
-          actualizar.save
+
+          rescue
+            Rails.logger.fatal "Error capturado, pero ahora tenemos que el dia de envio en vez de ser null es"
+            actualizar.envio
+          end
+
           #executarenSql="UPDATE ftp_pedidos SET envio=Date('now') WHERE id="+tuplaEspecial["id"].to_s+" AND sku="+tuplaEspecial["sku"].to_s
           #FtpPedido.connection.execute(executarenSql)
 
