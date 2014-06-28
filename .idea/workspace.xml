@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f22dfc7f-423c-481f-b2dc-ed2e5c4d6939" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TallerIntegracion3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +36,16 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="32" selection-start="3945" selection-end="3945" vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="8040">
+            <state line="357" column="38" selection-start="15808" selection-end="15808" vertical-scroll-proportion="0.0" vertical-offset="5050" max-vertical-offset="8040">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stock_management_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="213" column="23" selection-start="6543" selection-end="6558" vertical-scroll-proportion="0.5175258" vertical-offset="2944" max-vertical-offset="4260">
               <folding />
             </state>
           </provider>
@@ -54,15 +64,6 @@
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state line="72" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="68" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.37974682" vertical-offset="300" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
@@ -967,30 +968,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="9" selection-start="5334" selection-end="5334" vertical-scroll-proportion="0.5511182" vertical-offset="2160" max-vertical-offset="4260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="32" selection-start="3945" selection-end="3945" vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="8040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ftp_pedido.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="50" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
@@ -1011,7 +991,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="68" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.37974682" vertical-offset="300" max-vertical-offset="1110">
+        <state line="36" column="30" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.5063291" vertical-offset="300" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="22" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="357" column="38" selection-start="15808" selection-end="15808" vertical-scroll-proportion="0.0" vertical-offset="5050" max-vertical-offset="8040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stock_management_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="23" selection-start="6543" selection-end="6558" vertical-scroll-proportion="0.5175258" vertical-offset="2944" max-vertical-offset="4260">
           <folding />
         </state>
       </provider>
